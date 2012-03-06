@@ -451,17 +451,18 @@
 % journal papers have the author affiliations above the "Manuscript
 % received ..."  text while in non-compsoc journals this is reversed. Sigh.
 
-\author{Matthias~Armbruster,~\IEEEmembership{Member,~IEEE,}
-        John~Doe,~\IEEEmembership{Fellow,~OSA,}
-        and~Jane~Doe,~\IEEEmembership{Life~Fellow,~IEEE}% <-this % stops a space
-\IEEEcompsocitemizethanks{\IEEEcompsocthanksitem M. Shell is with the Department
-of Electrical and Computer Engineering, Georgia Institute of Technology, Atlanta,
-GA, 30332.\protect\\
+\author{Matthias~Armbruster,~\IEEEmembership{University~of~Mannheim}
+        Paul~Robert~Ernst~Steinhilber,~\IEEEmembership{University~of~Mannheim}
+        William~Weilgard~Francis~Almnes~\IEEEmembership{University~of~Oslo}
+        and~Kent~Andjic,~\IEEEmembership{University~of~Oslo}% <-this % stops a space
+\IEEEcompsocitemizethanks{\IEEEcompsocthanksitem Matthias Armbruster: matthias.armbruster@gmail.com
 % note need leading \protect in front of \\ to get a newline within \thanks as
 % \\ is fragile and will error, could use \hfil\break instead.
-E-mail: see http://www.michaelshell.org/contact.html
-\IEEEcompsocthanksitem J. Doe and J. Doe are with Anonymous University.}% <-this % stops a space
-\thanks{Manuscript received April 19, 2005; revised January 11, 2007.}}
+}% <-this % stops a space
+\IEEEcompsocitemizethanks{\IEEEcompsocthanksitem Paul R. E. Steinhilber: psteinhi@mail.uni-mannheim.de}
+\IEEEcompsocitemizethanks{\IEEEcompsocthanksitem William W. F. Almnes: wwalmnes@student.matnat.uio.no}
+\IEEEcompsocitemizethanks{\IEEEcompsocthanksitem Marko Andjic: marko.andjic@usit.uio.no}
+\thanks{Submitted just before April 23, 2012.}}
 
 % note the % following the last \IEEEmembership and also \thanks - 
 % these prevent an unwanted space from occurring between the last author name
@@ -568,6 +569,9 @@ Computer Society, IEEEtran, journal, \LaTeX, paper, template.
 
 
 \section{Introduction}
+This is the normal text. This is \textbf{bold text}. This is \textit{italic text}. You can also use \emph{emph command}.
+
+\section{Another section} 
 % Computer Society journal papers do something a tad strange with the very
 % first section heading (almost always called "Introduction"). They place it
 % ABOVE the main text! IEEEtran.cls currently does not do this for you.
