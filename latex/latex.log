@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2010.2.12)  6 MAR 2012 13:24
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2010.2.12)  6 MAR 2012 13:55
 entering extended mode
  %&-line parsing enabled.
 **latex.tex
@@ -93,8 +93,7 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <24> not available
 \@IEEEtmpitemindent=\dimen116
 \c@IEEEbiography=\count90
 \@IEEEtranrubishbin=\box26
-)
-No file latex.aux.
+) (./latex.aux)
 \openout1 = `latex.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 426.
@@ -111,7 +110,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 426.
 LaTeX Font Info:    ... okay on input line 426.
 LaTeX Font Info:    Try loading font information for OT1+phv on input line 543.
 
-(/usr/local/texlive/2009/texmf-dist/tex/latex/psnfss/ot1phv.fd
+ (/usr/local/texlive/2009/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <14> not available
@@ -132,7 +131,6 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 543.
 LaTeX Font Info:    Try loading font information for U+pzd on input line 543.
-
 (/usr/local/texlive/2009/texmf-dist/tex/latex/psnfss/upzd.fd
 File: upzd.fd 2001/06/04 font definitions for U/pzd.
 )
@@ -151,28 +149,24 @@ LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
  [1{/usr/local/texlive/2009/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
-] (./latex.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+] (./latex.aux) ) 
 Here is how much of TeX's memory you used:
- 1016 strings out of 493848
- 17321 string characters out of 3149207
+ 1018 strings out of 493848
+ 17341 string characters out of 3149207
  66297 words of memory out of 3000000
  4332 multiletter control sequences out of 15000+200000
  49191 words of font info for 99 fonts, out of 3000000 for 9000
  717 hyphenation exceptions out of 8191
  28i,8n,28p,186b,352s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/2009/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/tex
-live/2009/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/20
-09/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2009/texm
-f-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/2009/texmf-dist
-/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/
-type1/urw/palatino/uplri8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/
-urw/zapfding/uzdr.pfb>
-Output written on latex.pdf (1 page, 77300 bytes).
+{/usr/local/texlive/2009/texmf-dist/fonts/enc/dvips/base/8r.en
+c}</usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
+</usr/local/texlive/2009/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/l
+ocal/texlive/2009/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/te
+xlive/2009/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/
+2009/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2009/te
+xmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></usr/local/texlive/2009/texmf-di
+st/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on latex.pdf (1 page, 77318 bytes).
 PDF statistics:
  35 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
