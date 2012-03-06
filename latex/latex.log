@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2010.2.12)  6 MAR 2012 15:15
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2010.2.12)  6 MAR 2012 15:33
 entering extended mode
  %&-line parsing enabled.
 **latex.tex
@@ -12,7 +12,7 @@ greek, greek, hungarian, icelandic, indonesian, interlingua, irish, italian, ku
 rmanji, latin, latvian, lithuanian, mongolian, mongolian2a, bokmal, nynorsk, po
 lish, portuguese, romanian, russian, sanskrit, serbian, slovak, slovenian, span
 ish, swedish, turkish, ukenglish, ukrainian, uppersorbian, welsh, loaded.
-(/usr/local/texlive/2009/texmf-dist/tex/latex/IEEEtran/IEEEtran.cls
+(./IEEEtran.cls
 Document Class: IEEEtran 2007/03/05 V1.7a by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
 -- http://www.michaelshell.org/tex/ieeetran/
@@ -151,8 +151,8 @@ LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
 
 ] (./latex.aux) ) 
 Here is how much of TeX's memory you used:
- 1020 strings out of 493848
- 17354 string characters out of 3149207
+ 1019 strings out of 493848
+ 17194 string characters out of 3149207
  67297 words of memory out of 3000000
  4332 multiletter control sequences out of 15000+200000
  50456 words of font info for 101 fonts, out of 3000000 for 9000
