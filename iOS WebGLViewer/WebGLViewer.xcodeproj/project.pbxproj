@@ -1,0 +1,293 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA626F20150A794700345B5A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA626F1F150A794700345B5A /* UIKit.framework */; };
+		DA626F22150A794700345B5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA626F21150A794700345B5A /* Foundation.framework */; };
+		DA626F24150A794700345B5A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA626F23150A794700345B5A /* CoreGraphics.framework */; };
+		DA626F2A150A794700345B5A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA626F28150A794700345B5A /* InfoPlist.strings */; };
+		DA626F2C150A794700345B5A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA626F2B150A794700345B5A /* main.m */; };
+		DA626F30150A794700345B5A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA626F2F150A794700345B5A /* AppDelegate.m */; };
+		DA626F33150A794700345B5A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA626F32150A794700345B5A /* ViewController.m */; };
+		DA626F36150A794700345B5A /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA626F34150A794700345B5A /* ViewController_iPhone.xib */; };
+		DA626F39150A794700345B5A /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA626F37150A794700345B5A /* ViewController_iPad.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DA626F1B150A794700345B5A /* WebGLViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebGLViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA626F1F150A794700345B5A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DA626F21150A794700345B5A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DA626F23150A794700345B5A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DA626F27150A794700345B5A /* WebGLViewer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WebGLViewer-Info.plist"; sourceTree = "<group>"; };
+		DA626F29150A794700345B5A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DA626F2B150A794700345B5A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DA626F2D150A794700345B5A /* WebGLViewer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WebGLViewer-Prefix.pch"; sourceTree = "<group>"; };
+		DA626F2E150A794700345B5A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DA626F2F150A794700345B5A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DA626F31150A794700345B5A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DA626F32150A794700345B5A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DA626F35150A794700345B5A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		DA626F38150A794700345B5A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA626F18150A794700345B5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA626F20150A794700345B5A /* UIKit.framework in Frameworks */,
+				DA626F22150A794700345B5A /* Foundation.framework in Frameworks */,
+				DA626F24150A794700345B5A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DA626F10150A794700345B5A = {
+			isa = PBXGroup;
+			children = (
+				DA626F25150A794700345B5A /* WebGLViewer */,
+				DA626F1E150A794700345B5A /* Frameworks */,
+				DA626F1C150A794700345B5A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DA626F1C150A794700345B5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA626F1B150A794700345B5A /* WebGLViewer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA626F1E150A794700345B5A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA626F1F150A794700345B5A /* UIKit.framework */,
+				DA626F21150A794700345B5A /* Foundation.framework */,
+				DA626F23150A794700345B5A /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA626F25150A794700345B5A /* WebGLViewer */ = {
+			isa = PBXGroup;
+			children = (
+				DA626F2E150A794700345B5A /* AppDelegate.h */,
+				DA626F2F150A794700345B5A /* AppDelegate.m */,
+				DA626F31150A794700345B5A /* ViewController.h */,
+				DA626F32150A794700345B5A /* ViewController.m */,
+				DA626F34150A794700345B5A /* ViewController_iPhone.xib */,
+				DA626F37150A794700345B5A /* ViewController_iPad.xib */,
+				DA626F26150A794700345B5A /* Supporting Files */,
+			);
+			path = WebGLViewer;
+			sourceTree = "<group>";
+		};
+		DA626F26150A794700345B5A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA626F27150A794700345B5A /* WebGLViewer-Info.plist */,
+				DA626F28150A794700345B5A /* InfoPlist.strings */,
+				DA626F2B150A794700345B5A /* main.m */,
+				DA626F2D150A794700345B5A /* WebGLViewer-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA626F1A150A794700345B5A /* WebGLViewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA626F3C150A794700345B5A /* Build configuration list for PBXNativeTarget "WebGLViewer" */;
+			buildPhases = (
+				DA626F17150A794700345B5A /* Sources */,
+				DA626F18150A794700345B5A /* Frameworks */,
+				DA626F19150A794700345B5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WebGLViewer;
+			productName = WebGLViewer;
+			productReference = DA626F1B150A794700345B5A /* WebGLViewer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA626F12150A794700345B5A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = DA626F15150A794700345B5A /* Build configuration list for PBXProject "WebGLViewer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DA626F10150A794700345B5A;
+			productRefGroup = DA626F1C150A794700345B5A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA626F1A150A794700345B5A /* WebGLViewer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA626F19150A794700345B5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA626F2A150A794700345B5A /* InfoPlist.strings in Resources */,
+				DA626F36150A794700345B5A /* ViewController_iPhone.xib in Resources */,
+				DA626F39150A794700345B5A /* ViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA626F17150A794700345B5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA626F2C150A794700345B5A /* main.m in Sources */,
+				DA626F30150A794700345B5A /* AppDelegate.m in Sources */,
+				DA626F33150A794700345B5A /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DA626F28150A794700345B5A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA626F29150A794700345B5A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DA626F34150A794700345B5A /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA626F35150A794700345B5A /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		DA626F37150A794700345B5A /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA626F38150A794700345B5A /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DA626F3A150A794700345B5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DA626F3B150A794700345B5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DA626F3D150A794700345B5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WebGLViewer/WebGLViewer-Prefix.pch";
+				INFOPLIST_FILE = "WebGLViewer/WebGLViewer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DA626F3E150A794700345B5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WebGLViewer/WebGLViewer-Prefix.pch";
+				INFOPLIST_FILE = "WebGLViewer/WebGLViewer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA626F15150A794700345B5A /* Build configuration list for PBXProject "WebGLViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA626F3A150A794700345B5A /* Debug */,
+				DA626F3B150A794700345B5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA626F3C150A794700345B5A /* Build configuration list for PBXNativeTarget "WebGLViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA626F3D150A794700345B5A /* Debug */,
+				DA626F3E150A794700345B5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA626F12150A794700345B5A /* Project object */;
+}
