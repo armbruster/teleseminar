@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2010.4.24)  14 MAR 2012 19:33
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2010.4.24)  14 MAR 2012 19:47
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -258,14 +258,14 @@ Underfull \hbox (badness 1436) in paragraph at lines 117--118
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 123.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 126.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 125.
 
-Underfull \hbox (badness 2582) in paragraph at lines 130--131
+Underfull \hbox (badness 2582) in paragraph at lines 129--130
 \OT1/ppl/m/n/12 Although sup-port for We-bGL is avail-able
  []
 
 
-Underfull \hbox (badness 1983) in paragraph at lines 130--131
+Underfull \hbox (badness 1983) in paragraph at lines 129--130
 \OT1/ppl/m/n/12 on the desk-top com-put-ers within all ma-
  []
 
@@ -278,24 +278,21 @@ Missing character: There is no ™ in font pplr7t!
 Missing character: There is no â in font pplr7t!
 Missing character: There is no € in font pplr7t!
 Missing character: There is no ™ in font pplr7t!
-Missing character: There is no â in font pplr7t!
-Missing character: There is no € in font pplr7t!
-Missing character: There is no ™ in font pplr7t!
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 174.
+(Font)              <12> on input line 166.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 174.
+(Font)              <8> on input line 166.
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--175
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
 $\OT1/ppl/m/n/12 http : / / www . phdcomics . com / comics / archive .
  []
 
 
-Overfull \hbox (4.26031pt too wide) in paragraph at lines 194--194
+Overfull \hbox (4.26031pt too wide) in paragraph at lines 186--186
 [][][][][][][] 
  []
 
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 194.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 186.
 
 (/usr/local/texlive/2009/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
@@ -342,11 +339,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 118--122
 Here is how much of TeX's memory you used:
  3839 strings out of 493848
  60937 string characters out of 3149207
- 130775 words of memory out of 3000000
+ 131775 words of memory out of 3000000
  7107 multiletter control sequences out of 15000+200000
  44563 words of font info for 93 fonts, out of 3000000 for 9000
  717 hyphenation exceptions out of 8191
- 36i,7n,38p,877b,907s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,7n,38p,971b,907s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2009/texmf-dist/fonts/enc/dvips/base/8r.en
 c}</usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
 </usr/local/texlive/2009/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/lo
@@ -357,7 +354,7 @@ mf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2009/texmf-dist
 /fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/
 type1/urw/palatino/uplri8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/
 urw/zapfding/uzdr.pfb>
-Output written on latex.pdf (3 pages, 116587 bytes).
+Output written on latex.pdf (3 pages, 116382 bytes).
 PDF statistics:
  49 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
