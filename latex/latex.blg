@@ -1,9 +1,5 @@
 This is BibTeX, Version 0.99c (TeX Live 2009)
 The top-level auxiliary file: latex.aux
-White space in argument---line 28 of file latex.aux
- : \citation{Golubovic
- :                     2011}
-I'm skipping whatever remains of this command
 The style file: IEEEtran.bst
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: bib.bib
@@ -12,45 +8,44 @@ Database file #1: bib.bib
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 19 entries,
+You've used 20 entries,
             4039 wiz_defined-function locations,
-            894 strings with 9651 characters,
-and the built_in function-call counts, 8284 in all, are:
-= -- 582
-> -- 154
+            897 strings with 9772 characters,
+and the built_in function-call counts, 8539 in all, are:
+= -- 597
+> -- 155
 < -- 28
-+ -- 85
++ -- 86
 - -- 29
-* -- 364
-:= -- 1310
-add.period$ -- 30
-call.type$ -- 19
+* -- 373
+:= -- 1351
+add.period$ -- 31
+call.type$ -- 20
 change.case$ -- 9
 chr.to.int$ -- 63
-cite$ -- 19
-duplicate$ -- 671
-empty$ -- 832
+cite$ -- 20
+duplicate$ -- 695
+empty$ -- 862
 format.name$ -- 37
-if$ -- 1849
+if$ -- 1903
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 144
-newline$ -- 100
+int.to.str$ -- 20
+missing$ -- 150
+newline$ -- 105
 num.names$ -- 10
-pop$ -- 434
+pop$ -- 456
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 652
+skip$ -- 672
 stack$ -- 0
 substring$ -- 156
-swap$ -- 431
+swap$ -- 444
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 19
+type$ -- 20
 warning$ -- 0
 while$ -- 19
-width$ -- 21
-write$ -- 183
-(There was 1 error message)
+width$ -- 22
+write$ -- 191

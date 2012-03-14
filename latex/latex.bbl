@@ -126,4 +126,11 @@ nceptual/iAd_Design_Guide/iAd_Design_Guide.pdf}
   \url{https://developer.apple.com/appstore/resources/approval/guidelines.html}
 \BIBentrySTDinterwordspacing
 
+\bibitem{microsoftWebGLHarmful}
+\BIBentryALTinterwordspacing
+(2012, March). [Online]. Available:
+  \url{http://blogs.technet.com/b/srd/archive/2011/06/16/webgl-considered-harm%
+ful.aspx}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2010.4.24)  14 MAR 2012 19:47
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2010.4.24)  14 MAR 2012 20:55
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -333,14 +333,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 118--122
 \OT1/ppl/m/n/9 / / www . khronos . org / webgl / public-[]mailing-[]list /
  []
 
+
+Underfull \hbox (badness 3471) in paragraph at lines 131--135
+[]\OT1/ppl/m/n/9 (2012, March). [On-line]. Avail-able: $http :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--135
+\OT1/ppl/m/n/9 / / blogs . technet . com / b / srd / archive / 2011 / 06 / 16 /
+
+ []
+
 ) [3
 
 ] (./latex.aux) ) 
 Here is how much of TeX's memory you used:
- 3839 strings out of 493848
- 60937 string characters out of 3149207
+ 3840 strings out of 493848
+ 60960 string characters out of 3149207
  131775 words of memory out of 3000000
- 7107 multiletter control sequences out of 15000+200000
+ 7108 multiletter control sequences out of 15000+200000
  44563 words of font info for 93 fonts, out of 3000000 for 9000
  717 hyphenation exceptions out of 8191
  36i,7n,38p,971b,907s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -354,7 +365,7 @@ mf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2009/texmf-dist
 /fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/
 type1/urw/palatino/uplri8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/
 urw/zapfding/uzdr.pfb>
-Output written on latex.pdf (3 pages, 116382 bytes).
+Output written on latex.pdf (3 pages, 116452 bytes).
 PDF statistics:
  49 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

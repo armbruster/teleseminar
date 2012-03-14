@@ -111,10 +111,10 @@ In the effort to expand internet browser functionality to natively support three
 % TODO change secondary source (newsweek) to primary source (apple keynote), i.e., add entry to .bib and change entry in .tex)
 The rise of smartphones is growing with a fast and still accelerating pace, enabled ways of displaying information in a new way in a truly mobile context to many people \cite{Gartner2010,Nielsen2011}. They offer a much higher power than feature phones and even claim to offer the "real web" experience with "real browsers" \cite{informationweek2007}. There are differences, however, between the way information can be accessed from a desktop system and a mobile device, influenced by factors like screen size, processing power, and input methods.
 
-% TODO change wording (method)
+% TODO change wording (method) --- maybe "technology for" ??
 3d-support on mobile devices is still in an early phase. Adobe abandoned Flash in late 2011 \cite{Flash2011}, leaving WebGL as the main (method) of providing interactive 3d content on the mobile web, even if it is still in an initial phase.
 
-This paper analyzes the status quo and potentials of WebGL on mobile devices (regarding performance and human-computer-interaction.)
+This paper analyzes the status quo and potentials of WebGL on mobile devices (regarding performance and human-computer-interaction).
 
 The paper is structured as follows: Chapter 2 gives background information on relevant topics, i.e. augmented reality, WebGL, and human-computer-interation (HCI) with mobile devices and their evaluation criteria; Chapter 3 gives implementation details of the the WebGL environment used to capture the status quo; Chapter 4 presents the evaluation as well as limitations to this study; and Chapter 5 gives a summary of the results and presents future research opportunities.
 
@@ -130,7 +130,7 @@ Although support for WebGL is available on the desktop computers within all majo
 
 Apple has added WebGL capabilities to iOS with iOS 4.2 \cite{deVries2011, iAdDocu}. However officially WebGL is only available to be used on Apple’s iAd platform \cite{deVries2011, cmarrin2011}. With an hack discovered by Nathan de Vries \cite{deVries2011} WebGL can also be enabled in a UIWebView. Using this way it is possible to build a custom WebGL viewer for iOS. However since this method of enabling WebGL on iOS requires the use of non-public APIs it can’t be made available to end users due to Apple's App Store Review Guidelines \cite{appstorereviewguidelines}. The built-in Safari browser on iOS does not support WebGL and due to Apple’s App Store Review Guidelines \cite{appstorereviewguidelines} third party browsers are required to use the WebKit rendering engine provided by Apple. So until Apple officially supports WebGL in Safari on iOS there is no way available for the end user to run WebGL content on iOS.
 
-As the desktop version of InternetExplorer does not support WebGL \cite{Golubovic2011} and Microsoft is considering WebGL "harmful" [TODO] we probably wont see WebGL support on Windows Phone 7 in the near future. % cite: http://blogs.technet.com/b/srd/archive/2011/06/16/webgl-considered-harmful.aspx
+As the desktop version of InternetExplorer does not support WebGL \cite{Golubovic2011} and Microsoft is considering WebGL "harmful" \cite{microsoftWebGLHarmful} we probably wont see WebGL support on Windows Phone 7 in the near future. 
 
 With Firefox 4 WebGL compatible browsers are available on Android. % TODO: needs citation
 
