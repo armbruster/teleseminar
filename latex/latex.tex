@@ -67,9 +67,9 @@
 
 
 \author{William~Weilgard~Francis~Almnes,~\IEEEmembership{University~of~Oslo}\\
-        Kent~Andjic,~\IEEEmembership{University~of~Oslo}\\
+        Marko~Andjic,~\IEEEmembership{University~of~Oslo}\\
         Matthias~Armbruster~\IEEEmembership{University~of~Mannheim}\\  
-        and~Paul~Robert~Ernst~Steinhilber,~\IEEEmembership{University~of~Mannheim}% <-this % stops a space
+        and~Paul~Steinhilber,~\IEEEmembership{University~of~Mannheim}% <-this % stops a space
 
 \IEEEcompsocitemizethanks{\IEEEcompsocthanksitem William W. F. Almnes: wwalmnes@student.matnat.uio.no}
 \IEEEcompsocitemizethanks{\IEEEcompsocthanksitem Marko Andjic: marko.andjic@usit.uio.no}
@@ -102,7 +102,7 @@ WebGL, mobile computing, teleseminar.
 \section{Introduction}
 The technologies which allow people to interact with the world around them evolve constantly. Whereas it was common to simply display information in a static form in the early days of the web, at present an ever increasing amount of content is presented in dynamic and interactive ways.
 
-In the effort to expand internet browser functionality to natively support three-dimensional graphics, HTML5, WebGL have been developed. Many web sites already offer functionalities which were previously only found in native applications, e.g. word processing using Google Docs \cite{googledocs} or creating presentation using 280 Slides \cite{280slides}, thus narrowing "the gap between them" \cite{Golubovic2011}. A native usage of 3d-functionality enhances these "web applications" even further.
+In the effort to expand internet browser functionality to natively support three-dimensional graphics, HTML5, WebGL have been developed. Many web sites already offer functionalities which were previously only found in native applications, e.g. word processing using Google Docs \cite{googledocs} or creating presentations using 280 Slides \cite{280slides}, thus narrowing "the gap between them" \cite{Golubovic2011}. A native usage of 3d-functionality enhances these "web applications" even further.
 
 % TODO Clear definition of AR 
 "Augmented Reality (AR) has been defined broadly as combining real and computer-generated digital information into the user’s view of the physical and interactive real world in such a way that they appear as one environment, thus providing a bridge between digital information and the physical world" (\cite{Hoellerer2004,Klopfer2007,Vallino1998,Wellner1993} via \cite{Olsson2011b}). Application areas of AR can be as broad as ranging from health care \cite{Lui2011} to education \cite{Mannuss2011} to tourism \cite{Mulloni2011}. The topic has gained momentum thanks to the rise in smartphone usage. "To make the world itself the user interface [...] may revolutionize the way information is accessed and presented to people in the future \cite{Hoellerer2004,Wellner1993}.
@@ -124,7 +124,22 @@ The paper is structured as follows: Chapter 2 gives background information on re
 
 \subsubsection{Design}
 
+
 \subsubsection{Mobile WebGL}
+Although support for WebGL is available on the desktop computers within all major browsers WebGL (FireFox 4+, Safari 5.1+, Chrome 10+, Opera 12+), except of Microsoft's Internet Explorer \cite{Golubovic2011}, browsers on mobile devices supporting WebGL are still very rare.
+
+Apple has added WebGL capabilities to iOS with iOS 4.2 \cite{deVries2011, iAdDocu}. However officially WebGL is only available to be used on Apple’s iAd platform \cite{deVries2011, cmarrin2011}. With an hack discovered by Nathan de Vries \cite{deVries2011} WebGL can also be enabled in a UIWebView. Using this way it is possible to build a custom WebGL viewer for iOS. However since this method of enabling WebGL on iOS requires the use of non-public APIs it can’t be made available to end users due to Apple's App Store Review Guidelines (Section 2.5) \cite{appstorereviewguidelines}. The built-in Safari browser on iOS does not support WebGL and due to Apple’s App Store Review Guidelines (Section 2.7 and 2.8) \cite{appstorereviewguidelines} third party browsers are required to use the WebKit rendering engine provided by Apple. So until Apple officially supports WebGL in Safari on iOS there is no way available for the end user to run WebGL content on iOS.
+
+As the desktop version of InternetExplorer does not support WebGL \cite{Golubovic2011} and Microsoft is considering WebGL "harmful" [TODO] we probably wont see WebGL support on Windows Phone 7 in the near future. % cite: http://blogs.technet.com/b/srd/archive/2011/06/16/webgl-considered-harmful.aspx
+
+With Firefox 4 WebGL compatible browsers are available on Android. % TODO: needs citation
+
+%\subsubsection{Concerns}
+% http://news.cnet.com/8301-30685_3-20071726-264/microsoft-declares-webgl-harmful-to-security/
+% http://www.contextis.com/resources/blog/webgl/
+% http://www.contextis.com/resources/blog/webgl2/
+% http://blogs.technet.com/b/srd/archive/2011/06/16/webgl-considered-harmful.aspx
+
 
 \subsubsection{Status Quo}
 
