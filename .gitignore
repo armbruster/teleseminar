@@ -8,3 +8,28 @@ iOS WebGLViewer/WebGLViewer.xcodeproj/xcuserdata/paul.xcuserdatad/xcdebugger/Bre
 iOS WebGLViewer/WebGLViewer.xcodeproj/xcuserdata/paul.xcuserdatad/xcschemes/WebGLViewer.xcscheme
 
 iOS WebGLViewer/WebGLViewer.xcodeproj/xcuserdata/paul.xcuserdatad/xcschemes/xcschememanagement.plist
+
+*.aux
+*.glo
+*.idx
+*.log
+*.toc
+*.ist
+*.acn
+*.acr
+*.alg
+*.bbl
+*.blg
+*.dvi
+*.glg
+*.gls
+*.ilg
+*.ind
+*.lof
+*.lot
+*.maf
+*.mtc
+*.mtc1
+*.out
+*.synctex.gz
+
