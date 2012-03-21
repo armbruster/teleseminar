@@ -1,5 +1,6 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2010.2.12)  11 MAR 2012 21:24
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2010.4.24)  14 MAR 2012 20:55
 entering extended mode
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **latex.tex
 (./latex.tex
@@ -96,54 +97,144 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <24> not available
 ) (/usr/local/texlive/2009/texmf-dist/tex/latex/ltxmisc/url.sty
 \Urlmuskip=\muskip10
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+(/usr/local/texlive/2009/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2009/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+
+(/usr/local/texlive/2009/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2009/08/25 v0.04m Graphics/color for pdfTeX
+\Gread@gobject=\count91
+))
+(/usr/local/texlive/2009/texmf-dist/tex/latex/listings/listings.sty
+(/usr/local/texlive/2009/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+\lst@mode=\count92
+\lst@gtempboxa=\box27
+\lst@token=\toks16
+\lst@length=\count93
+\lst@currlwidth=\dimen117
+\lst@column=\count94
+\lst@pos=\count95
+\lst@lostspace=\dimen118
+\lst@width=\dimen119
+\lst@newlines=\count96
+\lst@lineno=\count97
+\lst@maxwidth=\dimen120
+
+(/usr/local/texlive/2009/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+\c@lstnumber=\count98
+\lst@skipnumbers=\count99
+\lst@framebox=\box28
+)
+(/usr/local/texlive/2009/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2007/02/22 1.4 listings configuration
+))
+Package: listings 2007/02/22 1.4 (Carsten Heinz)
+
+(/usr/local/texlive/2009/texmf-dist/tex/latex/psnfss/courier.sty
+Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
+)
+(/usr/local/texlive/2009/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2009/10/09 v3.1k Customizing captions (AR)
+
+(/usr/local/texlive/2009/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2009/10/09 v3.1k caption3 kernel (AR)
+\captionmargin=\dimen121
+\captionmargin@=\dimen122
+\captionwidth=\dimen123
+\caption@indent=\dimen124
+\caption@parindent=\dimen125
+\caption@hangindent=\dimen126
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used on input line 1068.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEta
+blestring \normalsize \begin {center}{\normalfont \sffamily \normalsize #1}\\{\
+normalfont \sffamily \normalsize #2}\end {center}\@IEEEtablecaptionsepspace \el
+se \@IEEEfigurecaptionsepspace \setbox \@tempboxa \hbox {\normalfont \sffamily 
+\normalsize {#1.}~ #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox {\
+normalfont \sffamily \normalsize {#1.}~ }\parbox [t]{\hsize }{\normalfont \sffa
+mily \normalsize \noindent \unhbox \@tempboxa #2}\else \hbox to\hsize {\normalf
+ont \sffamily \normalsize \box \@tempboxa \hfil }\fi \fi .
+\c@ContinuedFloat=\count100
+Package caption Info: listings package is loaded.
 ) (./latex.aux)
 \openout1 = `latex.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 58.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
 
-(/usr/local/texlive/2009/texmf-dist/tex/latex/psnfss/ot1phv.fd
+(/usr/local/texlive/2009/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count101
+\scratchdimen=\dimen127
+\scratchbox=\box29
+\nofMPsegments=\count102
+\nofMParguments=\count103
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count104
+\MPscratchDim=\dimen128
+\MPnumerator=\count105
+\everyMPtoPDFconversion=\toks18
+)
+\c@lstlisting=\count106
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 96.
+ (/usr/local/texlive/2009/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <14> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 58.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 96.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 58.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 96.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 58.
+(Font)              <9> on input line 96.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 58.
+(Font)              <6> on input line 96.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 58.
-LaTeX Font Info:    Calculating math sizes for size <14> on input line 58.
+(Font)              <5> on input line 96.
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 96.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14> on input line 58.
+(Font)              <14> on input line 96.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9.79996> on input line 58.
+(Font)              <9.79996> on input line 96.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 58.
-LaTeX Font Info:    Try loading font information for U+pzd on input line 58.
+(Font)              <7> on input line 96.
+LaTeX Font Info:    Try loading font information for U+pzd on input line 96.
 
 (/usr/local/texlive/2009/texmf-dist/tex/latex/psnfss/upzd.fd
 File: upzd.fd 2001/06/04 font definitions for U/pzd.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 64.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 102.
 LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <14> not available
-(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 64.
+(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 102.
 
-Underfull \hbox (badness 1755) in paragraph at lines 67--68
+Underfull \hbox (badness 1755) in paragraph at lines 105--106
 \OT1/ppl/m/n/12 oped. Many web sites al-ready of-fer func-
  []
 
@@ -151,12 +242,12 @@ Missing character: There is no â in font pplr7t!
 Missing character: There is no € in font pplr7t!
 Missing character: There is no ™ in font pplr7t!
 
-Underfull \hbox (badness 2626) in paragraph at lines 70--71
+Underfull \hbox (badness 2626) in paragraph at lines 108--109
 \OT1/ppl/m/n/12 broadly as com-bin-ing real and computer-
  []
 
 
-Underfull \hbox (badness 1436) in paragraph at lines 79--80
+Underfull \hbox (badness 1436) in paragraph at lines 117--118
 []\OT1/ppl/m/n/12 This pa-per an-a-lyzes the sta-tus quo and
  []
 
@@ -165,19 +256,48 @@ Underfull \hbox (badness 1436) in paragraph at lines 79--80
 
 ]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 85.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 123.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 87.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 113.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 113.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 125.
 
-Underfull \hbox (badness 10000) in paragraph at lines 113--114
+Underfull \hbox (badness 2582) in paragraph at lines 129--130
+\OT1/ppl/m/n/12 Although sup-port for We-bGL is avail-able
+ []
+
+
+Underfull \hbox (badness 1983) in paragraph at lines 129--130
+\OT1/ppl/m/n/12 on the desk-top com-put-ers within all ma-
+ []
+
+Missing character: There is no â in font pplr7t!
+Missing character: There is no € in font pplr7t!
+Missing character: There is no ™ in font pplr7t!
+Missing character: There is no â in font pplr7t!
+Missing character: There is no € in font pplr7t!
+Missing character: There is no ™ in font pplr7t!
+Missing character: There is no â in font pplr7t!
+Missing character: There is no € in font pplr7t!
+Missing character: There is no ™ in font pplr7t!
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 166.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 166.
+
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
 $\OT1/ppl/m/n/12 http : / / www . phdcomics . com / comics / archive .
  []
 
-(./latex.bbl
+
+Overfull \hbox (4.26031pt too wide) in paragraph at lines 186--186
+[][][][][][][] 
+ []
+
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 186.
+
+(/usr/local/texlive/2009/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+) (./latex.bbl
+[2]
 Underfull \hbox (badness 10000) in paragraph at lines 98--102
 []\OT1/ppl/m/n/9 (2012, March). [On-line]. Avail-able:
  []
@@ -193,26 +313,61 @@ Overfull \hbox (164.58707pt too wide) in paragraph at lines 98--102
 ]adobe-[]to-[]more-[]aggressively-[]contribute-[]to-[]html5 .
  []
 
-) [2] (./latex.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 111--115
+\OT1/ppl/m/n/9 / / developer . apple . com / library / iad / documentation /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 111--115
+\OT1/ppl/m/n/9 UserExperience / Conceptual / iAd[]Design[]Guide / iAd[]
+ []
+
+
+Underfull \hbox (badness 4072) in paragraph at lines 118--122
+[]\OT1/ppl/m/n/9 (2011, June). [On-line]. Avail-able: $https :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 118--122
+\OT1/ppl/m/n/9 / / www . khronos . org / webgl / public-[]mailing-[]list /
+ []
+
+
+Underfull \hbox (badness 3471) in paragraph at lines 131--135
+[]\OT1/ppl/m/n/9 (2012, March). [On-line]. Avail-able: $http :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--135
+\OT1/ppl/m/n/9 / / blogs . technet . com / b / srd / archive / 2011 / 06 / 16 /
+
+ []
+
+) [3
+
+] (./latex.aux) ) 
 Here is how much of TeX's memory you used:
- 1109 strings out of 493848
- 18371 string characters out of 3149207
- 70122 words of memory out of 3000000
- 4422 multiletter control sequences out of 15000+200000
- 43439 words of font info for 90 fonts, out of 3000000 for 9000
+ 3840 strings out of 493848
+ 60960 string characters out of 3149207
+ 131775 words of memory out of 3000000
+ 7108 multiletter control sequences out of 15000+200000
+ 44563 words of font info for 93 fonts, out of 3000000 for 9000
  717 hyphenation exceptions out of 8191
- 30i,6n,22p,802b,474s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/2009/texmf-dist/fonts/enc/dvips/base/8
-r.enc}</usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.
-pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></u
-sr/local/texlive/2009/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/loca
-l/texlive/2009/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/local/texl
-ive/2009/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/200
-9/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></usr/local/texlive/2009/texm
-f-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on latex.pdf (2 pages, 90056 bytes).
+ 36i,7n,38p,971b,907s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/local/texlive/2009/texmf-dist/fonts/enc/dvips/base/8r.en
+c}</usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
+</usr/local/texlive/2009/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/lo
+cal/texlive/2009/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/tex
+live/2009/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/20
+09/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/2009/tex
+mf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2009/texmf-dist
+/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/
+type1/urw/palatino/uplri8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/
+urw/zapfding/uzdr.pfb>
+Output written on latex.pdf (3 pages, 116452 bytes).
 PDF statistics:
- 38 PDF objects out of 1000 (max. 8388607)
+ 49 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

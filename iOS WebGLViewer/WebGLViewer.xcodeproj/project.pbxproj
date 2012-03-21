@@ -16,6 +16,10 @@
 		DA626F33150A794700345B5A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA626F32150A794700345B5A /* ViewController.m */; };
 		DA626F36150A794700345B5A /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA626F34150A794700345B5A /* ViewController_iPhone.xib */; };
 		DA626F39150A794700345B5A /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA626F37150A794700345B5A /* ViewController_iPad.xib */; };
+		DA70E9D81510EFA9001C72EB /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA70E9D71510EFA9001C72EB /* Icon@2x.png */; };
+		DA70E9DB1510EFAD001C72EB /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DA70E9DA1510EFAD001C72EB /* Icon.png */; };
+		DA70E9DD1510EFB4001C72EB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA70E9DC1510EFB4001C72EB /* Default@2x.png */; };
+		DA70E9DF1510EFBA001C72EB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DA70E9DE1510EFBA001C72EB /* Default.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,10 @@
 		DA626F32150A794700345B5A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DA626F35150A794700345B5A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		DA626F38150A794700345B5A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		DA70E9D71510EFA9001C72EB /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		DA70E9DA1510EFAD001C72EB /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		DA70E9DC1510EFB4001C72EB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		DA70E9DE1510EFBA001C72EB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +60,10 @@
 		DA626F10150A794700345B5A = {
 			isa = PBXGroup;
 			children = (
+				DA70E9DE1510EFBA001C72EB /* Default.png */,
+				DA70E9DC1510EFB4001C72EB /* Default@2x.png */,
+				DA70E9DA1510EFAD001C72EB /* Icon.png */,
+				DA70E9D71510EFA9001C72EB /* Icon@2x.png */,
 				DA626F25150A794700345B5A /* WebGLViewer */,
 				DA626F1E150A794700345B5A /* Frameworks */,
 				DA626F1C150A794700345B5A /* Products */,
@@ -154,6 +166,10 @@
 				DA626F2A150A794700345B5A /* InfoPlist.strings in Resources */,
 				DA626F36150A794700345B5A /* ViewController_iPhone.xib in Resources */,
 				DA626F39150A794700345B5A /* ViewController_iPad.xib in Resources */,
+				DA70E9D81510EFA9001C72EB /* Icon@2x.png in Resources */,
+				DA70E9DB1510EFAD001C72EB /* Icon.png in Resources */,
+				DA70E9DD1510EFB4001C72EB /* Default@2x.png in Resources */,
+				DA70E9DF1510EFBA001C72EB /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +302,7 @@
 				DA626F3E150A794700345B5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -100,4 +100,37 @@ S.~Wellman. (2012, March). [Online]. Available:
 ing-and-mobile-apps-adobe-to-more-aggressively-contribute-to-html5.html}
 \BIBentrySTDinterwordspacing
 
+\bibitem{deVries2011}
+\BIBentryALTinterwordspacing
+(2011, November). [Online]. Available:
+  \url{http://atnan.com/blog/2011/11/03/enabling-and-using-webgl-on-ios/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{iAdDocu}
+\BIBentryALTinterwordspacing
+(2011, November). [Online]. Available:
+  \url{https://developer.apple.com/library/iad/documentation/UserExperience/Co%
+nceptual/iAd_Design_Guide/iAd_Design_Guide.pdf}
+\BIBentrySTDinterwordspacing
+
+\bibitem{cmarrin2011}
+\BIBentryALTinterwordspacing
+(2011, June). [Online]. Available:
+  \url{https://www.khronos.org/webgl/public-mailing-list/archives/1106/msg0003%
+6.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{appstorereviewguidelines}
+\BIBentryALTinterwordspacing
+(2012). [Online]. Available:
+  \url{https://developer.apple.com/appstore/resources/approval/guidelines.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{microsoftWebGLHarmful}
+\BIBentryALTinterwordspacing
+(2012, March). [Online]. Available:
+  \url{http://blogs.technet.com/b/srd/archive/2011/06/16/webgl-considered-harm%
+ful.aspx}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}
