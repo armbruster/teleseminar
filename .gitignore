@@ -1,0 +1,57 @@
+
+.DS_Store
+
+iOS WebGLViewer/WebGLViewer.xcodeproj/project.xcworkspace/xcuserdata/paul.xcuserdatad/UserInterfaceState.xcuserstate
+
+iOS WebGLViewer/WebGLViewer.xcodeproj/xcuserdata/paul.xcuserdatad/xcdebugger/Breakpoints.xcbkptlist
+
+iOS WebGLViewer/WebGLViewer.xcodeproj/xcuserdata/paul.xcuserdatad/xcschemes/WebGLViewer.xcscheme
+
+iOS WebGLViewer/WebGLViewer.xcodeproj/xcuserdata/paul.xcuserdatad/xcschemes/xcschememanagement.plist
+
+<<<<<<< HEAD
+*.aux
+*.glo
+*.idx
+*.log
+*.toc
+*.ist
+*.acn
+*.acr
+*.alg
+*.bbl
+*.blg
+*.dvi
+*.glg
+*.gls
+*.ilg
+*.ind
+*.lof
+*.lot
+*.maf
+*.mtc
+*.mtc1
+*.out
+*.synctex.gz
+*.pdf
+latex/texpadtmp/*.*
+
+=======
+latex/latex.synctex.gz
+
+latex/latex.log
+
+latex/latex.bbl
+
+latex/latex.blg
+
+latex/latex.bbl
+
+latex/latex.aux
+
+latex/latex.bbl
+
+latex/latex.log
+
+latex/latex.aux
+>>>>>>> e65dcf9a59a4644c15db56b5441e91ae893cb0fe
