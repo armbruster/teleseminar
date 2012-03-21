@@ -34,7 +34,7 @@ iOS WebGLViewer/WebGLViewer.xcodeproj/xcuserdata/paul.xcuserdatad/xcschemes/xcsc
 *.out
 *.synctex.gz
 *.pdf
-latex/.texpadtmp/*.*
+latex/.texpadtmp/
 
 =======
 latex/latex.synctex.gz
@@ -51,9 +51,10 @@ latex/latex.aux
 
 latex/latex.bbl
 
+latex/latex.dvi
+
 latex/latex.log
 
 latex/latex.aux
 
-latex/latex.pdf
 >>>>>>> e65dcf9a59a4644c15db56b5441e91ae893cb0fe
