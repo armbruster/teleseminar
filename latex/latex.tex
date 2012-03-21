@@ -121,10 +121,17 @@ The paper is structured as follows: Chapter 2 gives background information on re
 \section{Background}
 
 \subsection{WebGL}
+In 2009, the \textit{WebGL Working Group} was formed with the mission to "bring hardware-accelerated graphics to the internet" \cite{Khronos2009}.  WebGL is a software library and extends Javascript to allow it to natively generate websites with 3D content. The first version of WebGL was released in 2011 \cite{Khronos2011}.
 
 \subsubsection{Design}
+"WebGL is based on OpenGL ES 2.0 and provides an API for 3D graphics. It uses the HTML5 canvas element and is accessed using Document Object Model interfaces. Automatic memory management is provided as part of the JavaScript language.... Renders of GPU, which muss support shader rendering" (Wikipedia)
+It is based on Canvas 3D, which was developed at Mozilla \cite{Mozilla2007}.
+"WebGL is a context of the canvas HTML element that provides a 3D computer graphics API without the use of plug-ins." (Wikipedia)
 
+% Insert Table: WebGL support in major web browsers (see \cite{Golubovic2011}).
+\subsubsection{Desktop WebGL}
 
+% TODO: Make table of mobile web browser support for WebGL, see \cite{Golubovic2011})
 \subsubsection{Mobile WebGL}
 Although support for WebGL is available on the desktop computers within all major browsers WebGL (FireFox 4+, Safari 5.1+, Chrome 10+, Opera 12+), except of Microsoft's Internet Explorer \cite{Golubovic2011}, browsers on mobile devices supporting WebGL are still very rare.
 
@@ -133,6 +140,7 @@ Apple has added WebGL capabilities to iOS with iOS 4.2 \cite{deVries2011, iAdDoc
 As the desktop version of InternetExplorer does not support WebGL \cite{Golubovic2011} and Microsoft is considering WebGL "harmful" \cite{microsoftWebGLHarmful} we probably wont see WebGL support on Windows Phone 7 in the near future. 
 
 With Firefox 4 WebGL compatible browsers are available on Android. % TODO: needs citation
+
 
 %\subsubsection{Concerns}
 % http://news.cnet.com/8301-30685_3-20071726-264/microsoft-declares-webgl-harmful-to-security/
@@ -143,21 +151,39 @@ With Firefox 4 WebGL compatible browsers are available on Android. % TODO: needs
 
 \subsubsection{Status Quo}
 
+% TODO: Is there a comprehensive set of evaluation criteria in the literature?
 \subsubsection{Evaluation criteria}
+In the literature, WebGL implementations on mobile devices have been technically evaluated using various methods and range from checking support of official WebGL desktop browser examples to typed array conformance tests to performance tests \cite{Golubovic2011}. 
 
+% TODO: Paraphrase
 \subsection{Augmented Reality}
+% "Augmented Reality (AR) has been defined broadly as combining real and computer-generated digital information into the user’s view of the physical and interactive real world in such a way that they appear as one environment, thus providing a bridge between digital information and the physical world" (\cite{Hoellerer2004,Klopfer2007,Vallino1998,Wellner1993} via \cite{Olsson2011b}). 
+
+Application areas of AR can be as broad as ranging from health care \cite{Lui2011} to education \cite{Mannuss2011} to tourism \cite{Mulloni2011}. The topic has gained momentum thanks to the rise in smartphone usage.
+
+% "MAR services were expected to empower people with novel context- sensitive and proactive functionalities, make their activities more efficient, raise awareness of the information related to their surroundings with a very intuitive interface, and provide personally and contextually relevant information that is reliable and up-to-date. Additionally, expectations of offering stimulating and pleasant experiences, such as playfulness, inspiration, liveliness, captivation, and surprise were identified" \cite{Olsson2011b}.
+
+% "Scenarios demonstrating pragmatic relevance were valued more highly than pleasure-oriented scenarios. […] AR was seen to make possible novel interaction possibilities and provide information that was not so easily accessible before.[…] fears of information flood, users’ loss of autonomy, and virtual experiences and information replacing the real were highlighted as negative aspects." \cite{OlssonU}
 
 \subsubsection{History}
 
 \subsubsection{Categories}
+AR applications can be categorized in two classes, \textit{AR browsers} and \textit{image recognition-based AR applications} \cite{Olsson2011a}.
 
 \subsubsection{Native apps and web applications}
 
 \subsubsection{WebGL usage}
 
 \subsubsection{Evaluation criteria}
+User-oriented issues critical for AR evolution and adoption \cite{Olsson2011b}. "AR research still lacks evaluation methods" \cite{Gandy2010} [12]. Metrics are still very abstract \cite{Olsson2011a}. Obstacles for evaluation the usability of mixed reality systems ("lack of, for example, a common testing platforms and benchmarks")\cite{Bach2004}.
+Thus, low user evaluation rates in AR research, though, many evaluate only early tech demos (cf. \cite{Duenster2008}). Some evaluation oriented towards user experience \cite{Bach2004}.
 
+\subsubsection{Impact on Human information behavior }
+Human behavior towards information is influenced by new technologies. recommendation agents - reducing the consumer’s information overload and search complexity \cite{Kowatch2010}. acquiring product information in in-store settings has often been linked to consumer decision making and information processing \cite{Karpischek2010,Kowatch2010,Xiao2007}. social aspects of mobile image recognition - attaching digital storytelling to physical products - affective influence \cite{Barthel2010}, e.g. trust, engage consumers to communicate and receive information about products \cite{Karpischek2010}
+
+% TODO Paraphrase
 \subsection{UI and UX Research}
+"User experience (UX) is regarded as a holistic concept describing the subjective experience resulting from the interaction with a technological product or service. Both instrumental (e.g. utility, usability, and other pragmatic elements) and non- instrumental (e.g. pleasure, appeal, aesthetics, and other hedonic elements) elements are covered in the UX literature \cite{Hassenzahl2006}. A recent ISO standard \cite{FDIS2009} defines UX holistically as “a person's perceptions and responses that result from the use or anticipated use of a product, system or service.” Recently, pleasurable user experience has become the principal goal in the design of novel interactive systems. Hence, the emphasis on UX has moved the design focus from removing usability and functionality problems or other negative factors to offering possibilities for positive and satisfying experiences that exceed the user’s expectations."
 
 
 
