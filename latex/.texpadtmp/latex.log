@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2010.2.12)  12 MAR 2012 12:28
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2010.2.12)  21 MAR 2012 22:24
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -211,12 +211,6 @@ LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <14> not available
 (Font)              Font shape `OT1/phv/m/sl' tried instead on input line 96.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 96.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 96.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 96.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 96.
 LaTeX Font Info:    Calculating math sizes for size <14> on input line 96.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <14> on input line 96.
@@ -229,6 +223,12 @@ LaTeX Font Info:    Try loading font information for U+pzd on input line 96.
 (/usr/local/texlive/2009/texmf-dist/tex/latex/psnfss/upzd.fd
 File: upzd.fd 2001/06/04 font definitions for U/pzd.
 )
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 96.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 96.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 96.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 102.
 LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <14> not available
@@ -257,23 +257,62 @@ Underfull \hbox (badness 1436) in paragraph at lines 117--118
 ]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 123.
-LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 125.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 151.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 151.
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
-$\OT1/ppl/m/n/12 http : / / www . phdcomics . com / comics / archive .
+Underfull \hbox (badness 5403) in paragraph at lines 124--125
+\OT1/ppl/m/n/12 In 2009, the \OT1/ppl/m/it/12 We-bGL Work-ing Group \OT1/ppl/m/
+n/12 was
  []
 
 
-Overfull \hbox (4.26031pt too wide) in paragraph at lines 171--171
+Underfull \hbox (badness 3168) in paragraph at lines 124--125
+\OT1/ppl/m/n/12 accelerated graph-ics to the in-ter-net" [[]].
+ []
+
+
+Underfull \hbox (badness 2042) in paragraph at lines 124--125
+\OT1/ppl/m/n/12 We-bGL is a soft-ware li-brary and ex-tends
+ []
+
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 126.
+
+Underfull \hbox (badness 2582) in paragraph at lines 136--137
+\OT1/ppl/m/n/12 Although sup-port for We-bGL is avail-able
+ []
+
+
+Underfull \hbox (badness 1983) in paragraph at lines 136--137
+\OT1/ppl/m/n/12 on the desk-top com-put-ers within all ma-
+ []
+
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ô in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ô in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ô in font pplr7t!
+[2]
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ô in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ú in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ù in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ô in font pplr7t!
+
+Overfull \hbox (4.26031pt too wide) in paragraph at lines 212--212
 [][][][][][][] 
  []
 
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 171.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 212.
 
 (/usr/local/texlive/2009/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
@@ -294,30 +333,93 @@ Overfull \hbox (164.58707pt too wide) in paragraph at lines 98--102
 ]adobe-[]to-[]more-[]aggressively-[]contribute-[]to-[]html5 .
  []
 
-) [2] (/Users/matthias/github/local/teleseminar/latex/.texpadtmp/latex.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--109
+[]\OT1/ppl/m/n/9 (2012, March). [On-line]. Avail-able:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--109
+\OT1/ppl/m/n/9 http : / / www . khronos . org / news / press / releases /
+ []
+
+
+Overfull \hbox (44.02942pt too wide) in paragraph at lines 105--109
+\OT1/ppl/m/n/9 khronos-[]webgl-[]initiative-[]hardware-[]accelerated-[]3d-[]gra
+phics-[]internet$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--116
+[]\OT1/ppl/m/n/9 (2012, March). [On-line]. Avail-able:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--116
+\OT1/ppl/m/n/9 http : / / www . khronos . org / news / press / releases /
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 131--135
+\OT1/ppl/m/n/9 / / developer . apple . com / library / iad / documentation /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--135
+\OT1/ppl/m/n/9 UserExperience / Conceptual / iAd[]Design[]Guide / iAd[]
+ []
+
+
+Underfull \hbox (badness 4072) in paragraph at lines 138--142
+[]\OT1/ppl/m/n/9 (2011, June). [On-line]. Avail-able: $https :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--142
+\OT1/ppl/m/n/9 / / www . khronos . org / webgl / public-[]mailing-[]list /
+ []
+
+
+Underfull \hbox (badness 3471) in paragraph at lines 151--155
+[]\OT1/ppl/m/n/9 (2012, March). [On-line]. Avail-able: $http :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--155
+\OT1/ppl/m/n/9 / / blogs . technet . com / b / srd / archive / 2011 / 06 / 16 /
+
+ []
+
+
+Underfull \hbox (badness 4048) in paragraph at lines 204--207
+[]\OT1/ppl/m/n/9 I. or-ga-ni-za-tion for stan-dard-iza-tion, ``Iso fdis 9241-
+ []
+
+) [4
+
+] (/Users/matthias/github/local/teleseminar/latex/.texpadtmp/latex.aux) ) 
 Here is how much of TeX's memory you used:
- 3835 strings out of 493848
- 61374 string characters out of 3149207
- 130775 words of memory out of 3000000
- 7102 multiletter control sequences out of 15000+200000
- 44563 words of font info for 93 fonts, out of 3000000 for 9000
+ 3845 strings out of 493848
+ 61528 string characters out of 3149207
+ 133775 words of memory out of 3000000
+ 7114 multiletter control sequences out of 15000+200000
+ 43394 words of font info for 88 fonts, out of 3000000 for 9000
  717 hyphenation exceptions out of 8191
- 36i,7n,38p,802b,907s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/
-usr/local/texlive/2009/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texli
-ve/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive
-/2009/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2009/te
-xmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2009/texmf-dis
-t/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2009/texmf-dist/fonts
-/type1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1
-/urw/palatino/uplb8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/urw/pa
-latino/uplr8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/urw/palatino/
-uplri8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/urw/zapfding/uzdr.p
-fb>
+ 36i,7n,38p,971b,907s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/
+local/texlive/2009/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2
+009/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/200
+9/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2009/texmf-
+dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2009/texmf-dist/fo
+nts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/typ
+e1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/urw
+/palatino/uplb8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/urw/palati
+no/uplr8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/urw/palatino/uplr
+i8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
 Output written on /Users/matthias/github/local/teleseminar/latex/.texpadtmp/lat
-ex.pdf (2 pages, 113604 bytes).
+ex.pdf (4 pages, 123188 bytes).
 PDF statistics:
- 46 PDF objects out of 1000 (max. 8388607)
+ 52 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

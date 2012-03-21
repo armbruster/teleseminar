@@ -100,4 +100,109 @@ S.~Wellman. (2012, March). [Online]. Available:
 ing-and-mobile-apps-adobe-to-more-aggressively-contribute-to-html5.html}
 \BIBentrySTDinterwordspacing
 
+\bibitem{Khronos2009}
+\BIBentryALTinterwordspacing
+(2012, March). [Online]. Available:
+  \url{http://www.khronos.org/news/press/releases/khronos-webgl-initiative-har%
+dware-accelerated-3d-graphics-internet}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Khronos2011}
+\BIBentryALTinterwordspacing
+(2012, March). [Online]. Available:
+  \url{http://www.khronos.org/news/press/releases/khronos-releases-final-webgl%
+-1.0-specification}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Mozilla2007}
+\BIBentryALTinterwordspacing
+(2012, March). [Online]. Available:
+  \url{http://blog.vlad1.com/2007/11/26/canvas-3d-gl-power-web-style/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{deVries2011}
+\BIBentryALTinterwordspacing
+(2011, November). [Online]. Available:
+  \url{http://atnan.com/blog/2011/11/03/enabling-and-using-webgl-on-ios/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{iAdDocu}
+\BIBentryALTinterwordspacing
+(2011, November). [Online]. Available:
+  \url{https://developer.apple.com/library/iad/documentation/UserExperience/Co%
+nceptual/iAd_Design_Guide/iAd_Design_Guide.pdf}
+\BIBentrySTDinterwordspacing
+
+\bibitem{cmarrin2011}
+\BIBentryALTinterwordspacing
+(2011, June). [Online]. Available:
+  \url{https://www.khronos.org/webgl/public-mailing-list/archives/1106/msg0003%
+6.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{appstorereviewguidelines}
+\BIBentryALTinterwordspacing
+(2012). [Online]. Available:
+  \url{https://developer.apple.com/appstore/resources/approval/guidelines.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{microsoftWebGLHarmful}
+\BIBentryALTinterwordspacing
+(2012, March). [Online]. Available:
+  \url{http://blogs.technet.com/b/srd/archive/2011/06/16/webgl-considered-harm%
+ful.aspx}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Olsson2011a}
+T.~Olsson and M.~Salo, ``Online user survey on current mobile augmented reality
+  applications,'' in \emph{10th IEEE International Symposium on Mixed and
+  Augmented Reality (ISMAR)}, October 2011, pp. 75--84.
+
+\bibitem{Gandy2010}
+M.~G. et~al., ``Experience with an ar evaluation test bed: presence,
+  performance, and physiological measurement,'' in \emph{ISMAR 2010}, 2010, pp.
+  127--136.
+
+\bibitem{Bach2004}
+C.~Bach and D.~L. Scapin, ``Obstacles and perspectives for evaluating mixed
+  reality systems usability,'' in \emph{Proceedings of the IUI-CADUI Workshop
+  on Exploring the Design and Engineering of Mixed Reality Systems (MIXER)},
+  2004.
+
+\bibitem{Duenster2008}
+A.~D{\"u}nster, R.~Grasset, and M.~Billinghurst, ``A survey of evaluation
+  techniques used in augmented reality studies,'' in \emph{Proc. ACM SIGGRAPH
+  2008}, 2008.
+
+\bibitem{Kowatch2010}
+T.~Kowatch and W.~Maass, ``In-store consumer behavior: how mobile
+  recommendation agents influence usage intentions, product purchases, and
+  store preferences,'' \emph{Computers in Human Behavior}, vol.~26, no.~4, pp.
+  697--704, July 2010.
+
+\bibitem{Karpischek2010}
+S.~Karpischek and F.~Michahelles, ``my2cents - digitizing consumer opinions and
+  comments about retail products,'' in \emph{Proc. of Internet of Things
+  (IOT)}, 2010.
+
+\bibitem{Xiao2007}
+B.~Xiao and I.~Benbasat, ``E-commerce product recommendation engines: use,
+  characteristics, and impact,'' \emph{Management of Information Systems
+  Quarterly}, vol.~31, no.~1, 2007.
+
+\bibitem{Barthel2010}
+R.~Barthel, A.~Hudson-Smith, M.~Jode, and B.~Blundell, ``Tales of things. the
+  internet of 'old' things: collecting stories of objects, places and spaces,''
+  in \emph{Proc. of the Urban Internet of Things}, 2010.
+
+\bibitem{Hassenzahl2006}
+M.~Hassenzahl and N.~Tractinsky, ``User experience - a research agenda,''
+  \emph{Behaviour and Information Technology}, vol.~25, no.~2, pp. 91--97,
+  2006.
+
+\bibitem{FDIS2009}
+I.~organization~for standardization, ``Iso fdis 9241-2010:2009. ergonomics of
+  human system interaction - part 210: Human-centred design for interactive
+  systems (formerly known as 13407).''
+
 \end{thebibliography}
