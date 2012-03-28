@@ -65,13 +65,13 @@ function addRoomEnvironment(scene) {
     var scale = 100;
     
     // Load BLACKBOARD
-/*    loader.load( "models/blackboard.js", function(geo) {
-	var meshBlackboard = new THREE.mesh(geo, matBlackboard);
+    loader.load( "models/blackboard.js", function(geo) {
+	var meshBlackboard = new THREE.Mesh(geo, matBlackboard);
 	meshBlackboard.scale.set(scale, scale, scale);
 	meshBlackboard.position.set(0, 0, -200);
 	scene.add(meshBlackboard);
     });
-    */
+    
     // Load DESK #1
     loader.load( "models/desk.js", function (geo) {
 	var meshDesk = new THREE.Mesh(geo, matDesk);
