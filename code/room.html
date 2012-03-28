@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>First webgl/three.js test</title>
+	<script type="text/javascript" src="js/Three.js"></script>
+	<script type="text/javascript">
+	window.onload = function () {
+
+		var camera, scene, renderer,
+		geometry, mesh, importMesh;
+		
+		var meshDesk = new Array();	
+		var adac_reverse,  adac_nrAdded;
+
+		init();
+		animate();
+
+
+		function init() {
+			adac_reverse = 1;
+			adac_nrAdded = 0;
+		
+			scene = new THREE.Scene();
+
+			camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 10000 );
+			camera.position.z = 800;
+			camera.position.y = 200;
+			camera.rotation.x = 50;
+			scene.add( camera );
+	
+			
+			var material = new THREE.MeshLambertMaterial( { color: 0xFF0000 } );
+
+			//addDeskAndChair(scene, 2);
+			addRoomEnvironment(scene);
+			
+			// Just a reference cube to see how large the imported models are.
+			var ref_cube = new THREE.Mesh(
+								new THREE.CubeGeometry( 50, 50, 50 ),
+								new THREE.MeshLambertMaterial( { color: 0xFF0000 } )
+							);
+			scene.add( ref_cube );
+			
+			
+			renderer = new THREE.CanvasRenderer();
+			renderer.setSize( window.innerWidth, window.innerHeight );
+			
+			// create a point light
+			var pointLight = new THREE.PointLight(0xFFFFFF);
+			pointLight.position.set(-100, 20, 500);		
+			scene.add(pointLight);
+
+			document.body.appendChild( renderer.domElement );
+
+		}
+	
+		
+		function animate() {
+			requestAnimationFrame( animate );
+			renderer.render( scene, camera );
+		}
+
+		function render() {
+			renderer.render( scene, camera );
+		}
+	};
+	</script>
+
+	<script type="text/javascript" src="js/addRoom.js"></script>
+	</head>
+	<body>
+		<div id="debug">
+		</div>
+	</body>
+</html>
