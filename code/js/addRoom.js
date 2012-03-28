@@ -63,7 +63,6 @@ function addRoomEnvironment(scene) {
     var coordX = 0, coordY = 0, coordZ = 0;
     // Adjust the scale if the objects are too large or too small compared to the room.
     var scale = 100;
-    
     // Load BLACKBOARD
     loader.load( "models/blackboard.js", function(geo) {
 	var meshBlackboard = new THREE.Mesh(geo, matBlackboard);
