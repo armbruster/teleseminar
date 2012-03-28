@@ -85,6 +85,10 @@ UIWebView* webView;
 	}
 }
 
+- (IBAction)reload {
+	[webView reload];
+}
+
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
 	[searchBar resignFirstResponder];
 

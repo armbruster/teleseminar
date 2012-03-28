@@ -11,4 +11,6 @@
 	IBOutlet UIView* theView;
 }
 
+- (IBAction)reload;
+
 @end
