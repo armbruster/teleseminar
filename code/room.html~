@@ -50,7 +50,7 @@
 			var pointLight = new THREE.PointLight(0xFFFFFF);
 			pointLight.position.set(-100, 20, 500);		
 			scene.add(pointLight);
-	               // document.getElementById('debug').innerHTML = "TEST";
+
 			document.body.appendChild( renderer.domElement );
 
 		}

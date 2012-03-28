@@ -53,25 +53,17 @@ function addDeskAndChair(scene, nr_of_desks) {
 /** Manually add the room environment until addDeskAndChair is fixed. */
 function addRoomEnvironment(scene) {
     var loader = new THREE.JSONLoader();
-    // The material for the blackboard.
-    var matBlackboard = new THREE.MeshLambertMaterial( { color: 0x000000 });
     // The material for the desk.
     var matDesk = new THREE.MeshLambertMaterial( { color: 0xFFFFFF });
     // The material for the chair.
-    var matChair = new THREE.MeshLambertMaterial( { color: 0xFF0000 });
+    var matChair= new THREE.MeshLambertMaterial( { color: 0xFF0000 });
     // The base coordinates
     var coordX = 0, coordY = 0, coordZ = 0;
     // Adjust the scale if the objects are too large or too small compared to the room.
     var scale = 100;
     
-    // Load BLACKBOARD
-/*    loader.load( "models/blackboard.js", function(geo) {
-	var meshBlackboard = new THREE.mesh(geo, matBlackboard);
-	meshBlackboard.scale.set(scale, scale, scale);
-	meshBlackboard.position.set(0, 0, -200);
-	scene.add(meshBlackboard);
-    });
-    */
+    
+    
     // Load DESK #1
     loader.load( "models/desk.js", function (geo) {
 	var meshDesk = new THREE.Mesh(geo, matDesk);
