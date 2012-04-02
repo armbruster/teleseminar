@@ -10,12 +10,13 @@
 	<script type="text/javascript">
 	window.onload = function () {
 
-		var camera, scene, renderer,
+		var camera, scene, renderer, projector,
 		geometry, mesh, importMesh;
 		
 		var meshDesk = new Array();	
 		var adac_reverse,  adac_nrAdded;
-
+		// a list with all the interactable objects.
+		var objects = [];
 		// room architecture
 		var roomHeight, roomWidth;
 		var floor, floorMaterial;
@@ -46,8 +47,9 @@
 			scene = new THREE.Scene();
 
 			camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 10000 );
-			camera.position.z = 800;
+			camera.position.z = 900;
 			camera.position.y = 200;
+			camera.position.x = 400;
 			camera.rotation.x = 50;
 			scene.add( camera );
 	
@@ -55,13 +57,16 @@
 			var material = new THREE.MeshLambertMaterial( { color: 0xFF0000 } );
 
 			//addDeskAndChair(scene, 2);
-			addRoomEnvironment(scene);
+addRoomEnvironment(scene, objects, roomWidth);			
 			
 			// Just a reference cube to see how large the imported models are.
 			var ref_cube = new THREE.Mesh(
 								new THREE.CubeGeometry( 50, 50, 50 ),
-								new THREE.MeshLambertMaterial( { color: 0xFF0000 } )
+								new THREE.MeshBasicMaterial( { color: 0xFF0000 , opacity: 0.5} )								
 							);
+			// Add the reference cube as an interactable object. 
+			objects.push(ref_cube);
+			ref_cube.position.set(roomWidth/2, 0, roomWidth/2);
 			scene.add( ref_cube );
 
 			ref_cube.position.x=roomWidth / 2;
@@ -153,6 +158,9 @@
 	               // document.getElementById('debug').innerHTML = "TEST";
 			document.body.appendChild( renderer.domElement );
 
+			projector = new THREE.Projector();
+			// Add an event for if a mouse button is pressed.
+			document.addEventListener( 'mousedown', onDocumentMouseDown, false );
 		}
 	
 		
@@ -160,6 +168,24 @@
 			requestAnimationFrame( animate );
 			render();
 		}
+		// Pressing the mouse button
+		function onDocumentMouseDown(event) {
+			event.preventDefault();
+			
+			var vector = new THREE.Vector3(( event.clientX / window.innerWidth) * 2 - 1, - (event.clientY / window.innerHeight) * 2 +1 , 0.5 );
+			projector.unprojectVector(vector, camera);
+			
+			var ray = new THREE.Ray( camera.position, vector.subSelf(camera.position).normalize() );
+			var intersects = ray.intersectObjects(objects);
+			
+			if (intersects.length > 0) {
+				if (intersects[0].object == objects[1]) {
+					document.getElementById('debug').innerHTML = "Will change blackboard to video...";
+				}
+				intersects[0].object.material.color.setHex(0x0000FF);
+			}
+		}
+	
 
 		function onKeyDown(a) { //pressing buttion
 		       var b = a.keyCode;

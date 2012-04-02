@@ -51,10 +51,10 @@ function addDeskAndChair(scene, nr_of_desks) {
 } // end addDeskAndChair()
 
 /** Manually add the room environment until addDeskAndChair is fixed. */
-function addRoomEnvironment(scene) {
+function addRoomEnvironment(scene, objects, roomWidth) {
     var loader = new THREE.JSONLoader();
     // The material for the blackboard.
-    var matBlackboard = new THREE.MeshLambertMaterial( { color: 0x000000 });
+    var matBlackboard = new THREE.MeshBasicMaterial( { color: 0x000000 });
     // The material for the desk.
     var matDesk = new THREE.MeshLambertMaterial( { color: 0xFFFFFF });
     // The material for the chair.
@@ -67,15 +67,16 @@ function addRoomEnvironment(scene) {
     loader.load( "models/blackboard.js", function(geo) {
 	var meshBlackboard = new THREE.Mesh(geo, matBlackboard);
 	meshBlackboard.scale.set(scale, scale, scale);
-	meshBlackboard.position.set(0, 0, -200);
+	meshBlackboard.position.set((roomWidth / 2) + 50, 0, 300);
 	scene.add(meshBlackboard);
+	objects.push(meshBlackboard);
     });
     
     // Load DESK #1
     loader.load( "models/desk.js", function (geo) {
 	var meshDesk = new THREE.Mesh(geo, matDesk);
 	meshDesk.scale.set(scale, scale, scale);
-	meshDesk.position.set(200, 0, 0);
+	meshDesk.position.set((roomWidth / 2) + 200, 0, 200);
 	//group.addChild(meshDesk);		
 	scene.add(meshDesk);
     });
@@ -83,14 +84,14 @@ function addRoomEnvironment(scene) {
     loader.load( "models/chair.js", function (geo) {
 	var meshChair = new THREE.Mesh(geo, matChair);
 	meshChair.scale.set(scale, scale, scale);
-	meshChair.position.set(200, 0, 0);
+	meshChair.position.set((roomWidth / 2) + 200, 0, 200);
 	//group.addChild(meshChair);
 	scene.add(meshChair);
     });
     loader.load( "models/chair.js", function (geo) {
 	var meshChair = new THREE.Mesh(geo, matChair);
 	meshChair.scale.set(scale, scale, scale);
-	meshChair.position.set(100, 0, 0);
+	meshChair.position.set((roomWidth / 2) + 100, 0, 200);
 	//group.addChild(meshChair);
 	scene.add(meshChair);
     });			
@@ -100,7 +101,7 @@ function addRoomEnvironment(scene) {
     loader.load( "models/desk.js", function (geo) {
 	var meshDesk = new THREE.Mesh(geo, matDesk);
 	meshDesk.scale.set(scale, scale, scale);
-	meshDesk.position.set(-200, 0, 0);
+	meshDesk.position.set((roomWidth / 2) - 200, 0, 200);
 	//group.addChild(meshDesk);		
 	scene.add(meshDesk);
     });
@@ -108,14 +109,14 @@ function addRoomEnvironment(scene) {
     loader.load( "models/chair.js", function (geo) {
 	var meshChair = new THREE.Mesh(geo, matChair);
 	meshChair.scale.set(scale, scale, scale);
-	meshChair.position.set(-300, 0, 0);
+	meshChair.position.set((roomWidth / 2) - 300, 0, 200);
 	//group.addChild(meshChair);
 	scene.add(meshChair);
     });
     loader.load( "models/chair.js", function (geo) {
 	var meshChair = new THREE.Mesh(geo, matChair);
 	meshChair.scale.set(scale, scale, scale);
-	meshChair.position.set(-200, 0, 0);
+	meshChair.position.set((roomWidth / 2) - 200, 0, 200);
 	//group.addChild(meshChair);
 	scene.add(meshChair);
     });			
@@ -125,7 +126,7 @@ function addRoomEnvironment(scene) {
     loader.load( "models/desk.js", function (geo) {
 	var meshDesk = new THREE.Mesh(geo, matDesk);
 	meshDesk.scale.set(scale, scale, scale);
-	meshDesk.position.set(200, 0, 200);
+	meshDesk.position.set((roomWidth / 2) + 200, 0, 400);
 	//group.addChild(meshDesk);		
 	scene.add(meshDesk);
     });
@@ -133,14 +134,14 @@ function addRoomEnvironment(scene) {
     loader.load( "models/chair.js", function (geo) {
 	var meshChair = new THREE.Mesh(geo, matChair);
 	meshChair.scale.set(scale, scale, scale);
-	meshChair.position.set(200, 0, 200);
+	meshChair.position.set((roomWidth / 2) + 200, 0, 400);
 	//group.addChild(meshChair);
 	scene.add(meshChair);
     });
     loader.load( "models/chair.js", function (geo) {
 	var meshChair = new THREE.Mesh(geo, matChair);
 	meshChair.scale.set(scale, scale, scale);
-	meshChair.position.set(100, 0, 200);
+	meshChair.position.set((roomWidth / 2) + 100, 0, 400);
 	//group.addChild(meshChair);
 	scene.add(meshChair);
     });			
@@ -150,7 +151,7 @@ function addRoomEnvironment(scene) {
     loader.load( "models/desk.js", function (geo) {
 	var meshDesk = new THREE.Mesh(geo, matDesk);
 	meshDesk.scale.set(scale, scale, scale);
-	meshDesk.position.set(-200, 0, 200);
+	meshDesk.position.set((roomWidth / 2) - 200, 0, 400);
 	//group.addChild(meshDesk);		
 	scene.add(meshDesk);
     });
@@ -158,14 +159,14 @@ function addRoomEnvironment(scene) {
     loader.load( "models/chair.js", function (geo) {
 	var meshChair = new THREE.Mesh(geo, matChair);
 	meshChair.scale.set(scale, scale, scale);
-	meshChair.position.set(-300, 0, 200);
+	meshChair.position.set((roomWidth / 2) - 300, 0, 400);
 	//group.addChild(meshChair);
 	scene.add(meshChair);
     });
     loader.load( "models/chair.js", function (geo) {
 	var meshChair = new THREE.Mesh(geo, matChair);
 	meshChair.scale.set(scale, scale, scale);
-	meshChair.position.set(-200, 0, 200);
+	meshChair.position.set((roomWidth / 2) - 200, 0, 400);
 	//group.addChild(meshChair);
 	scene.add(meshChair);
     });					
