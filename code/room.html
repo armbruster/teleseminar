@@ -55,13 +55,17 @@
 							);
 			scene.add( ref_cube );
 
+			ref_cube.position.x=0;
+			ref_cube.position.y=25;
+			ref_cube.position.z=0;
+
 			// floor
 			planeMaterial = new THREE.MeshLambertMaterial({ 
 			map: THREE.ImageUtils.loadTexture("textures/floor-512.jpg")
 			});
         	plane = new THREE.Mesh( new THREE.PlaneGeometry( 1500, 1500, 4, 4 ), planeMaterial );
  	       	plane.rotation.x = - 90 * ( Math.PI / 180 );
-    	   	plane.position.y = -250;
+    	   	plane.position.y = 0;
        		plane.position.z = 0;
 	        plane.overdraw = true;	
      	   	scene.add( plane );
