@@ -16,8 +16,14 @@
 		var meshDesk = new Array();	
 		var adac_reverse,  adac_nrAdded;
 
-		// floor
-		var plane, planeMaterial;
+		// room architecture
+		var roomHeight, roomWidth;
+		var floor, floorMaterial;
+		var roof, roofMaterial;
+		var frontWall, frontWallMaterial;
+		var backWall, backWallMaterial;
+		var leftWall, leftWallMaterial;
+		var rightWall, rightWallMaterial;
 
 		// keyboard movement
 		var up = false;
@@ -33,6 +39,9 @@
 		function init() {
 			adac_reverse = 1;
 			adac_nrAdded = 0;
+
+			roomWidth = 1000;
+			roomHeight = 500;
 		
 			scene = new THREE.Scene();
 
@@ -55,20 +64,79 @@
 							);
 			scene.add( ref_cube );
 
-			ref_cube.position.x=0;
+			ref_cube.position.x=roomWidth / 2;
 			ref_cube.position.y=25;
-			ref_cube.position.z=0;
+			ref_cube.position.z=roomWidth / 2;
 
 			// floor
-			planeMaterial = new THREE.MeshLambertMaterial({ 
+			floorMaterial = new THREE.MeshLambertMaterial({ 
 			map: THREE.ImageUtils.loadTexture("textures/floor-512.jpg")
 			});
-        	plane = new THREE.Mesh( new THREE.PlaneGeometry( 1500, 1500, 4, 4 ), planeMaterial );
- 	       	plane.rotation.x = - 90 * ( Math.PI / 180 );
-    	   	plane.position.y = 0;
-       		plane.position.z = 0;
-	        plane.overdraw = true;	
-     	   	scene.add( plane );
+        	floor = new THREE.Mesh( new THREE.PlaneGeometry( roomWidth, roomWidth, 4, 4 ), floorMaterial );
+ 	       	floor.rotation.x = - 90 * ( Math.PI / 180 );
+    	   	floor.position.x = roomWidth / 2;
+    	   	floor.position.y = 0;
+       		floor.position.z = roomWidth / 2;
+	        floor.overdraw = true;	
+     	   	scene.add( floor );
+
+     	   	roofMaterial = new THREE.MeshLambertMaterial({ 
+			map: THREE.ImageUtils.loadTexture("textures/floor-512.jpg")
+			});
+        	roof = new THREE.Mesh( new THREE.PlaneGeometry( roomWidth, roomWidth, 4, 4 ), roofMaterial );
+ 	       	roof.rotation.x = - 90 * ( Math.PI / 180 );
+    	   	roof.position.x = roomWidth / 2;
+    	   	roof.position.y = roomHeight;
+       		roof.position.z = roomWidth / 2;
+	        roof.overdraw = true;	
+     	   	scene.add( roof );
+
+     	   	frontWallMaterial = new THREE.MeshLambertMaterial({ 
+			map: THREE.ImageUtils.loadTexture("textures/wall-512.jpg")
+			});
+        	frontWall = new THREE.Mesh( new THREE.PlaneGeometry( roomWidth, roomHeight, 4, 4 ), frontWallMaterial );
+ 	       	frontWall.rotation.x = 0 * ( Math.PI / 180 );
+    	   	frontWall.position.x = roomWidth / 2;
+			frontWall.position.y = roomHeight / 2;
+       		frontWall.position.z = 0;
+	        frontWall.overdraw = true;	
+     	   	scene.add( frontWall );
+
+     	   	backWallMaterial = new THREE.MeshLambertMaterial({ 
+			map: THREE.ImageUtils.loadTexture("textures/wall-512.jpg")
+			});
+        	backWall = new THREE.Mesh( new THREE.PlaneGeometry( roomWidth, roomHeight, 4, 4 ), backWallMaterial );
+ 	       	backWall.rotation.x = 0 * ( Math.PI / 180 );
+    	   	backWall.position.x = roomWidth / 2;
+			backWall.position.y = roomHeight / 2;
+       		backWall.position.z = roomWidth;
+	        backWall.overdraw = true;	
+     	   	scene.add( backWall );
+
+     	   	leftWallMaterial = new THREE.MeshLambertMaterial({ 
+			map: THREE.ImageUtils.loadTexture("textures/wall-512.jpg")
+			});
+        	leftWall = new THREE.Mesh( new THREE.PlaneGeometry( roomWidth, roomHeight, 4, 4 ), leftWallMaterial );
+ 	       	leftWall.rotation.x = 0 * ( Math.PI / 180 );
+ 	       	leftWall.rotation.y = 90 * ( Math.PI / 180 );
+    	   	leftWall.position.x = 0;
+			leftWall.position.y = roomHeight / 2;
+       		leftWall.position.z = roomWidth / 2;
+	        leftWall.overdraw = true;	
+     	   	scene.add( leftWall );
+
+     	   	rightWallMaterial = new THREE.MeshLambertMaterial({ 
+			map: THREE.ImageUtils.loadTexture("textures/wall-512.jpg")
+			});
+        	rightWall = new THREE.Mesh( new THREE.PlaneGeometry( roomWidth, roomHeight, 4, 4 ), rightWallMaterial );
+ 	       	rightWall.rotation.x = 0 * ( Math.PI / 180 );
+ 	       	rightWall.rotation.y = 90 * ( Math.PI / 180 );
+ 	       	rightWall.rotation.y = -90 * ( Math.PI / 180 );
+    	   	rightWall.position.x = roomWidth;
+			rightWall.position.y = roomHeight / 2;
+       		rightWall.position.z = roomWidth / 2;
+	        rightWall.overdraw = true;	
+     	   	scene.add( rightWall );
 
      	   	document.addEventListener("keydown", onKeyDown, false);
         	document.addEventListener("keyup", onKeyUp, false);
@@ -80,7 +148,7 @@
 			
 			// create a point light
 			var pointLight = new THREE.PointLight(0xFFFFFF);
-			pointLight.position.set(-100, 20, 500);		
+			pointLight.position.set(roomWidth / 2, roomHeight, roomWidth / 2); //middle of the room		
 			scene.add(pointLight);
 	               // document.getElementById('debug').innerHTML = "TEST";
 			document.body.appendChild( renderer.domElement );
