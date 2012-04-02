@@ -82,14 +82,14 @@
         sphere.position.z=0;*/
 			
 			
-			renderer = new THREE.CanvasRenderer();
-			renderer.setSize( window.innerWidth, window.innerHeight );
+//			renderer = new THREE.CanvasRenderer();
+//			renderer.setSize( window.innerWidth, window.innerHeight );
 
-/*
+
 			renderer = new THREE.WebGLRenderer(  );
-      		renderer.setSize( 1000,500 );
+      		renderer.setSize( window.innerWidth,window.innerHeight );
       		document.body.appendChild( renderer.domElement );
-*/			
+			
 			// create a point light
 			var pointLight = new THREE.PointLight(0xFFFFFF);
 			pointLight.position.set(-100, 20, 500);		
