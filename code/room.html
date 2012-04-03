@@ -32,8 +32,6 @@
       		dx = false,
       		dw = false,
       		sp = false;
-  		var touchable = 'createTouch' in document;
-
 
 		init();
 		animate();
@@ -148,12 +146,6 @@ addRoomEnvironment(scene, objects, roomWidth);
      	   	document.addEventListener("keydown", onKeyDown, false);
         	document.addEventListener("keyup", onKeyUp, false);
 
-        	if(touchable) {
-				canvas.addEventListener( 'touchstart', onTouchStart, false );
-				canvas.addEventListener( 'touchmove', onTouchMove, false );
-				canvas.addEventListener( 'touchend', onTouchEnd, false );
-			}
-
 
 			renderer = new THREE.WebGLRenderer(  );
       		renderer.setSize( window.innerWidth,window.innerHeight );
@@ -211,19 +203,6 @@ addRoomEnvironment(scene, objects, roomWidth);
 		       else if (a == 39 || a == 68) dx = false;
 		       else if (a == 32) sp = false;
 		  }
-
-		function onTouchStart(event) {
-			//do stuff
-		}
-
-		function onTouchMove(event) {
- 			// Prevent the browser from doing its default thing (scroll, zoom)
-			event.preventDefault(); 
-		} 
-
-		function onTouchEnd(event) { 
-			//do stuff
-		}
 
 		function render() {
 			
