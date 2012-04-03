@@ -37,27 +37,30 @@
       	var touchable = 'createTouch' in document,
       		touches = []; // array of touch vectors
 
+      	// touch control
+      	var c, canvas;
+      	var touchable = 'createTouch' in document;
+
 		init();
 		animate();
 
 
 		function init() {
 
+			canvas = document.createElement( 'canvas' );
+			c = canvas.getContext( '2d' );
 			adac_reverse = 1;
 			adac_nrAdded = 0;
 
-			//roomWidth = 1000;
-			//roomHeight = 500;
-			roomWidth = window.innerWidth;
-			roomHeight = window.innerHeight;
+			roomWidth = 1000;
+			roomHeight = 500;
 		
 			scene = new THREE.Scene();
 
 			camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 10000 );
 			camera.position.z = 900;
 			camera.position.y = 200;
-			camera.position.x = roomWidth / 2;
-			camera.position.z = roomWidth / 2;
+			camera.position.x = 400;
 			camera.rotation.x = 50;
 			scene.add( camera );
 	
@@ -236,8 +239,6 @@ addRoomEnvironment(scene, objects, roomWidth);
 			// preventing default browser behavior, e.g. scrolling
 			event.preventDefault();
 			touches = e.touches;
-			var currentX = event.targetTouches[0].clientX;
-			var currentY = event.targetTouches[0].clientY;
 		}
 
 		function onTouchEnd( event ) {
@@ -274,6 +275,28 @@ addRoomEnvironment(scene, objects, roomWidth);
 		    else if (dw) { // down
 		      camera.position.z += 20;
 		    }
+
+
+		    if(touchable) {
+
+				for(var i=0; i<touches.length; i++)
+				{
+					var touch = touches[i]; 
+					c.beginPath(); 
+					c.fillStyle = "white";
+					c.fillText("touch id : "+touch.identifier+" x:"+touch.clientX+" y:"+touch.clientY, touch.clientX+30, touch.clientY-30); 
+
+					c.beginPath(); 
+					c.strokeStyle = "cyan";
+					c.lineWidth = "6";
+					c.arc(touch.clientX, touch.clientY, 40, 0, Math.PI*2, true); 
+					c.stroke();
+				}
+			}
+
+
+
+
 		    renderer.render( scene, camera );
 		}
 	};
