@@ -213,19 +213,16 @@ addRoomEnvironment(scene, objects, roomWidth);
 		  }
 
 		function onTouchStart(event) {
-			document.getElementById('debug').innerHTML = "Touch Start...";
 			//do stuff
 		}
 
 		function onTouchMove(event) {
  			// Prevent the browser from doing its default thing (scroll, zoom)
 			event.preventDefault(); 
-			document.getElementById('debug').innerHTML = "Touch Move........";
 		} 
 
 		function onTouchEnd(event) { 
 			//do stuff
-			document.getElementById('debug').innerHTML = "Touch End!";
 		}
 
 		function render() {
