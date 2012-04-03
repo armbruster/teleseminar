@@ -206,9 +206,21 @@ addRoomEnvironment(scene, objects, roomWidth);
 
 		function render() {
 			
-		    if (up && dx) {
+		    if (up && dx) { // up and right
 		      camera.position.x += 10;
 		      camera.position.z -= 10;
+		    }
+		    else if (up && sx) { // up and left
+		      camera.position.x -= 10;
+		      camera.position.z -= 10;
+		    }
+		    else if (dw && sx) { // back and left
+		      camera.position.x -= 10;
+		      camera.position.z += 10;
+		    }
+		    else if (dw && dx) { // back and right
+		      camera.position.x += 10;
+		      camera.position.z += 10;
 		    }
 		    else if (dx){
 		      camera.position.x += 20;
