@@ -3,7 +3,6 @@
 <html>
 <head>
 	<title>First webgl/three.js test</title>
-	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />
 	<script type="text/javascript" src="js/Three.js"></script>
 	<script type="text/javascript" src="js/RequestAnimationFrame.js"></script>
 	 <script src="js/Detector.js"></script>
@@ -34,11 +33,7 @@
       		dw = false,
       		sp = false;
 
-      	var touchable = 'createTouch' in document,
-      		touches = []; // array of touch vectors
-
       	// touch control
-      	var c, canvas;
       	var touchable = 'createTouch' in document;
 
 		init();
@@ -46,9 +41,6 @@
 
 
 		function init() {
-
-			canvas = document.createElement( 'canvas' );
-			c = canvas.getContext( '2d' );
 			adac_reverse = 1;
 			adac_nrAdded = 0;
 
@@ -161,8 +153,6 @@ addRoomEnvironment(scene, objects, roomWidth);
         		canvas.addEventListener( 'touchstart', onTouchStart, false);
         		canvas.addEventListener( 'touchmove', onTouchMove, false);
         		canvas.addEventListener( 'touchend', onTouchEnd, false);
-        		window.onorientationchange = resetCanvas;
-        		window.onresize = resetCanvas;
         	}
 
 
@@ -204,14 +194,6 @@ addRoomEnvironment(scene, objects, roomWidth);
 				intersects[0].object.material.color.setHex(0x0000FF);
 			}
 		}
-
-		function resetCanvas (e) {
-			// resizes and clears the canvas
-			canvas.width = window.innerWidth;
-			canvas.height = window.innerHeight;
-			// scrolls to upper left
-			window.scrollTo(0,0);
-		}
 	
 
 		function onKeyDown(a) { //pressing buttion
@@ -232,70 +214,36 @@ addRoomEnvironment(scene, objects, roomWidth);
 		  }
 
 		function onTouchStart( event ) {
-			touches = e.touches;
+			// do stuff
 		}
 
 		function onTouchMove( event ) {
 			// preventing default browser behavior, e.g. scrolling
 			event.preventDefault();
-			touches = e.touches;
 		}
 
 		function onTouchEnd( event ) {
-			touches = e.touches;
+			// do stuff
 		}
 
 		function render() {
 			
-		    if (up && dx) { // up and right
+		    if (up && dx) {
 		      camera.position.x += 10;
 		      camera.position.z -= 10;
 		    }
-		    else if (up && sx) { // up and left
-		      camera.position.x -= 10;
-		      camera.position.z -= 10;
-		    }
-		    else if (dw && dx) { // down and right
-		      camera.position.x += 10;
-		      camera.position.z += 10;
-		    }
-		    else if (dw && sx) { // down anf left
-		      camera.position.x -= 10;
-		      camera.position.z += 10;
-		    }
-		    else if (dx){ // right
+		    else if (dx){
 		      camera.position.x += 20;
 		    }
-		    else if (sx) { // left
+		    else if (sx) {
 		      camera.position.x -= 20;
 		    }
-		    else if (up) { // up
+		    else if (up) {
 		      camera.position.z -= 20;
 		    }
-		    else if (dw) { // down
+		    else if (dw) {
 		      camera.position.z += 20;
 		    }
-
-
-		    if(touchable) {
-
-				for(var i=0; i<touches.length; i++)
-				{
-					var touch = touches[i]; 
-					c.beginPath(); 
-					c.fillStyle = "white";
-					c.fillText("touch id : "+touch.identifier+" x:"+touch.clientX+" y:"+touch.clientY, touch.clientX+30, touch.clientY-30); 
-
-					c.beginPath(); 
-					c.strokeStyle = "cyan";
-					c.lineWidth = "6";
-					c.arc(touch.clientX, touch.clientY, 40, 0, Math.PI*2, true); 
-					c.stroke();
-				}
-			}
-
-
-
 
 		    renderer.render( scene, camera );
 		}
