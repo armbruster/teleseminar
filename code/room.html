@@ -242,11 +242,15 @@ addRoomEnvironment(scene, objects, roomWidth);
 			document.addEventListener( 'mousedown', onDocumentMouseDown, false );
 			document.addEventListener( 'touchstart', onDocumentTouchStart, false );
 			document.addEventListener( 'touchmove', onDocumentTouchMove, false );
+			
+			rotationX = 500;
 		}
 	
 		
-
+		var frame = 0;
 		function animate() {
+			frame += 0.1;
+			
 			/* 
 				moving a sphere according to touchEvent or device rotation. 
 				Camera is always looking at this sphere.
@@ -256,6 +260,10 @@ addRoomEnvironment(scene, objects, roomWidth);
 			sphere.position.x = rotationX;
 			sphere.position.z = Math.min(180, Math.max(0, Math.cos(Math.max(rotationX,rotationY)) * 700 + camera.position.z));
 			camera.lookAt(sphere.position);
+			
+			if (refCubeRotating) {
+				objects[0].rotation.y = frame;
+			}
 		
 			requestAnimationFrame( animate );
 			render();
@@ -282,7 +290,7 @@ addRoomEnvironment(scene, objects, roomWidth);
 			//rotationY = camera.rotation.y + (oldX - event.touches[ 0 ].pageX)/1000;
 			rotationX = Math.max(
 							Math.min(
-								rotationX + (oldX - event.touches[ 0 ].pageX)
+								rotationX + (oldX - event.touches[ 0 ].pageX) * 0.5
 								, 1100
 							)
 							,-100
@@ -296,6 +304,7 @@ addRoomEnvironment(scene, objects, roomWidth);
 			click(event.clientX,event.clientY);
 		}
 		
+		var refCubeRotating = false;
 		function click(X,Y) {
 			var vector = new THREE.Vector3(( X / window.innerWidth) * 2 - 1, - (Y / window.innerHeight) * 2 +1 , 0.5 );
 			projector.unprojectVector(vector, camera);
@@ -308,6 +317,17 @@ addRoomEnvironment(scene, objects, roomWidth);
 					//document.getElementById('debug').innerHTML = "Will change blackboard to video...";
 				}
 				intersects[0].object.material.color.setHex(0x0000FF);
+				
+				// if ref_cube
+				if (intersects[0].object == objects[0]) {
+						if (refCubeRotating) {
+							intersects[0].object.material.color.setHex(0xFFFFFF);
+							refCubeRotating = false;
+						} else {
+							intersects[0].object.material.color.setHex(0x0000FF);
+							refCubeRotating = true;
+						}
+				}
 			}
 		}
 	
