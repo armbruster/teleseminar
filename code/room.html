@@ -59,7 +59,7 @@
 		
 			scene = new THREE.Scene();
 
-			camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 10000 );
+			camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 10000);
 			camera.position.z = 900;
 			camera.position.y = 200;
 			camera.position.x = 400;
@@ -231,6 +231,15 @@ addRoomEnvironment(scene, objects, roomWidth);
 			render();
 		}
 		
+		window.ondevicemotion = function(event)  {
+			// device flat on table -> show floor
+			// device vertical -> look at blackboard
+			rotationX = (-event.accelerationIncludingGravity.y / 10) + 200;
+
+			/* getting the rotation at the Y axis is really difficult with only accelerometer data, so we limit accelerometer to looking up and down and try to get the Y rotation from the gyroscope */
+
+		}
+		
 		var oldX;
 		var oldY;
 		function onDocumentTouchStart(event) {
@@ -241,7 +250,7 @@ addRoomEnvironment(scene, objects, roomWidth);
 		
 		function onDocumentTouchMove( event ) {
 			rotationY = camera.rotation.y + (oldX - event.touches[ 0 ].pageX)/1000;
-			rotationX = camera.rotation.x + (oldY - event.touches[ 0 ].pageY)/1000;
+			// rotationX = camera.rotation.x + (oldY - event.touches[ 0 ].pageY)/1000;
 		}
 		
 		
