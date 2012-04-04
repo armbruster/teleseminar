@@ -1,0 +1,20 @@
+* {
+	padding: 0px;
+	margin: 0px;	
+	font-family: Helvetica, Verdana, sans-serif;
+}
+body {
+	background-color: black;
+}
+
+#info {
+	position: absolute;
+	top: 40px;
+	width: 300px;
+	left: 40px;
+    background-color: rgba(0,0,0,0.4);
+	border-radius: 3px;
+	font: 20px Georgia;
+	padding: 10px;
+	color: white;
+}
