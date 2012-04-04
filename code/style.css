@@ -14,7 +14,8 @@ body {
 	left: 40px;
     background-color: rgba(0,0,0,0.4);
 	border-radius: 3px;
-	font: 20px Georgia;
+	font-size: 20px;
 	padding: 10px;
 	color: white;
 }
+
