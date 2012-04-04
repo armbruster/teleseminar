@@ -36,6 +36,8 @@
 		var backWall, backWallMaterial;
 		var leftWall, leftWallMaterial;
 		var rightWall, rightWallMaterial;
+		var window1, window1Material;
+		var window2, window2Material;
 
 		// keyboard movement
 		var up = false;
@@ -161,6 +163,42 @@ addRoomEnvironment(scene, objects, roomWidth);
        		rightWall.position.z = roomWidth / 2;
 	        rightWall.overdraw = true;	
      	   	scene.add( rightWall );
+
+     	   	window1Material = new THREE.MeshLambertMaterial({ 
+			map: THREE.ImageUtils.loadTexture("textures/window-512.jpg")
+			});
+        	window1 = new THREE.Mesh( new THREE.PlaneGeometry( roomHeight/4, roomHeight/4, 4, 4 ), window1Material );
+ 	       	window1.rotation.x = 0 * ( Math.PI / 180 );
+ 	       	window1.rotation.y = 90 * ( Math.PI / 180 );
+    	   	window1.position.x = 1;
+			window1.position.y = roomHeight / 3;
+       		window1.position.z = roomWidth * 0.25;
+	        window1.overdraw = true;	
+     	   	scene.add( window1 );
+
+     	   	window2Material = new THREE.MeshLambertMaterial({ 
+			map: THREE.ImageUtils.loadTexture("textures/window-512.jpg")
+			});
+        	window2 = new THREE.Mesh( new THREE.PlaneGeometry( roomHeight/4, roomHeight/4, 4, 4 ), window2Material );
+ 	       	window2.rotation.x = 0 * ( Math.PI / 180 );
+ 	       	window2.rotation.y = 90 * ( Math.PI / 180 );
+    	   	window2.position.x = 1;
+			window2.position.y = roomHeight / 3;
+       		window2.position.z = roomWidth * 0.5;
+	        window2.overdraw = true;	
+     	   	scene.add( window2 );
+
+     	   	window3Material = new THREE.MeshLambertMaterial({ 
+			map: THREE.ImageUtils.loadTexture("textures/window-512.jpg")
+			});
+        	window3 = new THREE.Mesh( new THREE.PlaneGeometry( roomHeight/4, roomHeight/4, 4, 4 ), window3Material );
+ 	       	window3.rotation.x = 0 * ( Math.PI / 180 );
+ 	       	window3.rotation.y = 90 * ( Math.PI / 180 );
+    	   	window3.position.x = 1;
+			window3.position.y = roomHeight / 3;
+       		window3.position.z = roomWidth * 0.75;
+	        window3.overdraw = true;	
+     	   	scene.add( window3 );
 
      	   	document.addEventListener("keydown", onKeyDown, false);
         	document.addEventListener("keyup", onKeyUp, false);
