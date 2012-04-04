@@ -200,6 +200,19 @@ addRoomEnvironment(scene, objects, roomWidth);
 	        window3.overdraw = true;	
      	   	scene.add( window3 );
 
+     	   	doorMaterial = new THREE.MeshLambertMaterial( {
+     	   		map: THREE.ImageUtils.loadTexture("textures/door.jpg")
+     	   	});
+     	   	door = new THREE.Mesh( new THREE.PlaneGeometry( roomWidth/10, roomHeight*0.5, 4, 4), doorMaterial );
+     	   	door.rotation.x = 0 * ( Math.PI / 180 );
+ 	       	door.rotation.y = 90 * ( Math.PI / 180 );
+ 	       	door.rotation.y = -90 * ( Math.PI / 180 );
+    	   	door.position.x = roomWidth - 1;
+			door.position.y = roomHeight / 4;
+       		door.position.z = roomWidth / 4;
+	        door.overdraw = true;	
+     	   	scene.add( door );
+
      	   	document.addEventListener("keydown", onKeyDown, false);
         	document.addEventListener("keyup", onKeyUp, false);
 
