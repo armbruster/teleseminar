@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-
 <html>
 <head>
-	<title>First webgl/three.js test</title>
+	<title>Joint Teleseminar Oslo &amp; Mannheim</title>
 	<style>
 		* {
 			padding: 0px;
 			margin: 0px;	
+			font-family: Helvetica, Verdana, sans-serif;
+		}
+		body {
+			background-color: black;
 		}
 	</style>	
 	<script type="text/javascript" src="js/Three.js"></script>
@@ -15,6 +18,8 @@
 	<script src="js/jquery.min.js"></script>
 	<script type="text/javascript">
 	window.onload = function () {
+		var rotationX = 0;
+		var rotationY = 0;
 
 		var camera, scene, renderer, projector,
 		geometry, mesh, importMesh;
@@ -56,7 +61,7 @@
 			camera.position.z = 900;
 			camera.position.y = 200;
 			camera.position.x = 400;
-			camera.rotation.x = 50;
+			// camera.rotation.x = 50;
 			scene.add( camera );
 	
 			
@@ -177,24 +182,28 @@ addRoomEnvironment(scene, objects, roomWidth);
 			document.addEventListener( 'mousedown', onDocumentMouseDown, false );
 			document.addEventListener( 'touchstart', onDocumentTouchStart, false );
 			document.addEventListener( 'touchmove', onDocumentTouchMove, false );
-			
-			var rotation = 0;
 		}
 	
 		
-		function animate() {
-			camera.rotation.y = 0;		
+		function animate() {	
+			camera.rotation.y = rotationY;
+			camera.rotation.x = rotationX;		
 		
 			requestAnimationFrame( animate );
 			render();
 		}
 		
+		var oldX;
+		var oldY;
 		function onDocumentTouchStart(event) {
 			click(event.touches[ 0 ].pageX, event.touches[ 0 ].pageY);
+			oldX = event.touches[ 0 ].pageX; 
+			oldY = event.touches[ 0 ].pageY; 
 		}
 		
 		function onDocumentTouchMove( event ) {
-			// alert("touchMove");
+			rotationY = camera.rotation.y + (oldX - event.touches[ 0 ].pageX)/1000;
+			rotationX = camera.rotation.x + (oldY - event.touches[ 0 ].pageY)/1000;
 		}
 		
 		
@@ -276,7 +285,7 @@ addRoomEnvironment(scene, objects, roomWidth);
 	<script type="text/javascript" src="js/addRoom.js"></script>
 	</head>
 	<body>
-		<div id="debug">
+		<div id="debug" style="background-color:black;color:white;">
 		</div>
 	</body>
 </html>
