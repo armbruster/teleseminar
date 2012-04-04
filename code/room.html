@@ -3,10 +3,16 @@
 <html>
 <head>
 	<title>First webgl/three.js test</title>
+	<style>
+		* {
+			padding: 0px;
+			margin: 0px;	
+		}
+	</style>	
 	<script type="text/javascript" src="js/Three.js"></script>
 	<script type="text/javascript" src="js/RequestAnimationFrame.js"></script>
-	 <script src="js/Detector.js"></script>
-	 <script src="js/jquery.min.js"></script>
+	<script src="js/Detector.js"></script>
+	<script src="js/jquery.min.js"></script>
 	<script type="text/javascript">
 	window.onload = function () {
 
@@ -73,10 +79,18 @@ addRoomEnvironment(scene, objects, roomWidth);
 			ref_cube.position.y=25;
 			ref_cube.position.z=roomWidth / 2;
 
+
 			// floor
+			var floorTexture  = THREE.ImageUtils.loadTexture("textures/floor-512.jpg");
+			floorTexture.wrapS = THREE.RepeatWrapping;
+			floorTexture.wrapT = THREE.RepeatWrapping;
+			floorTexture.repeat.x = 10;
+			floorTexture.repeat.y = 10;
+			
 			floorMaterial = new THREE.MeshLambertMaterial({ 
-			map: THREE.ImageUtils.loadTexture("textures/floor-512.jpg")
+			map: floorTexture
 			});
+			
         	floor = new THREE.Mesh( new THREE.PlaneGeometry( roomWidth, roomWidth, 4, 4 ), floorMaterial );
  	       	floor.rotation.x = - 90 * ( Math.PI / 180 );
     	   	floor.position.x = roomWidth / 2;
@@ -161,18 +175,37 @@ addRoomEnvironment(scene, objects, roomWidth);
 			projector = new THREE.Projector();
 			// Add an event for if a mouse button is pressed.
 			document.addEventListener( 'mousedown', onDocumentMouseDown, false );
+			document.addEventListener( 'touchstart', onDocumentTouchStart, false );
+			document.addEventListener( 'touchmove', onDocumentTouchMove, false );
+			
+			var rotation = 0;
 		}
 	
 		
 		function animate() {
+			camera.rotation.y = 0;		
+		
 			requestAnimationFrame( animate );
 			render();
 		}
+		
+		function onDocumentTouchStart(event) {
+			click(event.touches[ 0 ].pageX, event.touches[ 0 ].pageY);
+		}
+		
+		function onDocumentTouchMove( event ) {
+			// alert("touchMove");
+		}
+		
+		
 		// Pressing the mouse button
 		function onDocumentMouseDown(event) {
 			event.preventDefault();
-			
-			var vector = new THREE.Vector3(( event.clientX / window.innerWidth) * 2 - 1, - (event.clientY / window.innerHeight) * 2 +1 , 0.5 );
+			click(event.clientX,event.clientY);
+		}
+		
+		function click(X,Y) {
+			var vector = new THREE.Vector3(( X / window.innerWidth) * 2 - 1, - (Y / window.innerHeight) * 2 +1 , 0.5 );
 			projector.unprojectVector(vector, camera);
 			
 			var ray = new THREE.Ray( camera.position, vector.subSelf(camera.position).normalize() );
@@ -180,7 +213,7 @@ addRoomEnvironment(scene, objects, roomWidth);
 			
 			if (intersects.length > 0) {
 				if (intersects[0].object == objects[1]) {
-					document.getElementById('debug').innerHTML = "Will change blackboard to video...";
+					//document.getElementById('debug').innerHTML = "Will change blackboard to video...";
 				}
 				intersects[0].object.material.color.setHex(0x0000FF);
 			}
