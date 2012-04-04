@@ -276,16 +276,6 @@ addRoomEnvironment(scene, objects, roomWidth);
 			click(event.touches[ 0 ].pageX, event.touches[ 0 ].pageY);
 			oldX = event.touches[ 0 ].pageX; 
 			oldY = event.touches[ 0 ].pageY; 
-
-			// moving the camera towards viewing direction on touch
-			if(camera.target.position.x - camera.position.x) > 0 camera.position.x += 10;
-			if(camera.target.position.x - camera.position.x) < 0 camera.position.x -= 10;
-
-			if(camera.target.position.y - camera.position.z) > 0 camera.position.z += 10;
-			if(camera.target.position.y - camera.position.z) < 0 camera.position.z -= 10;
-
-			if(camera.target.position.y - camera.position.z) > 0 camera.position.z += 10;
-			if(camera.target.position.y - camera.position.z) < 0 camera.position.z -= 10;
 		}
 		
 		function onDocumentTouchMove( event ) {
