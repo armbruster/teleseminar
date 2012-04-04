@@ -79,11 +79,11 @@
 			var material = new THREE.MeshLambertMaterial( { color: 0xFF0000 } );
 			
 			
-			sphere =  new THREE.Mesh( new THREE.SphereGeometry(1,1,1), material);
-			sphere.position.x=roomWidth / 2;
-			sphere.position.y=70;
-			sphere.position.z=roomWidth / 2;
-			scene.add(sphere);
+//			sphere =  new THREE.Mesh( new THREE.SphereGeometry(1,1,1), material);
+//			sphere.position.x=roomWidth / 2;
+//			sphere.position.y=70;
+//			sphere.position.z=roomWidth / 2;
+//			scene.add(sphere);
 
 			
 			addRoomEnvironment(scene, objects, roomWidth, vid_mat);			
@@ -271,7 +271,9 @@
 			camera.lookAt(sphere.position);
 			*/
 
+			// left & right
 			camera.rotation.y = rotationX;
+			// up & down
 			camera.rotation.x = rotationY;
 			
 			if (refCubeRotating) {
@@ -310,7 +312,7 @@
 		
 		function onDocumentTouchMove( event ) {
 			//rotationY = camera.rotation.y + (oldX - event.touches[ 0 ].pageX)/1000;
-			rotationX = rotationX + (oldX - event.touches[ 0 ].pageX) /3000;
+			rotationX = rotationX - (oldX - event.touches[ 0 ].pageX) /3000;
 /*
 			if((camera.target.position.x - camera.position.x) > 0) camera.position.x += 10;
 			if((camera.target.position.x - camera.position.x) < 0) camera.position.x -= 10;
