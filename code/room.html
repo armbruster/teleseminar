@@ -270,6 +270,9 @@
 			sphere.position.z = Math.min(180, Math.max(0, Math.cos(Math.max(rotationX,rotationY)) * 700 + camera.position.z));
 			camera.lookAt(sphere.position);
 			*/
+
+			camera.rotation.x = rotationX;
+			camera.rotation.y = rotationY;
 			
 			if (refCubeRotating) {
 				objects[1].rotation.y = frame;
