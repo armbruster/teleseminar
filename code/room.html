@@ -2,16 +2,7 @@
 <html>
 <head>
 	<title>Joint Teleseminar Oslo &amp; Mannheim</title>
-	<style>
-		* {
-			padding: 0px;
-			margin: 0px;	
-			font-family: Helvetica, Verdana, sans-serif;
-		}
-		body {
-			background-color: black;
-		}
-	</style>	
+	<link rel="stylesheet" type="text/css" media="all" href="style.css" />
 	<script type="text/javascript" src="js/Three.js"></script>
 	<script type="text/javascript" src="js/RequestAnimationFrame.js"></script>
 	<script src="js/Detector.js"></script>
@@ -24,8 +15,9 @@
 		var camera, scene, renderer, projector,
 		geometry, mesh, importMesh;
 		
-		var meshDesk = new Array();	
-		var adac_reverse,  adac_nrAdded;
+		// all video related variables
+		var video, image, imageContext, vid_texture, vid_mat;
+				
 		// a list with all the interactable objects.
 		var objects = [];
 		// room architecture
@@ -53,9 +45,7 @@
 
 
 		function init() {
-			adac_reverse = 1;
-			adac_nrAdded = 0;
-
+			
 			roomWidth = 1000;
 			roomHeight = 500;
 		
@@ -68,6 +58,23 @@
 			// camera.rotation.x = 50;
 			scene.add( camera );
 	
+			/****** VIDEO PART *******/
+			video = document.getElementById('video');
+			image = document.createElement('canvas');
+			image.width = 480;
+			image.height = 204;
+			
+			imageContext = image.getContext( '2d' );
+			imageContext.fillStyle = '#000000';
+			imageContext.fillRect( 0, 0, 480, 204 );
+							
+			vid_texture = new THREE.Texture(image);
+			vid_texture.minFiler = THREE.LinearFilter;
+			vid_texture.magFilter = THREE.LineaerFilter;
+
+			vid_mat = new THREE.MeshBasicMaterial( { map: vid_texture, overdraw: true } );
+			/****** END VIDEO PART *******/
+	
 			
 			var material = new THREE.MeshLambertMaterial( { color: 0xFF0000 } );
 			
@@ -78,8 +85,8 @@
 			sphere.position.z=roomWidth / 2;
 			scene.add(sphere);
 
-			//addDeskAndChair(scene, 2);
-addRoomEnvironment(scene, objects, roomWidth);			
+			
+			addRoomEnvironment(scene, objects, roomWidth, vid_mat);			
 			
 			// Just a reference cube to see how large the imported models are.
 			var ref_cube = new THREE.Mesh(
@@ -262,7 +269,7 @@ addRoomEnvironment(scene, objects, roomWidth);
 			camera.lookAt(sphere.position);
 			
 			if (refCubeRotating) {
-				objects[0].rotation.y = frame;
+				objects[1].rotation.y = frame;
 			}
 		
 			requestAnimationFrame( animate );
@@ -313,21 +320,33 @@ addRoomEnvironment(scene, objects, roomWidth);
 			var intersects = ray.intersectObjects(objects);
 			
 			if (intersects.length > 0) {
-				if (intersects[0].object == objects[1]) {
-					//document.getElementById('debug').innerHTML = "Will change blackboard to video...";
+				if (intersects[0].object == objects[0]) {					
+					// blackboard
+					if (video.paused) 
+						video.play();
+					else 
+						video.pause();					
+				} else if (intersects[0].object == objects[1]) {
+					// ref_cube
+					if (refCubeRotating) {
+						intersects[0].object.material.color.setHex(0xFFFFFF);
+						refCubeRotating = false;
+					} else {
+						intersects[0].object.material.color.setHex(0x0000FF);
+						refCubeRotating = true;
+					}
+				} else if (intersects[0].object == objects[2]) {
+					// red table
+					if ($('#info').is(':hidden')) {		
+						$('#info').show();
+					    $('#info').html("The desk is purchased at IKEA -> http://www.ikea.com");
+				    }
+				    else 
+				    	$('#info').hide();					
 				}
-				intersects[0].object.material.color.setHex(0x0000FF);
-				
-				// if ref_cube
-				if (intersects[0].object == objects[0]) {
-						if (refCubeRotating) {
-							intersects[0].object.material.color.setHex(0xFFFFFF);
-							refCubeRotating = false;
-						} else {
-							intersects[0].object.material.color.setHex(0x0000FF);
-							refCubeRotating = true;
-						}
-				}
+				else {
+					intersects[0].object.material.color.setHex(0x0000FF);
+				}				
 			}
 		}
 	
@@ -379,6 +398,13 @@ addRoomEnvironment(scene, objects, roomWidth);
 		    else if (dw) {
 		      camera.position.z += 20;
 		    }
+		    if ( video.readyState === video.HAVE_ENOUGH_DATA ) {
+
+				imageContext.drawImage( video, 0, 0 );
+
+				if ( vid_texture ) vid_texture.needsUpdate = true;				
+
+			}
 
 		    renderer.render( scene, camera );
 		}
@@ -388,6 +414,13 @@ addRoomEnvironment(scene, objects, roomWidth);
 	<script type="text/javascript" src="js/addRoom.js"></script>
 	</head>
 	<body>
+		<video id="video" style="display:none">
+			<source src="textures/sintel.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+			<source src="textures/sintel.ogv" type='video/ogg; codecs="theora, vorbis"'>
+		</video>		
+		<div id="info">
+			
+		</div>
 		<div id="debug" style="background-color:black;color:white;">
 		</div>
 	</body>

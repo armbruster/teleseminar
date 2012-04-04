@@ -51,7 +51,7 @@ function addDeskAndChair(scene, nr_of_desks) {
 } // end addDeskAndChair()
 
 /** Manually add the room environment until addDeskAndChair is fixed. */
-function addRoomEnvironment(scene, objects, roomWidth) {
+function addRoomEnvironment(scene, objects, roomWidth, vid_mat) {
     var loader = new THREE.JSONLoader();
     // The material for the blackboard.
     var matBlackboard = new THREE.MeshBasicMaterial( { color: 0x000000 });
@@ -64,13 +64,19 @@ function addRoomEnvironment(scene, objects, roomWidth) {
     // Adjust the scale if the objects are too large or too small compared to the room.
     var scale = 100;
     // Load BLACKBOARD
-    loader.load( "models/blackboard.js", function(geo) {
+    /*loader.load( "models/blackboard.js", function(geo) {
 	var meshBlackboard = new THREE.Mesh(geo, matBlackboard);
 	meshBlackboard.scale.set(scale, scale, scale);
 	meshBlackboard.position.set((roomWidth / 2) + 50, 0, 300);
 	scene.add(meshBlackboard);
 	objects.push(meshBlackboard);
-    });
+    });*/
+   	var blackBoard_plane = new THREE.PlaneGeometry(480, 204, 4, 4);
+   	var blackBoard = new THREE.Mesh(blackBoard_plane, vid_mat);
+   	blackBoard.position.set((roomWidth / 2) + 50, 150, 2);
+   	//meshBlackboard.scale.set(scale, scale, scale);
+   	scene.add(blackBoard);
+    objects.push(blackBoard);
     
     // Load DESK #1
     loader.load( "models/desk.js", function (geo) {
@@ -149,11 +155,12 @@ function addRoomEnvironment(scene, objects, roomWidth) {
 
     // Load DESK #4
     loader.load( "models/desk.js", function (geo) {
-	var meshDesk = new THREE.Mesh(geo, matDesk);
+	var meshDesk = new THREE.Mesh(geo, new THREE.MeshBasicMaterial( { color: 0xFF0000 , opacity: 0.5} ));
 	meshDesk.scale.set(scale, scale, scale);
 	meshDesk.position.set((roomWidth / 2) - 200, 0, 400);
 	//group.addChild(meshDesk);		
 	scene.add(meshDesk);
+	objects.push(meshDesk);
     });
     // The two chairs associated with DESK #2
     loader.load( "models/chair.js", function (geo) {
