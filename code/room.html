@@ -263,10 +263,13 @@
 				Camera is always looking at this sphere.
 				Creates nicer movement than camera rotation.
 			 */
+			/*
+
 			sphere.position.y = Math.sin(rotationY) * 700 + camera.position.y;
 			sphere.position.x = rotationX;
 			sphere.position.z = Math.min(180, Math.max(0, Math.cos(Math.max(rotationX,rotationY)) * 700 + camera.position.z));
 			camera.lookAt(sphere.position);
+			*/
 			
 			if (refCubeRotating) {
 				objects[1].rotation.y = frame;
@@ -291,6 +294,15 @@
 			click(event.touches[ 0 ].pageX, event.touches[ 0 ].pageY);
 			oldX = event.touches[ 0 ].pageX; 
 			oldY = event.touches[ 0 ].pageY; 
+
+			if((camera.target.position.x - camera.position.x) > 0) camera.position.x += 10;
+			if((camera.target.position.x - camera.position.x) < 0) camera.position.x -= 10;
+
+			if((camera.target.position.y - camera.position.y) > 0) camera.position.y += 10;
+			if((camera.target.position.y - camera.position.y) < 0) camera.position.y -= 10;
+
+			if((camera.target.position.z - camera.position.z) > 0) camera.position.z += 10;
+			if((camera.target.position.z - camera.position.z) < 0) camera.position.z -= 10;
 		}
 		
 		function onDocumentTouchMove( event ) {
