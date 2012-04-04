@@ -139,7 +139,7 @@
 		DA626F12150A794700345B5A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = DA626F15150A794700345B5A /* Build configuration list for PBXProject "WebGLViewer" */;
 			compatibilityVersion = "Xcode 3.2";

@@ -44,7 +44,8 @@ UIWebView* webView;
 	[theView addSubview:webView];
 	
 	// load a sample 
-	NSURLRequest* request = [NSURLRequest requestWithURL:[NSURL URLWithString: @"http://mrdoob.github.com/three.js/examples/canvas_geometry_cube.html" ]];
+	// NSURLRequest* request = [NSURLRequest requestWithURL:[NSURL URLWithString: @"http://mrdoob.github.com/three.js/examples/canvas_geometry_cube.html" ]];
+	NSURLRequest* request = [NSURLRequest requestWithURL:[NSURL URLWithString: @"http://oslo.paulsteinhilber.de/room.html" ]];
 	[webView loadRequest:request];
 }
 

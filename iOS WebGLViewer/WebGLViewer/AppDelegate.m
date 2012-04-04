@@ -32,6 +32,10 @@
 	}
 	self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+	
+	// prevent display to dim and device to auto-lock
+	[[ UIApplication sharedApplication ] setIdleTimerDisabled: YES ];
+	
     return YES;
 }
 
