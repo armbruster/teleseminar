@@ -14,6 +14,8 @@
 
 		var camera, scene, renderer, projector,
 		geometry, mesh, importMesh;
+
+		var controls;
 		
 		// all video related variables
 		var video, image, imageContext, vid_texture, vid_mat;
@@ -57,6 +59,15 @@
 			camera.position.x = 400;
 			// camera.rotation.x = 50;
 			scene.add( camera );
+
+			// adding built-in (Three.JS native) camera controls
+			controls = new THREE.FlyControls( camera );
+			controls.movementSpeed = 50;
+			controls.domElement = document;
+			controls.rollSpeed = 0.05;
+			controls.autoForward = false;
+			controls.dragToLook = true;
+
 	
 			/****** VIDEO PART *******/
 			video = document.getElementById('video');
@@ -229,10 +240,6 @@
 	        door.overdraw = true;	
      	   	scene.add( door );
 
-     	   	document.addEventListener("keydown", onKeyDown, false);
-        	document.addEventListener("keyup", onKeyUp, false);
-
-
 			renderer = new THREE.WebGLRenderer(  );
       		renderer.setSize( window.innerWidth,window.innerHeight );
       		document.body.appendChild( renderer.domElement );
@@ -281,6 +288,7 @@
 			}
 		
 			requestAnimationFrame( animate );
+			controls.update( 1 );
 			render();
 		}
 		
@@ -370,54 +378,8 @@
 			}
 		}
 	
-
-		function onKeyDown(a) { //pressing buttion
-		       var b = a.keyCode;
-		       if (b == 38 || b == 87) up = true;  //w
-		       else if (b == 40 || b == 83) dw = true; //s
-		       else if (b == 37 || b == 65) sx = true; //a
-		       else if (b == 39 || b == 68) dx = true; //d
-		  }
-		     
-		  function onKeyUp(a) { // letting go button
-		       a = a.keyCode;
-		       if (a == 38 || a == 87) up = false;
-		       else if (a == 40 || a == 83) dw = false;
-		       else if (a == 37 || a == 65) sx = false;
-		       else if (a == 39 || a == 68) dx = false;
-		       else if (a == 32) sp = false;
-		  }
-
 		function render() {
 			
-		    if (up && dx) { // up and right
-		      camera.position.x += 10;
-		      camera.position.z -= 10;
-		    }
-		    else if (up && sx) { // up and left
-		      camera.position.x -= 10;
-		      camera.position.z -= 10;
-		    }
-		    else if (dw && sx) { // back and left
-		      camera.position.x -= 10;
-		      camera.position.z += 10;
-		    }
-		    else if (dw && dx) { // back and right
-		      camera.position.x += 10;
-		      camera.position.z += 10;
-		    }
-		    else if (dx){
-		      camera.position.x += 20;
-		    }
-		    else if (sx) {
-		      camera.position.x -= 20;
-		    }
-		    else if (up) {
-		      camera.position.z -= 20;
-		    }
-		    else if (dw) {
-		      camera.position.z += 20;
-		    }
 		    if ( video.readyState === video.HAVE_ENOUGH_DATA ) {
 
 				imageContext.drawImage( video, 0, 0 );
