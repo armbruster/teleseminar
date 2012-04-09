@@ -31,7 +31,9 @@
 		var window1, window1Material;
 		var window2, window2Material;
 		
-		var sphere;
+		var lat = 0;
+		var long = 0;
+		// var sphere;
 
 		// keyboard movement
 		var up = false;
@@ -249,8 +251,17 @@
 			document.addEventListener( 'mousedown', onDocumentMouseDown, false );
 			document.addEventListener( 'touchstart', onDocumentTouchStart, false );
 			document.addEventListener( 'touchmove', onDocumentTouchMove, false );
-			
-			rotationX = 500;
+						
+						
+			// look at blackboard
+			camera.lookAt(objects[0].position);
+
+			// try to get gps position
+			if (navigator.geolocation) {
+				watchId = navigator.geolocation.watchPosition(updateLocation, handleError);
+			} else {
+				alert("location not available");
+			}
 		}
 	
 		
@@ -258,13 +269,7 @@
 		function animate() {
 			frame += 0.1;
 			
-			/* 
-				moving a sphere according to touchEvent or device rotation. 
-				Camera is always looking at this sphere.
-				Creates nicer movement than camera rotation.
-			 */
 			/*
-
 			sphere.position.y = Math.sin(rotationY) * 700 + camera.position.y;
 			sphere.position.x = rotationX;
 			sphere.position.z = Math.min(180, Math.max(0, Math.cos(Math.max(rotationX,rotationY)) * 700 + camera.position.z));
@@ -428,6 +433,45 @@
 
 		    renderer.render( scene, camera );
 		}
+		
+		function updateLocation(position)
+		{
+		    // Update the map if the current position is different from the previous position
+			if ((lat != position.coords.latitude)||(long != position.coords.longitude))
+			{
+		        showLocation(position);
+		        lat = position.coords.latitude;
+		        long = position.coords.longitude;
+		    }
+		 
+		}
+		function handleError(error) 
+		{
+			var errorMessage;
+			    switch (error.code)
+			    {
+			        case error.code.PERMISSION_DENIED:
+			            errorMessage = "Permission Denied";
+			            break;
+			        case error.code.POSITION_UNAVAILABLE:
+			            errorMessage = "Position Unavailable";
+			            break;	
+			        case error.code.TIMEOUT:
+			            errorMessage = "Time Out";
+			            break;
+			        case error.code.UNKNOWN_ERROR:
+			            errorMessage = "Unknown Error";
+			            break;	
+			    }
+			alert(errorMessage);
+		}
+		function showLocation (position)
+		{  
+		    $('#showMap').hide();
+		    $('#map').show();
+		    $('#map').html("<img src='http://maps.google.com/maps/api/staticmap?center="+position.coords.latitude+","+position.coords.longitude+"&zoom=14&size=300x100&markers=color:blue|label:S|"+position.coords.latitude+","+position.coords.longitude+"&sensor=true' width='300' height='100' />");   
+		}
+		
 	};
 	</script>
 
@@ -438,9 +482,10 @@
 			<source src="textures/sintel.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
 			<source src="textures/sintel.ogv" type='video/ogg; codecs="theora, vorbis"'>
 		</video>		
-		<div id="info">
-			
-		</div>
+		<div id="info"></div>
+		<div id="map" onclick="$('#map').hide();$('#showMap').show();"></div>
+		<div id="showMap" onclick="$('#map').show();$('#showMap').hide();"></div>
+		
 		<div id="debug" style="background-color:black;color:white;">
 		</div>
 	</body>

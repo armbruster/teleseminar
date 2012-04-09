@@ -7,15 +7,39 @@ body {
 	background-color: black;
 }
 
+/* info label for information about the desk */
 #info {
 	position: absolute;
-	top: 40px;
-	width: 300px;
-	left: 40px;
+	top: 0px;
+	left: 0px;
+	width: 320px;
     background-color: rgba(0,0,0,0.4);
-	border-radius: 3px;
 	font-size: 20px;
 	padding: 10px;
 	color: white;
+	display: none;
 }
 
+/* the map with the users location */
+#map {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 320px;
+    background-color: rgba(0,0,0,0.4);
+	font-size: 20px;
+	padding: 10px;
+	padding-bottom: 5px;
+	color: white;
+	display: none;
+}
+
+/* button to show/hide map */
+#showMap {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 40px;
+	height: 40px;
+    background-color: green;
+}
