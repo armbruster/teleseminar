@@ -5,6 +5,7 @@
 	<link rel="stylesheet" type="text/css" media="all" href="style.css" />
 	<script type="text/javascript" src="js/Three.js"></script>
 	<script type="text/javascript" src="js/RequestAnimationFrame.js"></script>
+	<script type="text/javascript" src="js/Stats.js"></script>
 	<script src="js/Detector.js"></script>
 	<script src="js/jquery.min.js"></script>
 	<script type="text/javascript">
@@ -14,6 +15,8 @@
 
 		var camera, scene, renderer, projector,
 		geometry, mesh, importMesh;
+
+		var stats;
 
 		var controls;
 		
@@ -69,6 +72,12 @@
 			controls.rollSpeed = 0.05;
 			controls.autoForward = false;
 			controls.dragToLook = true;
+
+			stats = new Stats();
+			stats.domElement.style.position = 'absolute';
+			stats.domElement.style.left = '0px';
+			stats.domElement.style.top = '0px';
+			document.body.appendChild( stats.domElement );
 
 	
 			/****** VIDEO PART *******/
@@ -294,6 +303,7 @@
 		
 			requestAnimationFrame( animate );
 			controls.update( 1 );
+			stats.update();
 			render();
 		}
 		
