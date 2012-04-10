@@ -209,7 +209,11 @@ Human behavior towards information is influenced by new technologies. recommenda
 Although data from a gyroscope is accessible with JavaScript and could be therefore used in a WebGL application, we only used data provided by a devices accelerometer, as not all of our test devices had a gyroscope included.
 
 \subsection{iOS WebGLViewer}
-	As mentioned in section \ref{WebGLoniOS} there is no official WebGL support in a browser on iOS available. Therefore a simple iOS application, called WebGLViewer, was implemented based on the method and instruction published by Nathan de Vries \cite{deVries2011}. WebGLViewer consists of a UIWebView, a reload button and an address bar. The UIWebView was modified to show WebGL content (compare section \ref{WebGLoniOS} and \cite{deVries2011}). The app WebGLViewer was used to view and evaluate WebGL content on iOS. 
+	As mentioned in section \ref{WebGLoniOS} there is no official WebGL support in a browser on iOS available. Therefore a simple iOS application, called WebGLViewer, was implemented based on the method and instruction published by Nathan de Vries \cite{deVries2011}. WebGLViewer consists of a UIWebView, a reload button and an address bar. The UIWebView was modified to show WebGL content (compare section \ref{WebGLoniOS} and \cite{deVries2011}). 
+	
+	If you shake the device while running WebGLViewer the app shows information about the battery consumption. The current battery level, the battery level when the loading of the current page finished as well as the delta of these two values is shown as percentage. In addition the time the website is shown as well as the battery consumption per minute is shown.  
+	
+	The app WebGLViewer was used to view and evaluate WebGL content on iOS. 
 
 \subsection{Room}
 
