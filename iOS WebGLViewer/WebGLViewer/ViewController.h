@@ -14,5 +14,6 @@
 - (IBAction)reload;
 
 - (void)startWatchingBattery;
+- (void)showBatteryInfo;
 
 @end

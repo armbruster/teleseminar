@@ -19,10 +19,8 @@ UIWebView* webView;
 
 #pragma mark - View lifecycle
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	
 	
 	// enabling WebGL as described by Nathan de Vries 
 	// http://atnan.com/blog/2011/11/03/enabling-and-using-webgl-on-ios/
@@ -33,13 +31,15 @@ UIWebView* webView;
 	id backingWebView = [webDocumentView performSelector:@selector(webView)];
 	[backingWebView _setWebGLEnabled:YES];
 	
+	// disable scrolling
 	webView.scrollView.scrollEnabled = NO; 
 	webView.scrollView.bounces = NO;
 	
+	// configure proper resizing to support rotation
+	webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	
 	// register delegate to get feeedback
 	webView.delegate = self;
-	
 	
 	[theView addSubview:webView];
 	
@@ -49,36 +49,30 @@ UIWebView* webView;
 	[webView loadRequest:request];
 }
 
-- (void)viewDidUnload
-{
+- (void)viewDidUnload {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
+- (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 	[self becomeFirstResponder];
 }
 
-- (void)viewWillDisappear:(BOOL)animated
-{
+- (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
 }
 
-- (void)viewDidDisappear:(BOOL)animated
-{
+- (void)viewDidDisappear:(BOOL)animated {
 	[super viewDidDisappear:animated];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
 	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
 	    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
@@ -98,10 +92,13 @@ UIWebView* webView;
 }
 
 // show alert view with battery information
+- (void)showBatteryInfo {
+	// TODO:
+}
+
 - (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
     NSLog(@"motionBegan");
-	
-	// TODO;
+	[self showBatteryInfo];
 }
 
 -(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event{
@@ -110,6 +107,10 @@ UIWebView* webView;
 
 -(BOOL)canBecomeFirstResponder {
 	return YES;
+}
+
+- (IBAction)batteryInfoButton {
+	[self showBatteryInfo];
 }
 
 // ----------------------------------------------------------------------------------------------------------------------------------
