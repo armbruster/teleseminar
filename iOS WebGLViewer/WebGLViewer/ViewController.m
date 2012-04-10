@@ -10,6 +10,8 @@
 @implementation ViewController
 
 UIWebView* webView;
+float batteryLevel;
+NSDate* startDate;
 
 - (void)didReceiveMemoryWarning
 {
@@ -88,12 +90,35 @@ UIWebView* webView;
 
 // save the current battery level
 - (void)startWatchingBattery {
-	// TODO:
+	[UIDevice currentDevice].batteryMonitoringEnabled = YES;
+	
+	batteryLevel = [UIDevice currentDevice].batteryLevel;
+	startDate = [[NSDate alloc] init];
+	
+	NSLog(@"%f", batteryLevel);
 }
 
 // show alert view with battery information
 - (void)showBatteryInfo {
-	// TODO:
+	
+	NSString* batteryInfo;
+	
+	NSDate* endDate = [NSDate date];
+	double ellapsedMinutes = [startDate timeIntervalSinceDate:endDate] / 60;
+	
+	if (batteryLevel == -1.0) {
+		batteryInfo = @"Battery level not available.";
+	} else {
+		float currentLevel = [UIDevice currentDevice].batteryLevel;
+		float delta = batteryLevel - currentLevel;
+		batteryInfo = [NSString stringWithFormat:@" level on start: %f \n level now: %f \n delta: %f \n\n\n run for %f minutes \n battery consumption per minute: \n%f", batteryLevel*100, currentLevel*100, delta*100, ellapsedMinutes, delta*100/ellapsedMinutes];
+	}
+
+	NSLog(@"%@", batteryInfo);
+	
+	// show alert view
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Battery Usage Information" message:batteryInfo delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+    [alert show];
 }
 
 - (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
