@@ -87,24 +87,36 @@ UIWebView* webView;
 	}
 }
 
-- (IBAction)reload {
-	[webView reload];
+
+// ----------------------------------------------------------------------------------------------------------------------------------
+// Shake Gesture & Battery Stuff
+// ----------------------------------------------------------------------------------------------------------------------------------
+
+// save the current battery level
+- (void)startWatchingBattery {
+	// TODO:
 }
 
--(BOOL)canBecomeFirstResponder {
-	return YES;
-}
-
+// show alert view with battery information
 - (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
     NSLog(@"motionBegan");
 	
-	// TODO: show alert view with battery information
+	// TODO;
 }
 
 -(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event{
     //NSLog(@"motionEnded");
 }
 
+-(BOOL)canBecomeFirstResponder {
+	return YES;
+}
+
+// ----------------------------------------------------------------------------------------------------------------------------------
+// "Address bar" + Reload
+// ----------------------------------------------------------------------------------------------------------------------------------
+
+/* load url from search bar in uiwebview */
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
 	[searchBar resignFirstResponder];
 
@@ -116,6 +128,13 @@ UIWebView* webView;
 	[webView loadRequest:request];
 }
 
+- (IBAction)reload {
+	[webView reload];
+}
+
+// ----------------------------------------------------------------------------------------------------------------------------------
+// UIWebViewDelegate Methods
+// ----------------------------------------------------------------------------------------------------------------------------------
 - (void)webViewDidStartLoad:(UIWebView *)webView {
     // starting the load, show the activity indicator in the status bar
 	UIApplication *application = [UIApplication sharedApplication];
@@ -127,6 +146,9 @@ UIWebView* webView;
     //[UIApplication sharedApplication].setNetworkActivityIndicatorVisible = NO;
 	UIApplication *application = [UIApplication sharedApplication];
 	application.networkActivityIndicatorVisible = NO;
+	
+	// start watching battery here
+	[self startWatchingBattery];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {

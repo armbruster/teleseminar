@@ -13,4 +13,6 @@
 
 - (IBAction)reload;
 
+- (void)startWatchingBattery;
+
 @end
