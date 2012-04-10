@@ -104,7 +104,7 @@ NSDate* startDate;
 	NSString* batteryInfo;
 	
 	NSDate* endDate = [NSDate date];
-	double ellapsedMinutes = [startDate timeIntervalSinceDate:endDate] / 60;
+	double ellapsedMinutes = [endDate timeIntervalSinceDate:startDate] / 60;
 	
 	if (batteryLevel == -1.0) {
 		batteryInfo = @"Battery level not available.";
