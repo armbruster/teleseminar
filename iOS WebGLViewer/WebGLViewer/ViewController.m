@@ -64,6 +64,7 @@ UIWebView* webView;
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+	[self becomeFirstResponder];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -88,6 +89,20 @@ UIWebView* webView;
 
 - (IBAction)reload {
 	[webView reload];
+}
+
+-(BOOL)canBecomeFirstResponder {
+	return YES;
+}
+
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    NSLog(@"motionBegan");
+	
+	// TODO: show alert view with battery information
+}
+
+-(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+    //NSLog(@"motionEnded");
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
