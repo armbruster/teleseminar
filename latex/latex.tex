@@ -19,7 +19,7 @@
 
 \usepackage{url}
 
-\hyphenation{op-tical net-works semi-conduc-tor}
+\hyphenation{op-tical net-works semi-conduc-tor Web-GL-Viewer Web-GL}
 
 \usepackage{color}
 \definecolor{lightgray}{rgb}{0.9,0.9,0.9}
@@ -141,7 +141,7 @@ It is based on Canvas 3D, which was developed at Mozilla \cite{Mozilla2007}.
 \subsubsection{Mobile WebGL}
 Although support for WebGL is available on the desktop computers within all major browsers WebGL (FireFox 4+, Safari 5.1+, Chrome 10+, Opera 12+), except of Microsoft's Internet Explorer \cite{Golubovic2011}, browsers on mobile devices supporting WebGL are still very rare.
 
-Apple has added WebGL capabilities to iOS with iOS 4.2 \cite{deVries2011, iAdDocu}. However officially WebGL is only available to be used on Apple’s iAd platform \cite{deVries2011, cmarrin2011}. With an hack discovered by Nathan de Vries \cite{deVries2011} WebGL can also be enabled in a UIWebView. Using this way it is possible to build a custom WebGL viewer for iOS. However since this method of enabling WebGL on iOS requires the use of non-public APIs it can’t be made available to end users due to Apple's App Store Review Guidelines \cite{appstorereviewguidelines}. The built-in Safari browser on iOS does not support WebGL and due to Apple’s App Store Review Guidelines \cite{appstorereviewguidelines} third party browsers are required to use the WebKit rendering engine provided by Apple. So until Apple officially supports WebGL in Safari on iOS there is no way available for the end user to run WebGL content on iOS.
+\label{WebGLoniOS} Apple has added WebGL capabilities to iOS with iOS 4.2 \cite{deVries2011, iAdDocu}. However officially WebGL is only available to be used on Apple’s iAd platform \cite{deVries2011, cmarrin2011}. With an hack discovered by Nathan de Vries \cite{deVries2011} WebGL can also be enabled in a UIWebView. Using this way it is possible to build a custom WebGL viewer for iOS. However since this method of enabling WebGL on iOS requires the use of non-public APIs it can’t be made available to end users due to Apple's App Store Review Guidelines \cite{appstorereviewguidelines}. The built-in Safari browser on iOS does not support WebGL and due to Apple’s App Store Review Guidelines \cite{appstorereviewguidelines} third party browsers are required to use the WebKit rendering engine provided by Apple. So until Apple officially supports WebGL in Safari on iOS there is no way available for the end user to run WebGL content on iOS. 
 
 As the desktop version of InternetExplorer does not support WebGL \cite{Golubovic2011} and Microsoft is considering WebGL "harmful" \cite{microsoftWebGLHarmful} we probably wont see WebGL support on Windows Phone 7 in the near future. 
 
@@ -206,10 +206,14 @@ Human behavior towards information is influenced by new technologies. recommenda
 
 
 \section{Implementation}
+Although data from a gyroscope is accessible with JavaScript and could be therefore used in a WebGL application, we only used data provided by a devices accelerometer, as not all of our test devices had a gyroscope included.
 
+\subsection{iOS WebGLViewer}
+	As mentioned in section \ref{WebGLoniOS} there is no official WebGL support in a browser on iOS available. Therefore a simple iOS application, called WebGLViewer, was implemented based on the method and instruction published by Nathan de Vries \cite{deVries2011}. WebGLViewer consists of a UIWebView, a reload button and an address bar. The UIWebView was modified to show WebGL content (compare section \ref{WebGLoniOS} and \cite{deVries2011}). The app WebGLViewer was used to view and evaluate WebGL content on iOS. 
+
+\subsection{Room}
 
 \section{Evaluation}
-
 
 \section{Conclusion}
 The conclusion goes here.
