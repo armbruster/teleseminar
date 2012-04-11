@@ -12,6 +12,7 @@
 UIWebView* webView;
 float batteryLevel;
 NSDate* startDate;
+BOOL checking = NO;
 
 - (void)didReceiveMemoryWarning
 {
@@ -96,6 +97,22 @@ NSDate* startDate;
 	startDate = [[NSDate alloc] init];
 	
 	NSLog(@"%f", batteryLevel);
+	
+	if (!checking) {
+		[self performSelector:@selector(checkBatteryLevel) withObject:nil afterDelay:0];
+		checking = YES;
+		NSLog(@"start checking");
+	}
+}
+
+// constantly check the battery level, to inform the user if it has changed
+-(void)checkBatteryLevel {
+	
+	if (batteryLevel != [UIDevice currentDevice].batteryLevel) {
+		[self showBatteryInfo];
+	}
+	
+	[self performSelector:@selector(checkBatteryLevel) withObject:nil afterDelay:10];
 }
 
 // show alert view with battery information
@@ -106,8 +123,8 @@ NSDate* startDate;
 	NSDate* endDate = [NSDate date];
 	double ellapsedMinutes = [endDate timeIntervalSinceDate:startDate] / 60;
 	
-	if (batteryLevel == -1.0) {
-		batteryInfo = @"Battery level not available.";
+	if (batteryLevel == -1.0 || [UIDevice currentDevice].batteryState != UIDeviceBatteryStateUnplugged) {
+		batteryInfo = @"Battery level not available.\nPlease unplug your device.";
 	} else {
 		float currentLevel = [UIDevice currentDevice].batteryLevel;
 		float delta = batteryLevel - currentLevel;

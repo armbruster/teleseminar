@@ -15,5 +15,6 @@
 
 - (void)startWatchingBattery;
 - (void)showBatteryInfo;
+- (void)checkBatteryLevel;
 
 @end
