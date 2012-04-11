@@ -151,9 +151,7 @@ Also RIM's tablet, the BlackBerry PlayBook, supports WebGL in web applications. 
 
 
 \subsubsection{Security Issues}
-Although 
-... % TODO:
-there are also critical voices, with Microsoft probably being their most prominent spokesperson. Microsoft believes "that WebGL will likely become an ongoing source of hard-to-fix vulnerabilities" \cite{microsoftWebGLHarmful}, because WebGL allows direct access to the computers hardware from the web. WebGL security therefore relies on graphic card drivers and other third party components. \cite{microsoftWebGLHarmful}
+Although the support of WebGL seems to be widespread, there are also critical voices, with Microsoft probably being their most prominent spokesperson. Microsoft believes "that WebGL will likely become an ongoing source of hard-to-fix vulnerabilities" \cite{microsoftWebGLHarmful}, because WebGL allows direct access to the computers hardware from the web. WebGL security therefore relies on graphic card drivers and other third party components. \cite{microsoftWebGLHarmful}
 
 Context, an information security consultancy, which recommends to disable WebGL in the browser, published and demonstrated two possible attack scenarios both initiated from a malicious website \cite{contextWebGL1, contextWebGL2}. They were not only able to perform a successful Denial of Service attack, which leads to operating system crashes and freezes of the desktop, but also to gather possible confidential information by stealing the content of the graphic memory with which they were able to reconstruct screenshots of the desktop. As stated by Context, these issues are inherent to the WebGL specification and can't be resolved without major changes in WebGL's architecture. Although there are countermeasures in development, which could resolve these issues, at the moment WebGL allows malicious programs access to the graphics hardware and software. \cite{contextWebGL1, contextWebGL2}
 
@@ -215,7 +213,7 @@ Although data from a gyroscope is accessible with JavaScript and could be theref
 \subsection{iOS WebGLViewer}
 	As mentioned in section \ref{WebGLoniOS} there is no official WebGL support in a browser on iOS available. Therefore a simple iOS application, called WebGLViewer, was implemented based on the method and instruction published by Nathan de Vries \cite{deVries2011}. WebGLViewer consists of a UIWebView, a reload button and an address bar. The UIWebView was modified to show WebGL content (compare section \ref{WebGLoniOS} and \cite{deVries2011}). 
 	
-	If you shake the device while running WebGLViewer the app shows information about the battery consumption. The current battery level, the battery level when the loading of the current page finished as well as the delta of these two values is shown as percentage. In addition the time the website is shown as well as the battery consumption per minute is shown.  
+	If you shake the device while running WebGLViewer the app shows information about the battery consumption. The current battery level, the battery level when the loading of the current page finished as well as the delta of these two values is shown as percentage. In addition the time the website is shown as well as the battery consumption per minute is shown. Unfortunately the battery level is only updated in 5\,\% steps. To get a more accurate result the battery information pop-up will automatically be shown if the battery level changes.
 	
 	The app WebGLViewer was used to view and evaluate WebGL content on iOS. 
 
