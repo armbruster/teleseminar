@@ -18,6 +18,7 @@
 
 
 \usepackage{url}
+\usepackage{multirow}
 
 \hyphenation{Web-GL-Viewer Web-GL}
 
@@ -222,18 +223,22 @@ Although data from a gyroscope is accessible with JavaScript and could be theref
 \section{Evaluation}
 
 \subsubsection{Battery usage}
-To measure the battery usage the WebGLViewer app for iOS was used (see section \ref{WebGLViewer}). The device was fully charged. The accordant content was opened in the WebGLViewer app. The device then was unplugged and the content reloaded. The time till the battery level reached 90\,\% was measured by the WebGLViewer. All test have been performed on an Apple iPhone 4 with iOS 5.1 installed. We compared the battery usage of our room, the Quake 3 WebGL Tech Demo and google.com as reference. The results are shown in table \ref{batteryTable}. 
+% cite QIII link
+To measure the battery usage the WebGLViewer app for iOS was used (see section \ref{WebGLViewer}). The device was fully charged. The accordant content was opened in the WebGLViewer app. The device then was unplugged and the content reloaded. The time till the battery level reached 90\,\% was measured by the WebGLViewer. Using Apple Instruments, which is part of Apples Developer Tools, we measured the CPU Activity (Total Activity, Foreground App Activity and Graphics) as well as the relative Energy Usage on a scale from 0 to 20. All test have been performed on an Apple iPhone 4 with iOS 5.1 installed. We compared the battery usage of our room, the Quake 3 WebGL Tech Demo and google.com as reference. The results are shown in table \ref{batteryTable}. 
 
-\begin{table}[htb]
-\begin{tabular}{r|c|l}
-	\textbf{Test Case}		& \textbf{Time till 90\,\%}				& \textbf{Battery usage}		\\
-	\hline
-	Our room				&										&								\\
-	Quake 3					&	34.67 min							& 0.29 $\frac{\%}{min}$			\\
-	google.com				&										&								\\
-\end{tabular}
-\caption{Battery consumption of different WebGL applications\label{batteryTable}}
-\end{table}
+\begin{table*}[tb]
+	\begin{centering}
+	\begin{tabular}{r|c|c|c|c|c|c}
+		\multirow{2}{*}{\textbf{Test Case}} & \multicolumn{3}{c|}{\textbf{Battery and Energy Consumption}}						 & \multicolumn{3}{c}{\textbf{CPU Activity}}					\\
+ 							&\textbf{Time till 90\,\%} & \textbf{Battery usage}	& \textbf{Relative Energy Usage} & \textbf{Total} 	& \textbf{Foreground App} 		& \textbf{Graphics}	\\
+		\hline
+		Our room		   &							&						&								&					&								&					\\
+		Quake 3			   &	34.67 min				& 0.29 $\frac{\%}{min}$	&								&					&								&					\\
+		google.com		   &							&						&								&					&								&					\\
+	\end{tabular}
+	\caption{Battery consumption of different WebGL applications\label{batteryTable}}
+	\end{centering}
+\end{table*}
 
 \section{Conclusion}
 The conclusion goes here.
