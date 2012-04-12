@@ -128,7 +128,11 @@ BOOL checking = NO;
 	double ellapsedMinutes = [endDate timeIntervalSinceDate:startDate] / 60;
 	
 	if (batteryLevel == -1.0 || [UIDevice currentDevice].batteryState != UIDeviceBatteryStateUnplugged) {
-		batteryInfo = @"Battery level not available.\nPlease unplug your device.";
+		if ([UIDevice currentDevice].batteryState == UIDeviceBatteryStateFull) {
+			batteryInfo = @"Device is fully loaded";
+		} else {
+			batteryInfo = @"Battery level not available.\nPlease unplug your device.";
+		}
 	} else {
 		float currentLevel = [UIDevice currentDevice].batteryLevel;
 		float delta = batteryLevel - currentLevel;
