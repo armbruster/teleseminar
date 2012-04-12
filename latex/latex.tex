@@ -66,7 +66,7 @@
 \title{WebGL on Mobile Devices}
 
 
-\author{William~Weilgard~Francis~Almnes,~\IEEEmembership{University~of~Oslo}\\
+\author{William~Almnes,~\IEEEmembership{University~of~Oslo}\\
         Marko~Andjic,~\IEEEmembership{University~of~Oslo}\\
         Matthias~Armbruster~\IEEEmembership{University~of~Mannheim}\\  
         and~Paul~Steinhilber,~\IEEEmembership{University~of~Mannheim}% <-this % stops a space
@@ -210,7 +210,7 @@ Academia evaluates user experience oftentimes by looking at the emotional state 
 \section{Implementation}
 Although data from a gyroscope is accessible with JavaScript and could be therefore used in a WebGL application, we only used data provided by a devices accelerometer, as not all of our test devices had a gyroscope included.
 
-\subsection{iOS WebGLViewer}
+\subsection{iOS WebGLViewer} \label{WebGLViewer}
 	As mentioned in section \ref{WebGLoniOS} there is no official WebGL support in a browser on iOS available. Therefore a simple iOS application, called WebGLViewer, was implemented based on the method and instruction published by Nathan de Vries \cite{deVries2011}. WebGLViewer consists of a UIWebView, a reload button and an address bar. The UIWebView was modified to show WebGL content (compare section \ref{WebGLoniOS} and \cite{deVries2011}). 
 	
 	If you shake the device while running WebGLViewer the app shows information about the battery consumption. The current battery level, the battery level when the loading of the current page finished as well as the delta of these two values is shown as percentage. In addition the time the website is shown as well as the battery consumption per minute is shown. Unfortunately the battery level is only updated in 5\,\% steps. To get a more accurate result the battery information pop-up will automatically be shown if the battery level changes.
@@ -220,6 +220,20 @@ Although data from a gyroscope is accessible with JavaScript and could be theref
 \subsection{Room}
 
 \section{Evaluation}
+
+\subsubsection{Battery usage}
+To measure the battery usage the WebGLViewer app for iOS was used (see section \ref{WebGLViewer}). The device was fully charged. The accordant content was opened in the WebGLViewer app. The device then was unplugged and the content reloaded. The time till the battery level reached 90\,\% was measured by the WebGLViewer. All test have been performed on an Apple iPhone 4 with iOS 5.1 installed. We compared the battery usage of our room, the Quake 3 WebGL Tech Demo and google.com as reference. The results are shown in table \ref{batteryTable}. 
+
+\begin{table}[htb]
+\begin{tabular}{r|c|l}
+	\textbf{Test Case}		& \textbf{Time till 90\,\%}				& \textbf{Battery usage}		\\
+	\hline
+	Our room				&										&								\\
+	Quake 3					&	34.67 min							& 0.29 $\frac{\%}{min}$			\\
+	google.com				&										&								\\
+\end{tabular}
+\caption{Battery consumption of different WebGL applications\label{batteryTable}}
+\end{table}
 
 \section{Conclusion}
 The conclusion goes here.
