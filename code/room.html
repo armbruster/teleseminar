@@ -66,12 +66,12 @@
 			scene.add( camera );
 
 			// adding built-in (Three.JS native) camera controls
-			controls = new THREE.FlyControls( camera );
-			controls.movementSpeed = 50;
-			controls.domElement = document;
-			controls.rollSpeed = 0.05;
-			controls.autoForward = false;
-			controls.dragToLook = true;
+//			controls = new THREE.FlyControls( camera );
+//			controls.movementSpeed = 50;
+//			controls.domElement = document;
+//			controls.rollSpeed = 0.05;
+//			controls.autoForward = false;
+//			controls.dragToLook = true;
 
 			stats = new Stats();
 			stats.domElement.style.position = 'absolute';
@@ -278,6 +278,7 @@
 			} else {
 				alert("location not available");
 			}
+			
 		}
 	
 		
@@ -302,7 +303,7 @@
 			}
 		
 			requestAnimationFrame( animate );
-			controls.update( 1 );
+			// controls.update( 1 );
 			stats.update();
 			render();
 		}
@@ -319,6 +320,7 @@
 		var oldX;
 		var oldY;
 		function onDocumentTouchStart(event) {
+	
 			click(event.touches[ 0 ].pageX, event.touches[ 0 ].pageY);
 			oldX = event.touches[ 0 ].pageX; 
 			oldY = event.touches[ 0 ].pageY; 
