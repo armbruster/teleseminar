@@ -68,7 +68,7 @@
 			scene.add( camera );
 
 			// adding built-in (Three.JS native) camera controls
-<<<<<<< HEAD
+
 		/*	controls = new THREE.FlyControls( camera );
 			controls.movementSpeed = 50;
 			controls.domElement = document;
@@ -82,15 +82,6 @@
 			controls.lookSpeed = 2;
 			controls.rollSpeed = 2;
 			
-=======
-//			controls = new THREE.FlyControls( camera );
-//			controls.movementSpeed = 50;
-//			controls.domElement = document;
-//			controls.rollSpeed = 0.05;
-//			controls.autoForward = false;
-//			controls.dragToLook = true;
-
->>>>>>> upstream/master
 			stats = new Stats();
 			stats.domElement.style.position = 'absolute';
 			stats.domElement.style.left = '0px';
@@ -321,11 +312,11 @@
 			}
 		
 			requestAnimationFrame( animate );
-<<<<<<< HEAD
+
 			controls.update( clock.getDelta() );
-=======
+
 			// controls.update( 1 );
->>>>>>> upstream/master
+
 			stats.update();
 			render();
 		}
