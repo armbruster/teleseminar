@@ -36,6 +36,8 @@
 		var window1, window1Material;
 		var window2, window2Material;
 		
+		var clock = new THREE.Clock();
+		
 		var lat = 0;
 		var long = 0;
 		// var sphere;
@@ -66,6 +68,21 @@
 			scene.add( camera );
 
 			// adding built-in (Three.JS native) camera controls
+<<<<<<< HEAD
+		/*	controls = new THREE.FlyControls( camera );
+			controls.movementSpeed = 50;
+			controls.domElement = document;
+			controls.rollSpeed = 0.05;
+			controls.autoForward = false;
+			controls.dragToLook = true;
+		*/
+			
+			controls = new THREE.RollControls( camera );
+			controls.movementSpeed = 500;
+			controls.lookSpeed = 2;
+			controls.rollSpeed = 2;
+			
+=======
 //			controls = new THREE.FlyControls( camera );
 //			controls.movementSpeed = 50;
 //			controls.domElement = document;
@@ -73,6 +90,7 @@
 //			controls.autoForward = false;
 //			controls.dragToLook = true;
 
+>>>>>>> upstream/master
 			stats = new Stats();
 			stats.domElement.style.position = 'absolute';
 			stats.domElement.style.left = '0px';
@@ -303,7 +321,11 @@
 			}
 		
 			requestAnimationFrame( animate );
+<<<<<<< HEAD
+			controls.update( clock.getDelta() );
+=======
 			// controls.update( 1 );
+>>>>>>> upstream/master
 			stats.update();
 			render();
 		}
@@ -455,8 +477,11 @@
 		<video id="video" style="display:none">
 			<source src="textures/sintel.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
 			<source src="textures/sintel.ogv" type='video/ogg; codecs="theora, vorbis"'>
-		</video>		
+		</video>
 		<div id="info"></div>
+		<div id="info_movement">					
+			WASD move, RF up/down, QE roll,	mouse look around		
+		</div>
 		<div id="map" onclick="$('#map').hide();$('#showMap').show();"></div>
 		<div id="showMap" onclick="$('#map').show();$('#showMap').hide();"></div>
 		
