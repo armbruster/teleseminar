@@ -8,6 +8,7 @@
 	<script type="text/javascript" src="js/Stats.js"></script>
 	<script src="js/Detector.js"></script>
 	<script src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/addRoom.js"></script>
 	<script type="text/javascript">
 	window.onload = function () {
 		var rotationX = 0;
@@ -52,7 +53,7 @@
 		init();
 		animate();
 
-
+		var bb_map;
 		function init() {
 			
 			roomWidth = 1500;
@@ -82,12 +83,14 @@
 			controls.lookSpeed = 2;
 			controls.rollSpeed = 2;
 			
+			
+			/****** STATS PART *******/
 			stats = new Stats();
 			stats.domElement.style.position = 'absolute';
 			stats.domElement.style.left = '0px';
 			stats.domElement.style.top = '0px';
 			document.body.appendChild( stats.domElement );
-
+			/****** END STATS PART *******/
 	
 			/****** VIDEO PART *******/
 			video = document.getElementById('video');
@@ -105,18 +108,10 @@
 
 			vid_mat = new THREE.MeshBasicMaterial( { map: vid_texture, overdraw: true } );
 			/****** END VIDEO PART *******/
-	
-			
-			var material = new THREE.MeshLambertMaterial( { color: 0xFF0000 } );
-			
-			
-//			sphere =  new THREE.Mesh( new THREE.SphereGeometry(1,1,1), material);
-//			sphere.position.x=roomWidth / 2;
-//			sphere.position.y=70;
-//			sphere.position.z=roomWidth / 2;
-//			scene.add(sphere);
 
-			
+			/** Create the room. */
+			createRoom(scene, roomWidth, roomHeight);
+			/** Add the room elements to the room. */	
 			addRoomEnvironment(scene, objects, roomWidth, vid_mat);			
 			
 			// Just a reference cube to see how large the imported models are.
@@ -134,132 +129,7 @@
 			ref_cube.position.z=roomWidth / 2;
 
 
-			// floor
-			var floorTexture  = THREE.ImageUtils.loadTexture("textures/floor-512.jpg");
-			floorTexture.wrapS = THREE.RepeatWrapping;
-			floorTexture.wrapT = THREE.RepeatWrapping;
-			floorTexture.repeat.x = 10;
-			floorTexture.repeat.y = 10;
 			
-			floorMaterial = new THREE.MeshLambertMaterial({ 
-			map: floorTexture
-			});
-			
-        	floor = new THREE.Mesh( new THREE.PlaneGeometry( roomWidth, roomWidth, 4, 4 ), floorMaterial );
- 	       	floor.rotation.x = - 90 * ( Math.PI / 180 );
-    	   	floor.position.x = roomWidth / 2;
-    	   	floor.position.y = 0;
-       		floor.position.z = roomWidth / 2;
-	        floor.overdraw = true;	
-     	   	scene.add( floor );
-
-     	   	roofMaterial = new THREE.MeshLambertMaterial({ 
-			map: THREE.ImageUtils.loadTexture("textures/floor-512.jpg")
-			});
-        	roof = new THREE.Mesh( new THREE.PlaneGeometry( roomWidth, roomWidth, 4, 4 ), roofMaterial );
- 	       	roof.rotation.x = - 90 * ( Math.PI / 180 );
-    	   	roof.position.x = roomWidth / 2;
-    	   	roof.position.y = roomHeight;
-       		roof.position.z = roomWidth / 2;
-	        roof.overdraw = true;	
-     	   	scene.add( roof );
-
-     	   	frontWallMaterial = new THREE.MeshLambertMaterial({ 
-			map: THREE.ImageUtils.loadTexture("textures/wall-512.jpg")
-			});
-        	frontWall = new THREE.Mesh( new THREE.PlaneGeometry( roomWidth, roomHeight, 4, 4 ), frontWallMaterial );
- 	       	frontWall.rotation.x = 0 * ( Math.PI / 180 );
-    	   	frontWall.position.x = roomWidth / 2;
-			frontWall.position.y = roomHeight / 2;
-       		frontWall.position.z = 0;
-	        frontWall.overdraw = true;	
-     	   	scene.add( frontWall );
-
-     	   	backWallMaterial = new THREE.MeshLambertMaterial({ 
-			map: THREE.ImageUtils.loadTexture("textures/wall-512.jpg")
-			});
-        	backWall = new THREE.Mesh( new THREE.PlaneGeometry( roomWidth, roomHeight, 4, 4 ), backWallMaterial );
- 	       	backWall.rotation.x = 180 * ( Math.PI / 180 );
-    	   	backWall.position.x = roomWidth / 2;
-			backWall.position.y = roomHeight / 2;
-       		backWall.position.z = roomWidth;
-	        backWall.overdraw = true;	
-     	   	scene.add( backWall );
-
-     	   	leftWallMaterial = new THREE.MeshLambertMaterial({ 
-			map: THREE.ImageUtils.loadTexture("textures/wall-512.jpg")
-			});
-        	leftWall = new THREE.Mesh( new THREE.PlaneGeometry( roomWidth, roomHeight, 4, 4 ), leftWallMaterial );
- 	       	leftWall.rotation.x = 0 * ( Math.PI / 180 );
- 	       	leftWall.rotation.y = 90 * ( Math.PI / 180 );
-    	   	leftWall.position.x = 0;
-			leftWall.position.y = roomHeight / 2;
-       		leftWall.position.z = roomWidth / 2;
-	        leftWall.overdraw = true;	
-     	   	scene.add( leftWall );
-
-     	   	rightWallMaterial = new THREE.MeshLambertMaterial({ 
-			map: THREE.ImageUtils.loadTexture("textures/wall-512.jpg")
-			});
-        	rightWall = new THREE.Mesh( new THREE.PlaneGeometry( roomWidth, roomHeight, 4, 4 ), rightWallMaterial );
- 	       	rightWall.rotation.x = 0 * ( Math.PI / 180 );
- 	       	rightWall.rotation.y = 90 * ( Math.PI / 180 );
- 	       	rightWall.rotation.y = -90 * ( Math.PI / 180 );
-    	   	rightWall.position.x = roomWidth;
-			rightWall.position.y = roomHeight / 2;
-       		rightWall.position.z = roomWidth / 2;
-	        rightWall.overdraw = true;	
-     	   	scene.add( rightWall );
-
-     	   	window1Material = new THREE.MeshLambertMaterial({ 
-			map: THREE.ImageUtils.loadTexture("textures/window-512.jpg")
-			});
-        	window1 = new THREE.Mesh( new THREE.PlaneGeometry( roomHeight/4, roomHeight/4, 4, 4 ), window1Material );
- 	       	window1.rotation.x = 0 * ( Math.PI / 180 );
- 	       	window1.rotation.y = 90 * ( Math.PI / 180 );
-    	   	window1.position.x = 1;
-			window1.position.y = roomHeight / 3;
-       		window1.position.z = roomWidth * 0.25;
-	        window1.overdraw = true;	
-     	   	scene.add( window1 );
-
-     	   	window2Material = new THREE.MeshLambertMaterial({ 
-			map: THREE.ImageUtils.loadTexture("textures/window-512.jpg")
-			});
-        	window2 = new THREE.Mesh( new THREE.PlaneGeometry( roomHeight/4, roomHeight/4, 4, 4 ), window2Material );
- 	       	window2.rotation.x = 0 * ( Math.PI / 180 );
- 	       	window2.rotation.y = 90 * ( Math.PI / 180 );
-    	   	window2.position.x = 1;
-			window2.position.y = roomHeight / 3;
-       		window2.position.z = roomWidth * 0.5;
-	        window2.overdraw = true;	
-     	   	scene.add( window2 );
-
-     	   	window3Material = new THREE.MeshLambertMaterial({ 
-			map: THREE.ImageUtils.loadTexture("textures/window-512.jpg")
-			});
-        	window3 = new THREE.Mesh( new THREE.PlaneGeometry( roomHeight/4, roomHeight/4, 4, 4 ), window3Material );
- 	       	window3.rotation.x = 0 * ( Math.PI / 180 );
- 	       	window3.rotation.y = 90 * ( Math.PI / 180 );
-    	   	window3.position.x = 1;
-			window3.position.y = roomHeight / 3;
-       		window3.position.z = roomWidth * 0.75;
-	        window3.overdraw = true;	
-     	   	scene.add( window3 );
-
-     	   	doorMaterial = new THREE.MeshLambertMaterial( {
-     	   		map: THREE.ImageUtils.loadTexture("textures/door.jpg")
-     	   	});
-     	   	door = new THREE.Mesh( new THREE.PlaneGeometry( roomWidth/10, roomHeight*0.5, 4, 4), doorMaterial );
-     	   	door.rotation.x = 0 * ( Math.PI / 180 );
- 	       	door.rotation.y = 90 * ( Math.PI / 180 );
- 	       	door.rotation.y = -90 * ( Math.PI / 180 );
-    	   	door.position.x = roomWidth - 1;
-			door.position.y = roomHeight / 4;
-       		door.position.z = roomWidth / 4;
-	        door.overdraw = true;	
-     	   	scene.add( door );
-
 			renderer = new THREE.WebGLRenderer(  );
       		renderer.setSize( window.innerWidth,window.innerHeight );
       		document.body.appendChild( renderer.domElement );
@@ -453,16 +323,15 @@
 			alert(errorMessage);
 		}
 		function showLocation (position)
-		{  
+		{ 					
 		    $('#showMap').hide();
 		    $('#map').show();
 		    $('#map').html("<img src='http://maps.google.com/maps/api/staticmap?center="+position.coords.latitude+","+position.coords.longitude+"&zoom=14&size=300x100&markers=color:blue|label:S|"+position.coords.latitude+","+position.coords.longitude+"&sensor=true' width='300' height='100' />");   
+			
 		}
 		
 	};
-	</script>
-
-	<script type="text/javascript" src="js/addRoom.js"></script>
+	</script>	
 	</head>
 	<body>
 		<video id="video" style="display:none">
