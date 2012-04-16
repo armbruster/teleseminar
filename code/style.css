@@ -10,7 +10,7 @@ body {
 /* info label for information about the desk */
 #info {
 	position: absolute;
-	top: 0px;
+	top: 50px;
 	left: 0px;
 	width: 320px;
     background-color: rgba(0,0,0,0.4);
