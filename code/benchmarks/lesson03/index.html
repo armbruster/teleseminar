@@ -5,7 +5,8 @@
 <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
 
 <script type="text/javascript" src="glMatrix-0.9.5.min.js"></script>
-<script type="text/javascript" src="webgl-utils.js"></script>
+<script type="text/javascript" src="../js/Stats.js"></script>
+<script type="text/javascript" src="../js/webgl-utils.js"></script>
 
 <script id="shader-fs" type="x-shader/x-fragment">
     precision mediump float;
@@ -275,6 +276,21 @@
         tick();
     }
 
+    var stats = new Stats();
+
+    // Align top-left
+    stats.getDomElement().style.position = 'absolute';
+    stats.getDomElement().style.left = '600px';
+    stats.getDomElement().style.top = '600px';
+
+    document.body.appendChild( stats.getDomElement() );
+
+    setInterval( function () {
+
+        stats.update();
+
+    }, 1000 / 60 );
+
 </script>
 
 </head>
@@ -287,6 +303,35 @@
 
     <br/>
     <a href="http://learningwebgl.com/blog/?p=239">&lt;&lt; Back to Lesson 3</a><br />
+
+    <script type="text/javascript">
+        var stats = new Stats();
+
+        // Align top-left
+        stats.getDomElement().style.position = 'absolute';
+        stats.getDomElement().style.left = '510';
+        stats.getDomElement().style.top = '8px';
+
+        document.body.appendChild( stats.getDomElement() );
+
+        setInterval( function () {
+
+            stats.update();
+
+        }, 1000 / 60 );
+    </script>
+    <script type="text/javascript">
+        var lastPaintCount;
+        lastPaintCount = 0;
+        function CalculateMozillaFrameRate () {
+            var currentPaintCount, frameRate; 
+            currentPaintCount = window.mozPaintCount;
+            frameRate = (currentPaintCount - lastPaintCount);
+            divFramerate.innerHTML = frameRate;
+            lastPaintCount = currentPaintCount;
+        }
+        setInterval ("CalculateMozillaFrameRate()", 1000); // frames per second, 1s = 1000ms
+    </script>
 </body>
 
 </html>
