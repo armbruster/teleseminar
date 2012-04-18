@@ -435,7 +435,22 @@
 
         tick();
     }
+	
+	var stats = new Stats();
 
+	// Align top-left
+	stats.getDomElement().style.position = 'absolute';
+	stats.getDomElement().style.left = '600px';
+	stats.getDomElement().style.top = '600px';
+
+	document.body.appendChild( stats.getDomElement() );
+
+	setInterval( function () {
+
+		stats.update();
+
+	}, 1000 / 60 );
+	
 </script>
 
 </head>
@@ -489,6 +504,22 @@
     <br/>
 
     <a href="http://learningwebgl.com/blog/?p=1778">&lt;&lt; Back to Lesson 15</a><br />
+	<script type="text/javascript">
+		var stats = new Stats();
+
+		// Align top-left
+		stats.getDomElement().style.position = 'absolute';
+		stats.getDomElement().style.left = '510';
+		stats.getDomElement().style.top = '8px';
+
+		document.body.appendChild( stats.getDomElement() );
+
+		setInterval( function () {
+
+			stats.update();
+
+		}, 1000 / 60 );
+	</script>
 </body>
 
 </html>
