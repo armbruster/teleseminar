@@ -8,6 +8,7 @@
 	<script type="text/javascript" src="js/Stats.js"></script>
 	<script src="js/Detector.js"></script>
 	<script src="js/jquery.min.js"></script>
+	<script src="js/isMobile.js"></script>
 	<script type="text/javascript" src="js/addRoom.js"></script>
 	<script type="text/javascript">
 	window.onload = function () {
@@ -69,20 +70,19 @@
 			scene.add( camera );
 
 			// adding built-in (Three.JS native) camera controls
-
-		/*	controls = new THREE.FlyControls( camera );
-			controls.movementSpeed = 50;
-			controls.domElement = document;
-			controls.rollSpeed = 0.05;
-			controls.autoForward = false;
-			controls.dragToLook = true;
-		*/
-			
-			controls = new THREE.RollControls( camera );
-			controls.movementSpeed = 500;
-			controls.lookSpeed = 2;
-			controls.rollSpeed = 2;
-			
+			if (!isMobile()) {
+				controls = new THREE.FlyControls( camera );
+				controls.movementSpeed = 50;
+				controls.domElement = document;
+				controls.rollSpeed = 0.05;
+				controls.autoForward = false;
+				controls.dragToLook = true;
+					
+//				controls = new THREE.RollControls( camera );
+//				controls.movementSpeed = 500;
+//				controls.lookSpeed = 2;
+//				controls.rollSpeed = 2;					
+			}
 			
 			/****** STATS PART *******/
 			stats = new Stats();
@@ -138,7 +138,6 @@
 			var pointLight = new THREE.PointLight(0xFFFFFF);
 			pointLight.position.set(roomWidth / 2, roomHeight, roomWidth / 2); //middle of the room		
 			scene.add(pointLight);
-	               // document.getElementById('debug').innerHTML = "TEST";
 			document.body.appendChild( renderer.domElement );
 
 			projector = new THREE.Projector();
@@ -154,6 +153,8 @@
 			// try to get gps position
 			if (navigator.geolocation) {
 				watchId = navigator.geolocation.watchPosition(updateLocation, handleError);
+				$('#showMap').hide();
+				$('#map').show();
 			} else {
 				alert("location not available");
 			}
@@ -183,9 +184,10 @@
 		
 			requestAnimationFrame( animate );
 
-			controls.update( clock.getDelta() );
-
-			// controls.update( 1 );
+			if (!isMobile()) {
+			 	// controls.update( clock.getDelta() );
+				controls.update( 0.5 );
+			}
 
 			stats.update();
 			render();
@@ -194,8 +196,11 @@
 		window.ondevicemotion = function(event)  {
 			// device flat on table -> show floor
 			// device vertical -> look at blackboard
-			rotationY = (-event.accelerationIncludingGravity.y / 10) + 200;
-
+		
+			if (isMobile() && isIOS()) {
+				rotationY = (-event.accelerationIncludingGravity.y / 10) + 200;	
+			}
+			
 			/* getting the rotation at the Y axis is really difficult with only accelerometer data, so we limit accelerometer to looking up and down and try to get the Y rotation from the gyroscope */
 
 		}
@@ -324,8 +329,6 @@
 		}
 		function showLocation (position)
 		{ 					
-		    $('#showMap').hide();
-		    $('#map').show();
 		    $('#map').html("<img src='http://maps.google.com/maps/api/staticmap?center="+position.coords.latitude+","+position.coords.longitude+"&zoom=14&size=300x100&markers=color:blue|label:S|"+position.coords.latitude+","+position.coords.longitude+"&sensor=true' width='300' height='100' />");   
 			
 		}
@@ -334,19 +337,16 @@
 	</script>	
 	</head>
 	<body>
-		<video id="video" style="display:none">
+		<video id="video" style="display:none;">
 			<source src="textures/sintel.m4v">
 			<source src="textures/sintel.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
 			<source src="textures/sintel.ogv" type='video/ogg; codecs="theora, vorbis"'>
 		</video>
 		<div id="info"></div>
-		<div id="info_movement">					
-			WASD move, RF up/down, QE roll,	mouse look around		
-		</div>
 		<div id="map" onclick="$('#map').hide();$('#showMap').show();"></div>
 		<div id="showMap" onclick="$('#map').show();$('#showMap').hide();"></div>
 		
-		<div id="debug" style="background-color:black;color:white;">
+
 		</div>
 	</body>
 </html>
