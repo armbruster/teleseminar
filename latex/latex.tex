@@ -239,6 +239,34 @@ To measure the battery usage the WebGLViewer app for iOS was used (see section \
 	\end{centering}
 \end{table*}
 
+\subsection{Frames per second}
+% TODO: cite 12 fps human eye
+To test the performance of WebGL on different platforms we measured and compared frames per second (FPS) for different applications on different devices. FPS describes the frequency at which images are generated. Below 12 FPS the human eyes is able to recognize the images as different images, for higher FPS a single image can’t be recognized and the images blend together creating motion. So a higher number of FPS creates a more fluid animation and is therefore considered better.
+
+Since the refresh rate of modern flat screens is 60 FPS there is usually no need to calculate more than 60 FPS. % TODO: cite
+% The higher the FPS the better, but the number should not exceed 60 (or at least the software %stack should make sure it doesn’t) , since this is the refresh frequency of modern flat screens, % so it would be unnecessary (I had a reference on that, just need to find it).
+
+%TODO: \citel{http://www.webkit.org/blog-files/webgl/SpiritBox.html}.
+In table \ref{fpsTable} we compared the frame rate of the implemented room, the Quake 3 WebGL Demo \cite{quakewebgl} and a example of a spinning cube, the “Spirit Box” from \url {webkit.org} on different mobile devices and one powerful desktop computer as reference.
+
+\begin{table*}[tb]
+	\begin{centering}
+	\begin{tabular}{r|c|c|c|c|c|c}
+		Device						& Operating System	& Browser		& Launched	& Our room	& Quake 3	&	SpiritBox	\\
+		\hline
+		Apple iPhone 4				& iOS 5.1			& WebGLViewer	&			& 40 FPS	& 29 FPS	& 43 FPS		\\
+		Apple iPhone 3GS			& iOS 5.1			& WebGLViewer	&			&			&			&				\\
+		Apple iPad 2				& iOS 5.1			& WebGLViewer	&			& 61 FPS	& 61 FPS	& 45 FPS		\\ % new Q3 Demo ??
+		Apple iPod Touch (4th Gen.)	& iOS 5.1			& WebGLViewer	&			& 21 FPS	& 37 FPS	& 43 FPS		\\ % new Q3 Demo ??
+		HTC Desire					& Android 2.2.2		& Opera v12		&			& 6 FPS 	&			&				\\ % room black == not working ???
+		HTC Desire					& Android 2.2.2		& Mozilla		&			& 2 FPS 	& N/A		&				\\ % Mozilla == Firefox ??
+		HTC EVO 3D					& Android ???		& Firefox		&			& 8 FPS		& 12 FPS	& N/A $^{1}$	\\ 
+		Reference Computer			& 					& 				&			&			&			&				\\
+	\end{tabular}
+	\caption{Frames per Second (FPS) of different WebGL applications on different devices\label{fpsTable}\\$^{1}$ \textit{The FPS value is constantly alternating between 12 FPS and 209 FPS, making it impossible to determine a realistic value.}}
+	\end{centering}
+\end{table*}
+
 \section{Conclusion}
 The conclusion goes here.
 
@@ -247,9 +275,8 @@ The conclusion goes here.
 
 
 \appendices
-\section*{Appendix A}
-
-Appendix one text goes here.
+\section*{Installing WebGLViewer}
+To install the WebGLViewer using the provided source code on an iOS device a membership in Apple's iOS Developer Program is needed. However compiling and running the WebGLViewer in the iOS Simulator is possible using XCode. As alternative, a registered developer can provide you a binary, which is build for your specific device. We used \url{testflight.com} to distribute such binaries. To request a binary you need to create an account on \url{http://bit.ly/zWoZQJ} and register your device as soon as you are accepted.
 
 \section*{Appendix B}
 Appendix two text goes here.
