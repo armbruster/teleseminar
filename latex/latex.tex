@@ -271,25 +271,27 @@ In table \ref{fpsTable} we compared the frame rate of the implemented room, the 
 \begin{table*}[tb]
 	\begin{centering}
 	\begin{tabular}{l|l|l|l|l|l|l|l}
-		Test										& Reference		& Desire		& EVO 3D	& iPhone 4	& iPhone 3GS	& iPad 2	& iPod Touch\\
+		Test										& Reference$^{1}$& Desire		& EVO 3D		& iPhone 4		& iPhone 3GS	& iPad 2	& iPod Touch\\
 		\hline
-		3 - Simple animations						& 59 FPS		&    FPS		& 16 FPS		& 57 FPS	&    FPS		&    FPS	&    FPS				\\
-		4 - 3D animations							& 58 FPS		&    FPS		& 19 FPS		& 57 FPS	&    FPS		&    FPS	&    FPS				\\
-		5 - Textures								& 59 FPS		&    FPS		& 16 FPS		& 40 FPS	&    FPS		&    FPS	&    FPS				\\
-		6 - Texture filters and keyboard			& 59 FPS		&    FPS		&    FPS		& 40 FPS	&    FPS		&    FPS	&    FPS				\\
-		7 - Basic Lighting							& 59 FPS		&    FPS		&    FPS		& 57 FPS	&    FPS		&    FPS	&    FPS				\\
-		8 - Transparency and blending				& 59 FPS		&    FPS		&    FPS		& 58 FPS	&    FPS		&    FPS	&    FPS				\\
-		9 - Particles								& 59 FPS		&    FPS		&    FPS		& 39 FPS	&    FPS		&    FPS	&    FPS				\\
-		10 - Loading a map							& 58 FPS		&    FPS		&    FPS		& 57 FPS	&    FPS		&    FPS	&    FPS				\\
-		11 - Sphere and rotation					& 59 FPS		&    FPS		&    FPS		& 40 FPS	&    FPS		&    FPS	&    FPS				\\
-		12 - Point lighting							& 58 FPS		&    FPS		&    FPS		& 40 FPS	&    FPS		&    FPS	&    FPS				\\
-		13 - per-fragment lighting					& 59 FPS		&    FPS		&    FPS		& 36 FPS	&    FPS		&    FPS	&    FPS				\\
-		14 - pecular highlights and JSON model		& 58 FPS		&    FPS		&    FPS		& 35 FPS	&    FPS		&    FPS	&    FPS				\\
-		15 - specular maps							& 58 FPS		&    FPS		&    FPS		& 22 FPS $^{*}$	&    FPS		&    FPS	&    FPS				\\
-		16 - Render to texture						& 58 FPS		&    FPS		&    FPS		& 22 FPS	&    FPS		&    FPS	&    FPS				\\
+		3 - Simple animations						& 59 FPS		&    FPS		& 16 FPS		& 57 FPS		& 57 FPS		&    FPS	& 40 FPS				\\
+		4 - 3D animations							& 58 FPS		&    FPS		& 19 FPS		& 57 FPS		& 57 FPS		&    FPS	& 57 FPS				\\
+		5 - Textures								& 59 FPS		&    FPS		& 16 FPS		& 40 FPS		& 57 FPS		&    FPS	& 40 FPS				\\
+		6 - Texture filters and keyboard			& 59 FPS		&    FPS		&    FPS		& 40 FPS		& 57 FPS		&    FPS	& 40 FPS				\\
+		7 - Basic Lighting							& 59 FPS		&    FPS		&    FPS		& 57 FPS		& 57 FPS		&    FPS	& 57 FPS				\\
+		8 - Transparency and blending				& 59 FPS		&    FPS		&    FPS		& 58 FPS		& 57 FPS		&    FPS	& 58 FPS				\\
+		9 - Particles								& 59 FPS		&    FPS		&    FPS		& 39 FPS		& 31 FPS		&    FPS	& 40 FPS				\\
+		10 - Loading a map							& 58 FPS		&    FPS		&    FPS		& 57 FPS		& 57 FPS		&    FPS	& 40 FPS				\\
+		11 - Sphere and rotation					& 59 FPS		&    FPS		&    FPS		& 40 FPS		& 57 FPS		&    FPS	& 57 FPS				\\
+		12 - Point lighting							& 58 FPS		&    FPS		&    FPS		& 40 FPS		& 57 FPS		&    FPS	& 40 FPS				\\
+		13 - per-fragment lighting					& 59 FPS		&    FPS		&    FPS		& 36 FPS		& 40 FPS		&    FPS	& 39 FPS				\\
+		14 - pecular highlights and JSON model		& 58 FPS		&    FPS		&    FPS		& 35 FPS		& 39 FPS		&    FPS	& 36 FPS				\\
+		15 - specular maps							& 58 FPS		&    FPS		&    FPS		& 22 FPS $^{2}$	& 24 FPS $^{2}$	&    FPS	& 22 FPS $^{2}$ 		\\
+		16 - Render to texture						& 58 FPS		&    FPS		&    FPS		& 22 FPS		& 22 FPS		&    FPS	& 22 FPS				\\
 	\end{tabular}
 	\caption{Frames per Second (FPS) using the lessons from the learning WebGL tutorial on different devices\label{lessonsTable}
-	\\\textit{As reference a 2010 MacBook was used.}}
+	\\\textit{$^{1}$ As reference a 2010 MacBook was used.}
+	\\\textit{$^{2}$ Rendering results aren't looking as expected}
+	}
 	\end{centering}
 \end{table*}
 
