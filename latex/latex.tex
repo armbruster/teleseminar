@@ -223,21 +223,25 @@ Although data from a gyroscope is accessible with JavaScript and could be theref
 \section{Evaluation}
 
 \subsubsection{Battery and CPU usage}
-To measure the battery usage the WebGLViewer app for iOS was used (see section \ref{WebGLViewer}). The device was fully charged. The accordant content was opened in the WebGLViewer app. The device then was unplugged and the content reloaded. The time till the battery level reached 90\,\% was measured by the WebGLViewer. Using Apple Instruments, which is part of Apples Developer Tools, we measured the CPU Activity (Total Activity, Foreground App Activity and Graphics) as well as the relative Energy Usage on a scale from 0 to 20. All test have been performed on an Apple iPhone 4 with iOS 5.1 installed. We compared the battery usage and CPU activity of our room, the Quake 3 WebGL Demo by Brandon Jones \cite{quakewebgl} and google.com as reference. The results are shown in table \ref{batteryTable}. 
+To measure the battery usage the WebGLViewer app for iOS was used (see section \ref{WebGLViewer}). The device was fully charged. The accordant content was opened in the WebGLViewer app. The device then was unplugged and the content reloaded. The time till the battery level reached 90\,\% was measured by the WebGLViewer. Using Apple Instruments, which is part of Apples Developer Tools, we measured the CPU Activity (Total Activity, Foreground App Activity and Graphics) as well as the relative Energy Usage on a scale from 0 to 20. All tests have been performed on an Apple iPhone 4 with iOS 5.1 installed. We compared the battery usage and CPU activity of our room, the Quake 3 WebGL Demo by Brandon Jones \cite{quakewebgl} and google.com as reference. The results are shown in table \ref{batteryTable}. 
 
 \begin{table*}[tb]
 	\begin{centering}
 	\begin{tabular}{r|c|c|c|c|c|c}
 		\multirow{2}{*}{\textbf{Test Case}} & \multicolumn{3}{c|}{\textbf{Battery and Energy Consumption}}						 & \multicolumn{3}{c}{\textbf{CPU Activity}}					\\
- 							&\textbf{Time till 90\,\%} & \textbf{Battery usage}	& \textbf{Relative Energy Usage} & \textbf{Total} 	& \textbf{Foreground App} 		& \textbf{Graphics}	\\
+ 							&\textbf{Time till 90\,\%} & \textbf{Battery Usage}	& \textbf{Relative Energy Usage} & \textbf{Total} 	& \textbf{Foreground App} 		& \textbf{Graphics}	\\
 		\hline
-		Our room		   &							&							&								&					&								&					\\
-		Quake 3			   &	34.67 min				& 0.289 $\frac{\%}{min}$	&								&					&								&					\\
-		google.com		   &	78.93 min				& 0.127	$\frac{\%}{min}$	&								&					&								&					\\
+		room.html		   &	36.03 min				& 0.278 $\frac{\%}{min}$	&	17							& 100\,\%			& 64\,\%						& 20\,\%			\\
+		Quake 3			   &	34.67 min				& 0.289 $\frac{\%}{min}$	&	16							& 70\,\%			& 60\,\%						& 8\,\%			\\
+		google.com		   &	78.93 min				& 0.127	$\frac{\%}{min}$	&	11							& 6\,\%				& 0.2\,\%						& 0.5\,\%		\\
 	\end{tabular}
-	\caption{Battery consumption of different WebGL applications\label{batteryTable}}
+	\caption{Battery consumption and CPU activity of different WebGL applications\label{batteryTable}}
 	\end{centering}
 \end{table*}
+
+Comparing the two WebGL applications to a normal website like \url{google.com} shows a huge difference in CPU activity. Whereas the overall CPU activity is below 10\,\%, with a value below 1\,\% for Foreground App Activity as well as Graphics Activity, while using \url{google.com}, the overall CPU activity is over 70\,\%, with about 60\,\% for Foreground App Activity and up to 25\,\% for Graphics Activity, while using a WebGL application. 
+
+If we look at the battery consumption there is also a significant difference visible. The battery drains as twice as fast while using a WebGL enabled website compared to \url{google.com}. The difference regarding the Relative Energy Usage is not as big, however we don't know how Apple calculates this value. \url{google.com} still needs less energy compared to the WebGL applications. Also the room.html has a higher value compared to the Quake 3 WebGL Demo, which is consistent with our measurement of the Battery Usage as well as with the Time till the battery level reaches 90\,\%.
 
 \subsection{Frames per second}
 % TODO: cite 12 fps human eye
@@ -252,13 +256,13 @@ In table \ref{fpsTable} we compared the frame rate of the implemented room, the 
 \begin{table*}[tb]
 	\begin{centering}
 	\begin{tabular}{l|l|l|l|l|l|l}
-		Device						& Operating System	& Browser		& Launched	& Our room	& Quake 3	&	SpiritBox	\\
+		Device						& Operating System	& Browser		& Launched	& room.html	& Quake 3	&	SpiritBox	\\
 		\hline
 		Apple iPad 2				& iOS 5.1			& WebGLViewer	& 2011		& 61 FPS	& 61 FPS	& 45 FPS		\\ % new Q3 Demo ??
-		HTC EVO 3D					& Android ???		& Firefox		& 2011		& 8 FPS		& 12 FPS	& N/A $^{1}$	\\ 
+		HTC EVO 3D					& Android 2.3.4		& Firefox		& 2011		& 8 FPS		& 12 FPS	& N/A $^{1}$	\\ 
 		Apple iPhone 4				& iOS 5.1			& WebGLViewer	& 2010		& 40 FPS	& 30 FPS	& 43 FPS		\\
 		Apple iPod Touch (4th Gen.)	& iOS 5.1			& WebGLViewer	& 2010		& 21 FPS	& 37 FPS	& 43 FPS		\\ % new Q3 Demo ??
-		HTC Desire					& Android 2.2.2		& Opera v12		& 2010		& 6 FPS 	&			&				\\ % room black == not working ???
+%		HTC Desire					& Android 2.2.2		& Opera v12		& 2010		& 6 FPS 	&			&				\\ % room black == not working ???
 		HTC Desire					& Android 2.2.2		& Mozilla		& 2010		& 2 FPS 	& N/A		&				\\ % Mozilla == Firefox ??
 		Apple iPhone 3GS			& iOS 5.1			& WebGLViewer	& 2009		&			&			&				\\
 		\hline
