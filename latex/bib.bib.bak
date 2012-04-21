@@ -341,28 +341,10 @@
   date-modified = {2012-03-09 10:12:36 +0100}
 }
 
-@OTHER{Blender3d,
-  owner = {William},
-  timestamp = {2012.04.21},
-  url = {http://www.blender.org/}
-}
-
 @OTHER{HeligVR,
   owner = {William},
   timestamp = {2012.04.21},
   url = {http://www.mortonheilig.com/InventorVR.html}
-}
-
-@OTHER{pocketARhistory,
-  owner = {William},
-  timestamp = {2012.04.21},
-  url = {http://www.pocket-lint.com/news/38803/the-history-of-augmented-reality}
-}
-
-@OTHER{wiredAR,
-  owner = {William},
-  timestamp = {2012.04.21},
-  url = {http://www.wired.com/gadgetlab/2009/08/augmented-reality/}
 }
 
 @OTHER{280slides,
