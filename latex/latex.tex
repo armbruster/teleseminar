@@ -260,7 +260,7 @@ In table \ref{fpsTable} we compared the frame rate of the implemented room, the 
 		\hline
 		Apple iPad 2				& iOS 5.1			& WebGLViewer	& 2011		& 61 FPS	& 61 FPS	& 45 FPS		\\ % new Q3 Demo ??
 		HTC EVO 3D					& Android 2.3.4		& Firefox		& 2011		& 8 FPS		& 12 FPS	& N/A $^{1}$	\\ 
-		Apple iPhone 4				& iOS 5.1			& WebGLViewer	& 2010		& 40 FPS	& 30 FPS	& 43 FPS		\\
+		Apple iPhone 4				& iOS 5.1			& WebGLViewer	& 2010		& 40 FPS	& 29 FPS	& 43 FPS		\\
 		Apple iPod Touch (4th Gen.)	& iOS 5.1			& WebGLViewer	& 2010		& 21 FPS	& 37 FPS	& 43 FPS		\\ % new Q3 Demo ??
 %		HTC Desire					& Android 2.2.2		& Opera v12		& 2010		& 6 FPS 	&			&				\\ % room black == not working ???
 		HTC Desire					& Android 2.2.2		& Mozilla		& 2010		& 2 FPS 	& N/A		&				\\ % Mozilla == Firefox ??
@@ -277,20 +277,20 @@ In table \ref{fpsTable} we compared the frame rate of the implemented room, the 
 	\begin{tabular}{l|l|l|l|l|l|l|l}
 		Test										& Reference$^{1}$& Desire		& EVO 3D		& iPhone 4		& iPhone 3GS	& iPad 2	& iPod Touch\\
 		\hline
-		3 - Simple animations						& 59 FPS		&    FPS		& 16 FPS		& 57 FPS		& 57 FPS		&    FPS	& 40 FPS				\\
-		4 - 3D animations							& 58 FPS		&    FPS		& 19 FPS		& 57 FPS		& 57 FPS		&    FPS	& 57 FPS				\\
-		5 - Textures								& 59 FPS		&    FPS		& 16 FPS		& 40 FPS		& 57 FPS		&    FPS	& 40 FPS				\\
-		6 - Texture filters and keyboard			& 59 FPS		&    FPS		& 18 FPS		& 40 FPS		& 57 FPS		&    FPS	& 40 FPS				\\
-		7 - Basic Lighting							& 59 FPS		&    FPS		& 17 FPS		& 57 FPS		& 57 FPS		&    FPS	& 57 FPS				\\
-		8 - Transparency and blending				& 59 FPS		&    FPS		& 16 FPS		& 58 FPS		& 57 FPS		&    FPS	& 58 FPS				\\
-		9 - Particles								& 59 FPS		&    FPS		& 17 FPS		& 39 FPS		& 31 FPS		&    FPS	& 40 FPS				\\
-		10 - Loading a map							& 58 FPS		&    FPS		& 15 FPS		& 57 FPS		& 57 FPS		&    FPS	& 40 FPS				\\
-		11 - Sphere and rotation					& 59 FPS		&    FPS		& 15 FPS		& 40 FPS		& 57 FPS		&    FPS	& 57 FPS				\\
-		12 - Point lighting							& 58 FPS		&    FPS		& 15 FPS		& 40 FPS		& 57 FPS		&    FPS	& 40 FPS				\\
-		13 - Per-fragment lighting					& 59 FPS		&    FPS		& 17 FPS		& 36 FPS		& 40 FPS		&    FPS	& 39 FPS				\\
-		14 - Specular highlights and JSON model		& 58 FPS		&    FPS		& 15 FPS		& 35 FPS		& 39 FPS		&    FPS	& 36 FPS				\\
-		15 - Specular maps							& 58 FPS		&    FPS		& 16 FPS		& 22 FPS $^{2}$	& 24 FPS $^{2}$	&    FPS	& 22 FPS $^{2}$ 		\\
-		16 - Render to texture						& 58 FPS		&    FPS		& 16 FPS		& 22 FPS		& 22 FPS		&    FPS	& 22 FPS				\\
+		3 - Simple animations						& 59 FPS		& 13 FPS		& 16 FPS		& 57 FPS		& 57 FPS		&    FPS	& 40 FPS				\\
+		4 - 3D animations							& 58 FPS		& 12 FPS		& 19 FPS		& 57 FPS		& 57 FPS		&    FPS	& 57 FPS				\\
+		5 - Textures								& 59 FPS		& 13 FPS		& 16 FPS		& 40 FPS		& 57 FPS		&    FPS	& 40 FPS				\\
+		6 - Texture filters and keyboard			& 59 FPS		& 12 FPS		& 18 FPS		& 40 FPS		& 57 FPS		&    FPS	& 40 FPS				\\
+		7 - Basic Lighting							& 59 FPS		& 12 FPS		& 17 FPS		& 57 FPS		& 57 FPS		&    FPS	& 57 FPS				\\
+		8 - Transparency and blending				& 59 FPS		& 11 FPS		& 16 FPS		& 58 FPS		& 57 FPS		&    FPS	& 58 FPS				\\
+		9 - Particles								& 59 FPS		&  8 FPS		& 17 FPS		& 39 FPS		& 31 FPS		&    FPS	& 40 FPS				\\
+		10 - Loading a map							& 58 FPS		& 11 FPS		& 15 FPS		& 57 FPS		& 57 FPS		&    FPS	& 40 FPS				\\
+		11 - Sphere and rotation					& 59 FPS		& 12 FPS		& 15 FPS		& 40 FPS		& 57 FPS		&    FPS	& 57 FPS				\\
+		12 - Point lighting							& 58 FPS		& 11 FPS		& 15 FPS		& 40 FPS		& 57 FPS		&    FPS	& 40 FPS				\\
+		13 - Per-fragment lighting					& 59 FPS		& 10 FPS		& 17 FPS		& 36 FPS		& 40 FPS		&    FPS	& 39 FPS				\\
+		14 - Specular highlights and JSON model		& 58 FPS		&  9 FPS		& 15 FPS		& 35 FPS		& 39 FPS		&    FPS	& 36 FPS				\\
+		15 - Specular maps							& 58 FPS		&  8 FPS		& 16 FPS		& 22 FPS $^{2}$	& 24 FPS $^{2}$	&    FPS	& 22 FPS $^{2}$ 		\\
+		16 - Render to texture						& 58 FPS		&  6 FPS		& 16 FPS		& 22 FPS		& 22 FPS		&    FPS	& 22 FPS				\\
 	\end{tabular}
 	\caption{Frames per Second (FPS) using the lessons from the learning WebGL tutorial on different devices\label{lessonsTable}
 	\\\textit{$^{1}$ As reference a 2010 MacBook was used.}
