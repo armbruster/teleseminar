@@ -21,7 +21,7 @@
 \usepackage{graphicx}
 \usepackage{multirow}
 
-\hyphenation{Web-GL-Viewer Web-GL}
+\hyphenation{Web-GL-Viewer Web-GL Web-RTC}
 
 \usepackage{color}
 \definecolor{lightgray}{rgb}{0.9,0.9,0.9}
@@ -247,14 +247,14 @@ Our application, \textit{Room.html}, is build with the goal of demonstrating the
 
 Figure \ref{fig:roomVideo} shows a screenshot of room.html running in Chrome on a desktop computer, while playing the video. Figure \ref{fig:roomMobile} shows a screenshot of room.html running in the WebGLViewer on an iPhone.
 
-\begin{figure}
-\centerline{\includegraphics[width=0.6\textwidth]{grafiken/roomVideo.pdf}}
+\begin{figure}[htb]
+	\includegraphics[width=\columnwidth]{grafiken/roomVideo}
 	\caption{Room.html with playing video in Chrome on a desktop computer}
 	\label{fig:roomVideo}
 \end{figure}
 
-\begin{figure}
-	\centerline{\includegraphics[width=0.6\textwidth]{grafiken/room_Mobile.pdf}}
+\begin{figure}[htb]
+	\centerline{\includegraphics[width=0.8\columnwidth]{grafiken/room_Mobile}}
 	\caption{Room.html shown in the WebGLViewer on an iPhone}
 	\label{fig:roomMobile}
 \end{figure}
@@ -310,7 +310,6 @@ In addition to technical parameters another interesting area of evaluation of We
 
 
 \subsection{Energy Consumption}
-To measure the battery usage, the WebGLViewer application for iOS, as described in section \ref{WebGLViewer}, was used. The device was fully charged. The accordant content was opened in the WebGLViewer application. The device was then unplugged and the content reloaded. The time until the battery level decreased to 90\,\% as well as the battery consumption per minute was measured and calculated by the WebGLViewer. Using Apple Instruments, a part of Apple’s Developer Tools \cite{AppleDevTools}, we measured the \textit{CPU Activity} (\textit{Total Activity}, \textit{Foreground App Activity} and \textit{Graphics}) as well as the relative \textit{Energy Usage} on a scale from 0 to 20. All tests have been performed on an Apple iPhone 4 with iOS 5.1 installed using the WebGLViewer. We have compared the battery usage and CPU activity of the implemented \textit{Room.html}, the \textit{Quake 3 WebGL Demo} by Brandon Jones \cite{quakewebgl} and \url{google.com} as reference. The results are shown in table \ref{batteryTable}.
 
 \begin{table*}[tb]
 	\begin{centering}
@@ -326,22 +325,14 @@ To measure the battery usage, the WebGLViewer application for iOS, as described 
 	\end{centering}
 \end{table*}
 
+To measure the battery usage, the WebGLViewer application for iOS, as described in section \ref{WebGLViewer}, was used. The device was fully charged. The accordant content was opened in the WebGLViewer application. The device was then unplugged and the content reloaded. The time until the battery level decreased to 90\,\% as well as the battery consumption per minute was measured and calculated by the WebGLViewer. Using Apple Instruments, a part of Apple’s Developer Tools \cite{AppleDevTools}, we measured the \textit{CPU Activity} (\textit{Total Activity}, \textit{Foreground App Activity} and \textit{Graphics}) as well as the relative \textit{Energy Usage} on a scale from 0 to 20. All tests have been performed on an Apple iPhone 4 with iOS 5.1 installed using the WebGLViewer. We have compared the battery usage and CPU activity of the implemented \textit{Room.html}, the \textit{Quake 3 WebGL Demo} by Brandon Jones \cite{quakewebgl} and \url{google.com} as reference. The results are shown in table \ref{batteryTable}.
+
 Comparing the two WebGL applications to a normal website like \url{google.com} shows a huge difference in CPU activity. The overall CPU activity is below 10\,\%, with a value below 1\,\% for Foreground App Activity as well as \textit{Graphics Activity}, while using \url{google.com}, whereas the overall CPU activity is over 70\,\%, with about 60\,\% for \textit{Foreground App Activity} and up to 25\,\% for \textit{Graphics Activity}, while using a WebGL application. 
 
 If we look at the battery consumption there is also a significant difference visible. The battery drains twice as fast while using a WebGL enabled website compared to \url{google.com}. The difference regarding the \textit{Relative Energy Usage} is not as big, however, we don't know how Apple calculates this value. \url{google.com} still needs less energy compared to the WebGL applications. Also the room.html has a higher \textit{Relative Energy Usage} compared to the Quake 3 WebGL Demo, which is consistent with our measurement of the battery usage, as well as with the time until the battery level decreases to 90\,\%.
 
 
 \subsection{Frames per second}
-To test the performance of WebGL on different platforms we have measured and compared frames per second (FPS) for different applications. FPS describes the frequency at which images are generated. The values below 10-12 FPS, are recognizable by the human eye as the separate images; for higher FPS, single images cannot be recognized and they blend together creating motion \cite{12FPS}. So a higher number of FPS creates a more fluid animation and is therefore considered better. Since the refresh rate of modern flat screens is 60 FPS there is usually no need to render with more than 60 FPS \cite{60fps}.
-
-In table \ref{fpsTable} we compared the FPS of the implemented \textit{Room.html}, the \textit{Quake 3 WebGL Demo} \cite{quakewebgl} (as shown in figure \ref{fig:quake3}), and an example of a spinning cube, the \textit{SpiritBox} from \url {webkit.org} \cite{SpiritBox}, on different mobile devices as well as on one laptop computer (2010 MacBook) and stationary computer (2006 MacPro) as reference. 
-
-\begin{figure}
-	\centerline{\includegraphics[width=0.3\textwidth]{grafiken/quake.pdf}}
-	\caption{Quake 3 WebGL Demo \cite{quakewebgl} shown in the WebGLViewer on an iPhone}
-	\label{fig:quake3}
-\end{figure}
-
 
 \begin{table*}[tb]
 	\begin{centering}
@@ -365,6 +356,16 @@ In table \ref{fpsTable} we compared the FPS of the implemented \textit{Room.html
 	\\$^{3}$ \textit{Reference Computer: MacBook 2006, Mac OS X 10.7.3, 2x 2.0 GHz Dual-Core Intel Xeon, 6 GB 667 MHz DDR2 RAM}}
 	\end{centering}
 \end{table*}
+
+To test the performance of WebGL on different platforms we have measured and compared frames per second (FPS) for different applications. FPS describes the frequency at which images are generated. The values below 10-12 FPS, are recognizable by the human eye as the separate images; for higher FPS, single images cannot be recognized and they blend together creating motion \cite{12FPS}. So a higher number of FPS creates a more fluid animation and is therefore considered better. Since the refresh rate of modern flat screens is 60 FPS there is usually no need to render with more than 60 FPS \cite{60fps}.
+
+In table \ref{fpsTable} we compared the FPS of the implemented \textit{Room.html}, the \textit{Quake 3 WebGL Demo} \cite{quakewebgl} (as shown in figure \ref{fig:quake3}), and an example of a spinning cube, the \textit{SpiritBox} from \url {webkit.org} \cite{SpiritBox}, on different mobile devices as well as on one laptop computer (2010 MacBook) and stationary computer (2006 MacPro) as reference. 
+
+\begin{figure}[htb]
+	\centerline{\includegraphics[width=0.8\columnwidth]{grafiken/quake3}}
+	\caption{Quake 3 WebGL Demo \cite{quakewebgl} shown in the WebGLViewer on an iPhone}
+	\label{fig:quake3}
+\end{figure}
 
 \begin{table*}[tb]
 	\begin{centering}
@@ -401,24 +402,20 @@ The most obvious result is the big performance difference between the iOS and An
 
 While the Android devices have always had lower frame rates compared to the iOS devices, they were able to render all lessons from table \ref{lessonsTable} correctly. iOS based  devices, on the other hand, were not able to render lesson 15 correctly. Screenshots to compare the rendering of lesson 15 on Android and iOS are shown in figure \ref{fig:lesson15_Android} and figure \ref{fig:lesson15_iOS}, respectively. 
 
-\begin{figure}[h]
-  \hfill
-  \begin{minipage}[t]{.45\textwidth}
-    \begin{center}
-	\includegraphics[width=0.8\textwidth]{grafiken/lesson15_Android.pdf}
+\begin{figure}[htb]
+	\begin{center}
+	\includegraphics[width=0.8\columnwidth]{grafiken/lesson15_Android}
       \caption{“Lesson 15” WebGL demo on Android (adapted from \cite{lesson15})}
       \label{fig:lesson15_Android}
     \end{center}
-  \end{minipage}
-  \hfill
-  \begin{minipage}[t]{.45\textwidth}
-    \begin{center}  
-    \includegraphics[width=0.8\textwidth]{grafiken/lesson15_iOS.pdf}
+\end{figure}
+
+\begin{figure}[htb]
+	\begin{center}  
+    \includegraphics[width=0.8\columnwidth]{grafiken/lesson15_iOS}
       \caption{“Lesson 15” WebGL demo on iOS (adapted from \cite{lesson15})}
       \label{fig:lesson15_iOS}
     \end{center}
-  \end{minipage}
-  \hfill
 \end{figure}
 
 Another interesting result is, that the iPhone 3GS delivers significantly higher frame rates in some tests compared to the iPhone 4. An possible explanation could be, that the iPhone 4’s display resolution is significantly higher, thus requiring the calculation of four times more pixels. 
@@ -431,7 +428,8 @@ Albeit most of the tests we have performed were successful, we have still encoun
 
 \subsubsection{Device Sensors Access}\label{deviceSensors}
 WebRTC, an upcoming standard for access to the device’s video camera and microphone, is currently only available on Opera Mobile 12, a browser currently not supported on iOS. With the Android devices lacking in performance, we were unable to implement a WebRTC application.
-During our evaluation and testing on other devices, we realised that the accelerometer wasn’t working as intended on Android using a HTC EVO 3D running the \textit{Room.html} in Firefox. When the device is laying flat on a surface, the room’s floor is shown as expected. Holding it vertically in your hand, however, still shows the floor. The accelerometer is undoubtedly working, but it seems to be much less sensitive, than the one on iOS based devices. Therefore, the feature to look up and down with the accelerometer is deactivated, when non-iOS device is detected.
+
+During our evaluation and testing on other devices, we realized that the accelerometer wasn’t working as intended on Android using a HTC EVO 3D running the \textit{Room.html} in Firefox. When the device is laying flat on a surface, the room’s floor is shown as expected. Holding it vertically in your hand, however, still shows the floor. The accelerometer is undoubtedly working, but it seems to be much less sensitive, than the one on iOS based devices. Therefore, the feature to look up and down with the accelerometer is deactivated, when non-iOS device is detected.
 
 \subsubsection{Key and Mouse Events}
 As expected, key and mouse events cannot be triggered in WebGL on mobile devices with touch screens, but replacing them with touch events is a working solution for this problem.
@@ -466,7 +464,7 @@ To install the WebGLViewer using the provided source code on an iOS device a mem
 \section*{Appendix B}
 A screenshots of SpiritBox at \ref{fig:spiritbox}.
 \begin{figure}
-	\centerline{\includegraphics[width=0.4\textwidth]{grafiken/SpiritBox.pdf}}
+	\centerline{\includegraphics[width=0.4\textwidth]{grafiken/SpiritBox}}
 	\caption{WebGL demo SpiritBox by \cite{SpiritBox}}
 	\label{fig:spiritbox}
 \end{figure}
@@ -474,7 +472,7 @@ A screenshots of SpiritBox at \ref{fig:spiritbox}.
 A screenshots of "Lesson 9" at \ref{fig:lesson9}.
 
 \begin{figure}
-	\centerline{\includegraphics[width=0.4\textwidth]{grafiken/lesson9.pdf}}
+	\centerline{\includegraphics[width=0.4\textwidth]{grafiken/lesson9}}
 	\caption{“Lesson 9” WebGL demo (adapted from \cite{lesson9})}
 	\label{fig:lesson9}
 \end{figure}
