@@ -335,16 +335,10 @@ To measure the battery usage, the WebGLViewer application for iOS, as described 
 
 Comparing the two WebGL applications to a normal website like \url{google.com} shows a huge difference in CPU activity. The overall CPU activity is below 10\,\%, with a value below 1\,\% for Foreground App Activity as well as \textit{Graphics Activity}, while using \url{google.com}, whereas the overall CPU activity is over 70\,\%, with about 60\,\% for \textit{Foreground App Activity} and up to 25\,\% for \textit{Graphics Activity}, while using a WebGL application. 
 
-If we look at the battery consumption there is also a significant difference visible. The battery drains twice as fast while using a WebGL enabled website compared to \url{google.com}. The difference regarding the \textit{Relative Energy Usage} is not as big, however, we don't know how Apple calculates this value. \url{google.com} still needs less energy compared to the WebGL applications. Also the room.html has a higher \textit{Relative Energy Usage} compared to the Quake 3 WebGL Demo, which is consistent with our measurement of the battery usage, as well as with the time until the battery level decreases to 90\,\%.
+If we look at the battery consumption there is also a significant difference visible. The battery drains twice as fast while using a WebGL enabled website compared to \url{google.com}. The difference regarding the \textit{Relative Energy Usage} is not as big, however, we don't know how Apple calculates this value.
 
 
 \subsection{Frames per second}
-
-\begin{figure}[htb]
-	\centerline{\includegraphics[width=0.6\columnwidth]{grafiken/SpiritBox}}
-	\caption{WebGL demo SpiritBox by \cite{SpiritBox}}
-	\label{fig:spiritbox}
-\end{figure}
 
 \begin{table*}[tb]
 	\begin{centering}
@@ -371,7 +365,17 @@ If we look at the battery consumption there is also a significant difference vis
 
 To test the performance of WebGL on different platforms we have measured and compared frames per second (FPS) for different applications. FPS describes the frequency at which images are generated. The values below 10-12 FPS, are recognizable by the human eye as the separate images; for higher FPS, single images cannot be recognized and they blend together creating motion \cite{12FPS}. So a higher number of FPS creates a more fluid animation and is therefore considered better. Since the refresh rate of modern flat screens is 60 FPS there is usually no need to render with more than 60 FPS \cite{60fps}.
 
+\begin{figure}[htb]
+	\centerline{\includegraphics[width=0.6\columnwidth]{grafiken/SpiritBox}}
+	\caption{WebGL demo SpiritBox by \cite{SpiritBox}}
+	\label{fig:spiritbox}
+\end{figure}
+
 In table \ref{fpsTable} we compared the FPS of the implemented \textit{Room.html}, the \textit{Quake 3 WebGL Demo} \cite{quakewebgl} (as shown in figure \ref{fig:quake3}), and an example of a spinning cube, the \textit{SpiritBox} from \url {webkit.org} \cite{SpiritBox} (as shown in figure \ref{fig:spiritbox}), on different mobile devices as well as on one laptop computer (2010 MacBook) and stationary computer (2006 MacPro) as reference. 
+
+The lessons from \url{learningWebGL.com} \cite{learningwebgl} have been used as a benchmark to test the performance on different mobile device. As example figure \ref{fig:lesson9} shows a screenshot of lesson 9. The results are shown in table \ref{lessonsTable}.
+
+Opera has advertised the WebGL capabilities beginning with Opera Mobile 12 \cite{opera12}, but the performance of WebGL content on this browser is much worse than in Firefox. Although all lessons from table \ref{lessonsTable} are rendered correctly, the frame rate was always below 10 FPS, compared with 16 FPS in average in Firefox on the HTC EVO 3D. The \textit{SpiritBox} on the other hand is not rendered correctly (only a blue square is visible) and the room.html doesn’t load at all.
 
 \begin{table*}[tb]
 	\begin{centering}
@@ -405,10 +409,6 @@ In table \ref{fpsTable} we compared the FPS of the implemented \textit{Room.html
 	\caption{"Lesson 9" WebGL demo (adapted from \cite{lesson9})}
 	\label{fig:lesson9}
 \end{figure}
-
-The lessons from \url{learningWebGL.com} \cite{learningwebgl} have been used as a benchmark to test the performance on different mobile device. As example figure \ref{fig:lesson9} shows a screenshot of lesson 9. The results are shown in table \ref{lessonsTable}.
-
-Opera has advertised the WebGL capabilities beginning with Opera Mobile 12 \cite{opera12}, but the performance of WebGL content on this browser is much worse than in Firefox. Although all lessons from table \ref{lessonsTable} are rendered correctly, the frame rate was always below 10 FPS, compared with 16 FPS in average in Firefox on the HTC EVO 3D. The \textit{SpiritBox} on the other hand is not rendered correctly (only a blue square is visible) and the room.html doesn’t load at all.
 
 The most obvious result is the big performance difference between the iOS and Android devices. Even the HTC EVO 3D, which was launched in 2011, was not able to deliver results comparable to the iPhone 3GS launched in 2009. On the Android devices the \textit{Room.html} was unusable to interact with fluidly, whereas it was rendered smoothly on all iOS devices. 
 
