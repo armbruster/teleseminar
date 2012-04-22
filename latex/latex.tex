@@ -254,7 +254,7 @@ Figure \ref{fig:roomVideo} shows a screenshot of room.html running in Chrome on 
 \end{figure}
 
 \begin{figure}[htb]
-	\centerline{\includegraphics[width=0.7\columnwidth]{grafiken/room_Mobile}}
+	\centerline{\includegraphics[width=0.6\columnwidth]{grafiken/room_Mobile}}
 	\caption{Room.html shown in the WebGLViewer on an iPhone}
 	\label{fig:roomMobile}
 \end{figure}
@@ -325,7 +325,13 @@ In addition to technical parameters another interesting area of evaluation of We
 	\end{centering}
 \end{table*}
 
-To measure the battery usage, the WebGLViewer application for iOS, as described in section \ref{WebGLViewer}, was used. The device was fully charged. The accordant content was opened in the WebGLViewer application. The device was then unplugged and the content reloaded. The time until the battery level decreased to 90\,\% as well as the battery consumption per minute was measured and calculated by the WebGLViewer. Using Apple Instruments, a part of Apple’s Developer Tools \cite{AppleDevTools}, we measured the \textit{CPU Activity} (\textit{Total Activity}, \textit{Foreground App Activity} and \textit{Graphics}) as well as the relative \textit{Energy Usage} on a scale from 0 to 20. All tests have been performed on an Apple iPhone 4 with iOS 5.1 installed using the WebGLViewer. We have compared the battery usage and CPU activity of the implemented \textit{Room.html}, the \textit{Quake 3 WebGL Demo} by Brandon Jones \cite{quakewebgl} and \url{google.com} as reference. The results are shown in table \ref{batteryTable}.
+\begin{figure}[htb]
+	\centerline{\includegraphics[width=0.6\columnwidth]{grafiken/quake3}}
+	\caption{Quake 3 WebGL Demo \cite{quakewebgl} shown in the WebGLViewer on an iPhone}
+	\label{fig:quake3}
+\end{figure}
+
+To measure the battery usage, the WebGLViewer application for iOS, as described in section \ref{WebGLViewer}, was used. The device was fully charged. The accordant content was opened in the WebGLViewer application. The device was then unplugged and the content reloaded. The time until the battery level decreased to 90\,\% as well as the battery consumption per minute was measured and calculated by the WebGLViewer. Using Apple Instruments, a part of Apple’s Developer Tools \cite{AppleDevTools}, we measured the \textit{CPU Activity} (\textit{Total Activity}, \textit{Foreground App Activity} and \textit{Graphics}) as well as the relative \textit{Energy Usage} on a scale from 0 to 20. All tests have been performed on an Apple iPhone 4 with iOS 5.1 installed using the WebGLViewer. We have compared the battery usage and CPU activity of the implemented \textit{Room.html}, the \textit{Quake 3 WebGL Demo} by Brandon Jones \cite{quakewebgl} (as shown in figure \ref{fig:quake3}) and \url{google.com} as reference. The results are shown in table \ref{batteryTable}.
 
 Comparing the two WebGL applications to a normal website like \url{google.com} shows a huge difference in CPU activity. The overall CPU activity is below 10\,\%, with a value below 1\,\% for Foreground App Activity as well as \textit{Graphics Activity}, while using \url{google.com}, whereas the overall CPU activity is over 70\,\%, with about 60\,\% for \textit{Foreground App Activity} and up to 25\,\% for \textit{Graphics Activity}, while using a WebGL application. 
 
@@ -333,6 +339,12 @@ If we look at the battery consumption there is also a significant difference vis
 
 
 \subsection{Frames per second}
+
+\begin{figure}[htb]
+	\centerline{\includegraphics[width=0.6\columnwidth]{grafiken/SpiritBox}}
+	\caption{WebGL demo SpiritBox by \cite{SpiritBox}}
+	\label{fig:spiritbox}
+\end{figure}
 
 \begin{table*}[tb]
 	\begin{centering}
@@ -359,13 +371,7 @@ If we look at the battery consumption there is also a significant difference vis
 
 To test the performance of WebGL on different platforms we have measured and compared frames per second (FPS) for different applications. FPS describes the frequency at which images are generated. The values below 10-12 FPS, are recognizable by the human eye as the separate images; for higher FPS, single images cannot be recognized and they blend together creating motion \cite{12FPS}. So a higher number of FPS creates a more fluid animation and is therefore considered better. Since the refresh rate of modern flat screens is 60 FPS there is usually no need to render with more than 60 FPS \cite{60fps}.
 
-In table \ref{fpsTable} we compared the FPS of the implemented \textit{Room.html}, the \textit{Quake 3 WebGL Demo} \cite{quakewebgl} (as shown in figure \ref{fig:quake3}), and an example of a spinning cube, the \textit{SpiritBox} from \url {webkit.org} \cite{SpiritBox}, on different mobile devices as well as on one laptop computer (2010 MacBook) and stationary computer (2006 MacPro) as reference. 
-
-\begin{figure}[htb]
-	\centerline{\includegraphics[width=0.7\columnwidth]{grafiken/quake3}}
-	\caption{Quake 3 WebGL Demo \cite{quakewebgl} shown in the WebGLViewer on an iPhone}
-	\label{fig:quake3}
-\end{figure}
+In table \ref{fpsTable} we compared the FPS of the implemented \textit{Room.html}, the \textit{Quake 3 WebGL Demo} \cite{quakewebgl} (as shown in figure \ref{fig:quake3}), and an example of a spinning cube, the \textit{SpiritBox} from \url {webkit.org} \cite{SpiritBox} (as shown in figure \ref{fig:spiritbox}), on different mobile devices as well as on one laptop computer (2010 MacBook) and stationary computer (2006 MacPro) as reference. 
 
 \begin{table*}[tb]
 	\begin{centering}
@@ -394,7 +400,13 @@ In table \ref{fpsTable} we compared the FPS of the implemented \textit{Room.html
 	\end{centering}
 \end{table*}
 
-The lessons from \url{learningWebGL.com} \cite{learningwebgl} have been used as a benchmark to test the performance on different mobile device. The results are shown in table \ref{lessonsTable}.
+\begin{figure}
+	\centerline{\includegraphics[width=0.6\columnwidth]{grafiken/lesson9}}
+	\caption{“Lesson 9” WebGL demo (adapted from \cite{lesson9})}
+	\label{fig:lesson9}
+\end{figure}
+
+The lessons from \url{learningWebGL.com} \cite{learningwebgl} have been used as a benchmark to test the performance on different mobile device. As example figure \ref{fig:lesson9} shows a screenshot of lessen 9. The results are shown in table \ref{lessonsTable}.
 
 Opera has advertised the WebGL capabilities beginning with Opera Mobile 12 \cite{opera12}, but the performance of WebGL content on this browser is much worse than in Firefox. Although all lessons from table \ref{lessonsTable} are rendered correctly, the frame rate was always below 10 FPS, compared with 16 FPS in average in Firefox on the HTC EVO 3D. The \textit{SpiritBox} on the other hand is not rendered correctly (only a blue square is visible) and the room.html doesn’t load at all.
 
@@ -404,7 +416,7 @@ While the Android devices have always had lower frame rates compared to the iOS 
 
 \begin{figure}[htb]
 	\begin{center}
-	\includegraphics[width=0.7\columnwidth]{grafiken/lesson15_Android}
+	\includegraphics[width=0.65\columnwidth]{grafiken/lesson15_Android}
       \caption{“Lesson 15” WebGL demo on Android (adapted from \cite{lesson15})}
       \label{fig:lesson15_Android}
     \end{center}
@@ -412,7 +424,7 @@ While the Android devices have always had lower frame rates compared to the iOS 
 
 \begin{figure}[htb]
 	\begin{center}  
-    \includegraphics[width=0.7\columnwidth]{grafiken/lesson15_iOS}
+    \includegraphics[width=0.6\columnwidth]{grafiken/lesson15_iOS}
       \caption{“Lesson 15” WebGL demo on iOS (adapted from \cite{lesson15})}
       \label{fig:lesson15_iOS}
     \end{center}
@@ -461,21 +473,7 @@ Our results, presented in this paper, indicate that WebGL at its current state c
 \section*{Installing WebGLViewer}
 To install the WebGLViewer using the provided source code on an iOS device a membership in Apple's iOS Developer Program is needed. However compiling and running the WebGLViewer in the iOS Simulator is possible using XCode. As alternative, a registered developer can provide you a binary, which is build for your specific device. We used \url{testflight.com} to distribute such binaries. To request a binary you need to create an account on \url{http://bit.ly/zWoZQJ} and register your device as soon as you are accepted.
 
-\section*{Appendix B}
-A screenshots of SpiritBox at \ref{fig:spiritbox}.
-\begin{figure}
-	\centerline{\includegraphics[width=0.7\columnwidth]{grafiken/SpiritBox}}
-	\caption{WebGL demo SpiritBox by \cite{SpiritBox}}
-	\label{fig:spiritbox}
-\end{figure}
 
-A screenshots of "Lesson 9" at \ref{fig:lesson9}.
-
-\begin{figure}
-	\centerline{\includegraphics[width=0.7\columnwidth]{grafiken/lesson9}}
-	\caption{“Lesson 9” WebGL demo (adapted from \cite{lesson9})}
-	\label{fig:lesson9}
-\end{figure}
 
 \ifCLASSOPTIONcaptionsoff
   \newpage
