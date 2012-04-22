@@ -325,15 +325,15 @@ In addition to technical parameters another interesting area of evaluation of We
 	\end{centering}
 \end{table*}
 
+To measure the battery usage, the WebGLViewer application for iOS, as described in section \ref{WebGLViewer}, was used. The device was fully charged. The accordant content was opened in the WebGLViewer application. The device was then unplugged and the content reloaded. The time until the battery level decreased to 90\,\% as well as the battery consumption per minute was measured and calculated by the WebGLViewer. Using Apple Instruments, a part of Apple’s Developer Tools \cite{AppleDevTools}, we measured the \textit{CPU Activity} (\textit{Total Activity}, \textit{Foreground App Activity} and \textit{Graphics}) as well as the relative \textit{Energy Usage} on a scale from 0 to 20. All tests have been performed on an Apple iPhone 4 with iOS 5.1 installed using the WebGLViewer. We have compared the battery usage and CPU activity of the implemented \textit{Room.html}, the \textit{Quake 3 WebGL Demo} by Brandon Jones \cite{quakewebgl} (as shown in figure \ref{fig:quake3}) and \url{google.com} as reference. The results are shown in table \ref{batteryTable}.
+
+Comparing the two WebGL applications to a normal website like \url{google.com} shows a huge difference in CPU activity. The overall CPU activity is below 10\,\%, with a value below 1\,\% for Foreground App Activity as well as \textit{Graphics Activity}, while using \url{google.com}, whereas the overall CPU activity is over 70\,\%, with about 60\,\% for \textit{Foreground App Activity} and up to 25\,\% for \textit{Graphics Activity}, while using a WebGL application. 
+
 \begin{figure}[htb]
 	\centerline{\includegraphics[width=0.6\columnwidth]{grafiken/quake3}}
 	\caption{Quake 3 WebGL Demo \cite{quakewebgl} shown in the WebGLViewer on an iPhone}
 	\label{fig:quake3}
 \end{figure}
-
-To measure the battery usage, the WebGLViewer application for iOS, as described in section \ref{WebGLViewer}, was used. The device was fully charged. The accordant content was opened in the WebGLViewer application. The device was then unplugged and the content reloaded. The time until the battery level decreased to 90\,\% as well as the battery consumption per minute was measured and calculated by the WebGLViewer. Using Apple Instruments, a part of Apple’s Developer Tools \cite{AppleDevTools}, we measured the \textit{CPU Activity} (\textit{Total Activity}, \textit{Foreground App Activity} and \textit{Graphics}) as well as the relative \textit{Energy Usage} on a scale from 0 to 20. All tests have been performed on an Apple iPhone 4 with iOS 5.1 installed using the WebGLViewer. We have compared the battery usage and CPU activity of the implemented \textit{Room.html}, the \textit{Quake 3 WebGL Demo} by Brandon Jones \cite{quakewebgl} (as shown in figure \ref{fig:quake3}) and \url{google.com} as reference. The results are shown in table \ref{batteryTable}.
-
-Comparing the two WebGL applications to a normal website like \url{google.com} shows a huge difference in CPU activity. The overall CPU activity is below 10\,\%, with a value below 1\,\% for Foreground App Activity as well as \textit{Graphics Activity}, while using \url{google.com}, whereas the overall CPU activity is over 70\,\%, with about 60\,\% for \textit{Foreground App Activity} and up to 25\,\% for \textit{Graphics Activity}, while using a WebGL application. 
 
 If we look at the battery consumption there is also a significant difference visible. The battery drains twice as fast while using a WebGL enabled website compared to \url{google.com}. The difference regarding the \textit{Relative Energy Usage} is not as big, however, we don't know how Apple calculates this value.
 
